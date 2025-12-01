@@ -1,0 +1,2095 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "name": "image_augmentation_pipeline",
+      "type": "function",
+      "module": "__main__",
+      "context": "image_augmentation_pipeline#1",
+      "performance": {
+        "execution_time_ms": 29.04367446899414,
+        "memory_before_mb": 0.000980377197265625,
+        "memory_after_mb": 2.9826889038085938,
+        "memory_allocated_mb": 2.981708526611328,
+        "peak_memory_mb": 2.9826889038085938,
+        "memory_usage": 3127576
+      },
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 1,
+          "to_name": "img_list"
+        },
+        {
+          "type": "creates",
+          "to_id": 2,
+          "to_name": "augmented"
+        },
+        {
+          "type": "creates",
+          "to_id": 3,
+          "to_name": "img"
+        },
+        {
+          "type": "creates",
+          "to_id": 4,
+          "to_name": "flipped"
+        },
+        {
+          "type": "creates",
+          "to_id": 6,
+          "to_name": "gray"
+        },
+        {
+          "type": "creates",
+          "to_id": 8,
+          "to_name": "binary"
+        },
+        {
+          "type": "creates",
+          "to_id": 10,
+          "to_name": "_"
+        },
+        {
+          "type": "creates",
+          "to_id": 11,
+          "to_name": "blurred"
+        },
+        {
+          "type": "modifies",
+          "to_id": 14,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 15,
+          "to_name": "flipped"
+        },
+        {
+          "type": "modifies",
+          "to_id": 16,
+          "to_name": "gray"
+        },
+        {
+          "type": "modifies",
+          "to_id": 17,
+          "to_name": "binary"
+        },
+        {
+          "type": "modifies",
+          "to_id": 18,
+          "to_name": "blurred"
+        },
+        {
+          "type": "modifies",
+          "to_id": 19,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 20,
+          "to_name": "flipped"
+        },
+        {
+          "type": "modifies",
+          "to_id": 21,
+          "to_name": "gray"
+        },
+        {
+          "type": "modifies",
+          "to_id": 22,
+          "to_name": "binary"
+        },
+        {
+          "type": "modifies",
+          "to_id": 23,
+          "to_name": "blurred"
+        },
+        {
+          "type": "modifies",
+          "to_id": 24,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 25,
+          "to_name": "flipped"
+        },
+        {
+          "type": "modifies",
+          "to_id": 26,
+          "to_name": "gray"
+        },
+        {
+          "type": "modifies",
+          "to_id": 27,
+          "to_name": "binary"
+        },
+        {
+          "type": "modifies",
+          "to_id": 28,
+          "to_name": "blurred"
+        },
+        {
+          "type": "modifies",
+          "to_id": 29,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 30,
+          "to_name": "flipped"
+        },
+        {
+          "type": "modifies",
+          "to_id": 31,
+          "to_name": "gray"
+        },
+        {
+          "type": "modifies",
+          "to_id": 32,
+          "to_name": "binary"
+        },
+        {
+          "type": "modifies",
+          "to_id": 33,
+          "to_name": "blurred"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "img_list",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->img_list#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.005
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "augmented",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->augmented#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.0
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "img",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->img#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          640,
+          480,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.87890625
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 5,
+          "to_name": "flip"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "flipped",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->flipped#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          640,
+          480,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.87890625
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 5,
+          "from_name": "flip"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 7,
+          "to_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "flip",
+      "type": "function_call",
+      "module": "library",
+      "context": "image_augmentation_pipeline#1->flip#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 3,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 14,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 19,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 24,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 29,
+          "from_name": "img"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 4,
+          "to_name": "flipped"
+        },
+        {
+          "type": "produces",
+          "to_id": 15,
+          "to_name": "flipped"
+        },
+        {
+          "type": "produces",
+          "to_id": 20,
+          "to_name": "flipped"
+        },
+        {
+          "type": "produces",
+          "to_id": 25,
+          "to_name": "flipped"
+        },
+        {
+          "type": "produces",
+          "to_id": 30,
+          "to_name": "flipped"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "gray",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->gray#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          640,
+          480
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.29296875
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 7,
+          "from_name": "cvtColor"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 9,
+          "to_name": "threshold"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "cvtColor",
+      "type": "function_call",
+      "module": "library",
+      "context": "image_augmentation_pipeline#1->cvtColor#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 4,
+          "from_name": "flipped"
+        },
+        {
+          "type": "uses",
+          "from_id": 15,
+          "from_name": "flipped"
+        },
+        {
+          "type": "uses",
+          "from_id": 20,
+          "from_name": "flipped"
+        },
+        {
+          "type": "uses",
+          "from_id": 25,
+          "from_name": "flipped"
+        },
+        {
+          "type": "uses",
+          "from_id": 30,
+          "from_name": "flipped"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 6,
+          "to_name": "gray"
+        },
+        {
+          "type": "produces",
+          "to_id": 16,
+          "to_name": "gray"
+        },
+        {
+          "type": "produces",
+          "to_id": 21,
+          "to_name": "gray"
+        },
+        {
+          "type": "produces",
+          "to_id": 26,
+          "to_name": "gray"
+        },
+        {
+          "type": "produces",
+          "to_id": 31,
+          "to_name": "gray"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "binary",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->binary#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          640,
+          480
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.29296875
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 9,
+          "from_name": "threshold"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 12,
+          "to_name": "blur"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "threshold",
+      "type": "function_call",
+      "module": "library",
+      "context": "image_augmentation_pipeline#1->threshold#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 6,
+          "from_name": "gray"
+        },
+        {
+          "type": "uses",
+          "from_id": 16,
+          "from_name": "gray"
+        },
+        {
+          "type": "uses",
+          "from_id": 21,
+          "from_name": "gray"
+        },
+        {
+          "type": "uses",
+          "from_id": 26,
+          "from_name": "gray"
+        },
+        {
+          "type": "uses",
+          "from_id": 31,
+          "from_name": "gray"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 10,
+          "to_name": "_"
+        },
+        {
+          "type": "produces",
+          "to_id": 8,
+          "to_name": "binary"
+        },
+        {
+          "type": "produces",
+          "to_id": 17,
+          "to_name": "binary"
+        },
+        {
+          "type": "produces",
+          "to_id": 22,
+          "to_name": "binary"
+        },
+        {
+          "type": "produces",
+          "to_id": 27,
+          "to_name": "binary"
+        },
+        {
+          "type": "produces",
+          "to_id": 32,
+          "to_name": "binary"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "_",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->_#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 9,
+          "from_name": "threshold"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "blurred",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->blurred#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          640,
+          480
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.29296875
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 12,
+          "from_name": "blur"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 13,
+          "to_name": "append"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "blur",
+      "type": "function_call",
+      "module": "library",
+      "context": "image_augmentation_pipeline#1->blur#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 8,
+          "from_name": "binary"
+        },
+        {
+          "type": "uses",
+          "from_id": 17,
+          "from_name": "binary"
+        },
+        {
+          "type": "uses",
+          "from_id": 22,
+          "from_name": "binary"
+        },
+        {
+          "type": "uses",
+          "from_id": 27,
+          "from_name": "binary"
+        },
+        {
+          "type": "uses",
+          "from_id": 32,
+          "from_name": "binary"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 11,
+          "to_name": "blurred"
+        },
+        {
+          "type": "produces",
+          "to_id": 18,
+          "to_name": "blurred"
+        },
+        {
+          "type": "produces",
+          "to_id": 23,
+          "to_name": "blurred"
+        },
+        {
+          "type": "produces",
+          "to_id": 28,
+          "to_name": "blurred"
+        },
+        {
+          "type": "produces",
+          "to_id": 33,
+          "to_name": "blurred"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "append",
+      "type": "function_call",
+      "module": "library",
+      "context": "image_augmentation_pipeline#1->append#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 11,
+          "from_name": "blurred"
+        },
+        {
+          "type": "uses",
+          "from_id": 18,
+          "from_name": "blurred"
+        },
+        {
+          "type": "uses",
+          "from_id": 23,
+          "from_name": "blurred"
+        },
+        {
+          "type": "uses",
+          "from_id": 28,
+          "from_name": "blurred"
+        },
+        {
+          "type": "uses",
+          "from_id": 33,
+          "from_name": "blurred"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "img",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->img#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": null,
+        "shape": [
+          640,
+          480,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.87890625
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 5,
+          "to_name": "flip"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "flipped",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->flipped#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": null,
+        "shape": [
+          640,
+          480,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.87890625
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 5,
+          "from_name": "flip"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 7,
+          "to_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "gray",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->gray#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": null,
+        "shape": [
+          640,
+          480
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.29296875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 7,
+          "from_name": "cvtColor"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 9,
+          "to_name": "threshold"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "binary",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->binary#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": null,
+        "shape": [
+          640,
+          480
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.29296875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 9,
+          "from_name": "threshold"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 12,
+          "to_name": "blur"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "blurred",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->blurred#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": null,
+        "shape": [
+          640,
+          480
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.29296875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 12,
+          "from_name": "blur"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 13,
+          "to_name": "append"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "img",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->img#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": null,
+        "shape": [
+          640,
+          480,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.87890625
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 5,
+          "to_name": "flip"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "flipped",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->flipped#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": null,
+        "shape": [
+          640,
+          480,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.87890625
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 5,
+          "from_name": "flip"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 7,
+          "to_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "gray",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->gray#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": null,
+        "shape": [
+          640,
+          480
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.29296875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 7,
+          "from_name": "cvtColor"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 9,
+          "to_name": "threshold"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "binary",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->binary#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": null,
+        "shape": [
+          640,
+          480
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.29296875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 9,
+          "from_name": "threshold"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 12,
+          "to_name": "blur"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "blurred",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->blurred#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": null,
+        "shape": [
+          640,
+          480
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.29296875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 12,
+          "from_name": "blur"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 13,
+          "to_name": "append"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "img",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->img#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": null,
+        "shape": [
+          640,
+          480,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.87890625
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 5,
+          "to_name": "flip"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "flipped",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->flipped#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": null,
+        "shape": [
+          640,
+          480,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.87890625
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 5,
+          "from_name": "flip"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 7,
+          "to_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "gray",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->gray#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": null,
+        "shape": [
+          640,
+          480
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.29296875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 7,
+          "from_name": "cvtColor"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 9,
+          "to_name": "threshold"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "binary",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->binary#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": null,
+        "shape": [
+          640,
+          480
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.29296875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 9,
+          "from_name": "threshold"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 12,
+          "to_name": "blur"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "blurred",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->blurred#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": null,
+        "shape": [
+          640,
+          480
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.29296875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 12,
+          "from_name": "blur"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 13,
+          "to_name": "append"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "img",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->img#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": null,
+        "shape": [
+          640,
+          480,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.87890625
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 5,
+          "to_name": "flip"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "flipped",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->flipped#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": null,
+        "shape": [
+          640,
+          480,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.87890625
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 5,
+          "from_name": "flip"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 7,
+          "to_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "gray",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->gray#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": null,
+        "shape": [
+          640,
+          480
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.29296875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 7,
+          "from_name": "cvtColor"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 9,
+          "to_name": "threshold"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "binary",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->binary#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": null,
+        "shape": [
+          640,
+          480
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.29296875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 9,
+          "from_name": "threshold"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 12,
+          "to_name": "blur"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "blurred",
+      "type": "variable",
+      "module": "global",
+      "context": "image_augmentation_pipeline#1->blurred#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": null,
+        "shape": [
+          640,
+          480
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.29296875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_augmentation_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 12,
+          "from_name": "blur"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 13,
+          "to_name": "append"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    [
+      0,
+      1,
+      "creates"
+    ],
+    [
+      0,
+      2,
+      "creates"
+    ],
+    [
+      0,
+      3,
+      "creates"
+    ],
+    [
+      0,
+      4,
+      "creates"
+    ],
+    [
+      3,
+      5,
+      "uses"
+    ],
+    [
+      5,
+      4,
+      "produces"
+    ],
+    [
+      0,
+      6,
+      "creates"
+    ],
+    [
+      4,
+      7,
+      "uses"
+    ],
+    [
+      7,
+      6,
+      "produces"
+    ],
+    [
+      0,
+      8,
+      "creates"
+    ],
+    [
+      6,
+      9,
+      "uses"
+    ],
+    [
+      0,
+      10,
+      "creates"
+    ],
+    [
+      9,
+      10,
+      "produces"
+    ],
+    [
+      9,
+      8,
+      "produces"
+    ],
+    [
+      0,
+      11,
+      "creates"
+    ],
+    [
+      8,
+      12,
+      "uses"
+    ],
+    [
+      12,
+      11,
+      "produces"
+    ],
+    [
+      11,
+      13,
+      "uses"
+    ],
+    [
+      0,
+      14,
+      "modifies"
+    ],
+    [
+      0,
+      15,
+      "modifies"
+    ],
+    [
+      14,
+      5,
+      "uses"
+    ],
+    [
+      5,
+      15,
+      "produces"
+    ],
+    [
+      0,
+      16,
+      "modifies"
+    ],
+    [
+      15,
+      7,
+      "uses"
+    ],
+    [
+      7,
+      16,
+      "produces"
+    ],
+    [
+      0,
+      17,
+      "modifies"
+    ],
+    [
+      16,
+      9,
+      "uses"
+    ],
+    [
+      9,
+      17,
+      "produces"
+    ],
+    [
+      0,
+      18,
+      "modifies"
+    ],
+    [
+      17,
+      12,
+      "uses"
+    ],
+    [
+      12,
+      18,
+      "produces"
+    ],
+    [
+      18,
+      13,
+      "uses"
+    ],
+    [
+      0,
+      19,
+      "modifies"
+    ],
+    [
+      0,
+      20,
+      "modifies"
+    ],
+    [
+      19,
+      5,
+      "uses"
+    ],
+    [
+      5,
+      20,
+      "produces"
+    ],
+    [
+      0,
+      21,
+      "modifies"
+    ],
+    [
+      20,
+      7,
+      "uses"
+    ],
+    [
+      7,
+      21,
+      "produces"
+    ],
+    [
+      0,
+      22,
+      "modifies"
+    ],
+    [
+      21,
+      9,
+      "uses"
+    ],
+    [
+      9,
+      22,
+      "produces"
+    ],
+    [
+      0,
+      23,
+      "modifies"
+    ],
+    [
+      22,
+      12,
+      "uses"
+    ],
+    [
+      12,
+      23,
+      "produces"
+    ],
+    [
+      23,
+      13,
+      "uses"
+    ],
+    [
+      0,
+      24,
+      "modifies"
+    ],
+    [
+      0,
+      25,
+      "modifies"
+    ],
+    [
+      24,
+      5,
+      "uses"
+    ],
+    [
+      5,
+      25,
+      "produces"
+    ],
+    [
+      0,
+      26,
+      "modifies"
+    ],
+    [
+      25,
+      7,
+      "uses"
+    ],
+    [
+      7,
+      26,
+      "produces"
+    ],
+    [
+      0,
+      27,
+      "modifies"
+    ],
+    [
+      26,
+      9,
+      "uses"
+    ],
+    [
+      9,
+      27,
+      "produces"
+    ],
+    [
+      0,
+      28,
+      "modifies"
+    ],
+    [
+      27,
+      12,
+      "uses"
+    ],
+    [
+      12,
+      28,
+      "produces"
+    ],
+    [
+      28,
+      13,
+      "uses"
+    ],
+    [
+      0,
+      29,
+      "modifies"
+    ],
+    [
+      0,
+      30,
+      "modifies"
+    ],
+    [
+      29,
+      5,
+      "uses"
+    ],
+    [
+      5,
+      30,
+      "produces"
+    ],
+    [
+      0,
+      31,
+      "modifies"
+    ],
+    [
+      30,
+      7,
+      "uses"
+    ],
+    [
+      7,
+      31,
+      "produces"
+    ],
+    [
+      0,
+      32,
+      "modifies"
+    ],
+    [
+      31,
+      9,
+      "uses"
+    ],
+    [
+      9,
+      32,
+      "produces"
+    ],
+    [
+      0,
+      33,
+      "modifies"
+    ],
+    [
+      32,
+      12,
+      "uses"
+    ],
+    [
+      12,
+      33,
+      "produces"
+    ],
+    [
+      33,
+      13,
+      "uses"
+    ]
+  ],
+  "memory_report": {
+    "peak_memory_mb": 2.9826889038085938,
+    "peak_gpu_memory_mb": 0,
+    "total_variables_tracked": 0,
+    "function_profiles": {
+      "image_augmentation_pipeline#1": {
+        "function": "image_augmentation_pipeline",
+        "call_count": 1,
+        "peak_memory_mb": 2.9826889038085938,
+        "allocated_mb": 2.981861114501953,
+        "freed_mb": 0,
+        "duration_ms": 29.16693687438965
+      }
+    },
+    "variable_summary": {}
+  },
+  "flame_graph": {
+    "name": "root",
+    "value": 2.9826889038085938,
+    "children": [
+      {
+        "name": "image_augmentation_pipeline#1",
+        "value": 2.9826889038085938,
+        "children": []
+      }
+    ]
+  },
+  "statistics": {
+    "total_nodes": 34,
+    "function_nodes": 1,
+    "variable_nodes": 28,
+    "total_variables_tracked": 8,
+    "peak_memory_mb": 2.9826889038085938
+  }
+}

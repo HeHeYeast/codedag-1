@@ -1,0 +1,370 @@
+{
+  "coarsening_statistics": {
+    "pattern_count": 0,
+    "total_instances": 0,
+    "nodes_saved": 0,
+    "pattern_details": []
+  },
+  "nodes": [
+    {
+      "id": 0,
+      "name": "single_image_ops",
+      "type": "function",
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580576.2733192,
+        "end_time": 1764580576.2860773,
+        "execution_time_ms": 12.758016586303711,
+        "memory_before_mb": 0.0009822845458984375,
+        "memory_after_mb": 0.24312210083007812,
+        "memory_allocated_mb": 0.2421398162841797,
+        "peak_memory_mb": 0.24312210083007812
+      }
+    },
+    {
+      "id": 1,
+      "name": "prod",
+      "type": "function",
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580576.273704,
+        "end_time": 1764580576.2746148,
+        "execution_time_ms": 0.9107589721679688,
+        "memory_before_mb": 0.0025815963745117188,
+        "memory_after_mb": 0.007069587707519531,
+        "memory_allocated_mb": 0.0044879913330078125,
+        "peak_memory_mb": 0.007069587707519531
+      }
+    },
+    {
+      "id": 2,
+      "name": "relevant_args",
+      "type": "variable",
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580576.274041,
+        "end_time": 1764580576.274042,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 3,
+      "name": "<return_expression>",
+      "type": "variable",
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580576.2745194,
+        "end_time": 1764580576.2745202,
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0
+      }
+    },
+    {
+      "id": 4,
+      "name": "img",
+      "type": "variable",
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580576.2754772,
+        "end_time": 1764580576.2754781,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 5,
+      "name": "randint",
+      "type": "function_call",
+      "performance": {
+        "execution_time": 0.001,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 0.0,
+        "end_time": 0.0,
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0
+      }
+    },
+    {
+      "id": 6,
+      "name": "resized1",
+      "type": "variable",
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580576.276388,
+        "end_time": 1764580576.2763886,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 7,
+      "name": "resize",
+      "type": "function_call",
+      "performance": {
+        "execution_time": 0.001,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 0.0,
+        "end_time": 0.0,
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0
+      }
+    },
+    {
+      "id": 8,
+      "name": "resized2",
+      "type": "variable",
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580576.2770593,
+        "end_time": 1764580576.2770617,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 9,
+      "name": "rgb",
+      "type": "variable",
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580576.277676,
+        "end_time": 1764580576.277677,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 10,
+      "name": "cvtColor",
+      "type": "function_call",
+      "performance": {
+        "execution_time": 0.001,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 0.0,
+        "end_time": 0.0,
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0
+      }
+    },
+    {
+      "id": 11,
+      "name": "hsv",
+      "type": "variable",
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580576.2784424,
+        "end_time": 1764580576.2784433,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 12,
+      "name": "gray",
+      "type": "variable",
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580576.279069,
+        "end_time": 1764580576.2790694,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 13,
+      "name": "gaussian",
+      "type": "variable",
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580576.2798011,
+        "end_time": 1764580576.2798016,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 14,
+      "name": "GaussianBlur",
+      "type": "function_call",
+      "performance": {
+        "execution_time": 0.001,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 0.0,
+        "end_time": 0.0,
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0
+      }
+    },
+    {
+      "id": 15,
+      "name": "median",
+      "type": "variable",
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580576.280991,
+        "end_time": 1764580576.280992,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 16,
+      "name": "medianBlur",
+      "type": "function_call",
+      "performance": {
+        "execution_time": 0.001,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 0.0,
+        "end_time": 0.0,
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0
+      }
+    },
+    {
+      "id": 17,
+      "name": "box",
+      "type": "variable",
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580576.2818685,
+        "end_time": 1764580576.2818694,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 18,
+      "name": "blur",
+      "type": "function_call",
+      "performance": {
+        "execution_time": 0.001,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 0.0,
+        "end_time": 0.0,
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0
+      }
+    },
+    {
+      "id": 19,
+      "name": "<return_expression>",
+      "type": "variable",
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580576.2856731,
+        "end_time": 1764580576.285674,
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0
+      }
+    }
+  ]
+}

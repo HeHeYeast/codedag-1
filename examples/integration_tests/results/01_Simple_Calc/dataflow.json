@@ -1,0 +1,1808 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "name": "simple_matrix_computation",
+      "type": "function",
+      "module": "__main__",
+      "context": "simple_matrix_computation#1",
+      "performance": {
+        "execution_time_ms": 97.30315208435059,
+        "memory_before_mb": 0.00618743896484375,
+        "memory_after_mb": 0.3090038299560547,
+        "memory_allocated_mb": 0.30281639099121094,
+        "peak_memory_mb": 0.3090038299560547,
+        "memory_usage": 324014
+      },
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 1,
+          "to_name": "matrix_a"
+        },
+        {
+          "type": "creates",
+          "to_id": 2,
+          "to_name": "matrix_b"
+        },
+        {
+          "type": "calls",
+          "to_id": 3,
+          "to_name": "dot"
+        },
+        {
+          "type": "creates",
+          "to_id": 6,
+          "to_name": "c"
+        },
+        {
+          "type": "creates",
+          "to_id": 7,
+          "to_name": "d"
+        },
+        {
+          "type": "creates",
+          "to_id": 9,
+          "to_name": "e"
+        },
+        {
+          "type": "calls",
+          "to_id": 11,
+          "to_name": "amax"
+        },
+        {
+          "type": "creates",
+          "to_id": 14,
+          "to_name": "max_val"
+        },
+        {
+          "type": "creates",
+          "to_id": 15,
+          "to_name": "f"
+        },
+        {
+          "type": "calls",
+          "to_id": 17,
+          "to_name": "mean"
+        },
+        {
+          "type": "creates",
+          "to_id": 27,
+          "to_name": "mean_val"
+        },
+        {
+          "type": "calls",
+          "to_id": 28,
+          "to_name": "sum"
+        },
+        {
+          "type": "creates",
+          "to_id": 31,
+          "to_name": "sum_val"
+        },
+        {
+          "type": "calls",
+          "to_id": 32,
+          "to_name": "reshape"
+        },
+        {
+          "type": "creates",
+          "to_id": 35,
+          "to_name": "g"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "matrix_a",
+      "type": "variable",
+      "module": "global",
+      "context": "simple_matrix_computation#1->matrix_a#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          100,
+          100
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.03814697265625
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "simple_matrix_computation"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 3,
+          "to_name": "dot"
+        },
+        {
+          "type": "uses",
+          "to_id": 10,
+          "to_name": "add"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "matrix_b",
+      "type": "variable",
+      "module": "global",
+      "context": "simple_matrix_computation#1->matrix_b#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          100,
+          100
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.03814697265625
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "simple_matrix_computation"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 3,
+          "to_name": "dot"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "dot",
+      "type": "function",
+      "module": "unknown",
+      "context": "simple_matrix_computation#1->dot#1",
+      "performance": {
+        "execution_time_ms": 4.661083221435547,
+        "memory_before_mb": 0.02236652374267578,
+        "memory_after_mb": 0.07126712799072266,
+        "memory_allocated_mb": 0.048900604248046875,
+        "peak_memory_mb": 0.07126712799072266,
+        "memory_usage": 74729
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 0,
+          "from_name": "simple_matrix_computation"
+        },
+        {
+          "type": "uses",
+          "from_id": 1,
+          "from_name": "matrix_a"
+        },
+        {
+          "type": "uses",
+          "from_id": 2,
+          "from_name": "matrix_b"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 4,
+          "to_name": "relevant_args"
+        },
+        {
+          "type": "produces",
+          "to_id": 6,
+          "to_name": "c"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "relevant_args",
+      "type": "variable",
+      "module": "simple_matrix_computation#1",
+      "context": "simple_matrix_computation#1->dot#1->relevant_args#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.003
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 3,
+          "from_name": "dot"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "<return_expression>",
+      "type": "variable",
+      "module": "anonymous",
+      "context": "simple_matrix_computation#1->dot#1-><return_expression>",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 0,
+        "actual_value": null,
+        "shape": [
+          100,
+          100
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.03814697265625
+      },
+      "output_edges": [
+        {
+          "type": "flows_to",
+          "to_id": 6,
+          "to_name": "c"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "c",
+      "type": "variable",
+      "module": "global",
+      "context": "simple_matrix_computation#1->c#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          100,
+          100
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.03814697265625
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "simple_matrix_computation"
+        },
+        {
+          "type": "flows_to",
+          "from_id": 5,
+          "from_name": "<return_expression>"
+        },
+        {
+          "type": "produces",
+          "from_id": 3,
+          "from_name": "dot"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 8,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "d",
+      "type": "variable",
+      "module": "global",
+      "context": "simple_matrix_computation#1->d#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          100,
+          100
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.03814697265625
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "simple_matrix_computation"
+        },
+        {
+          "type": "produces",
+          "from_id": 8,
+          "from_name": "operator.add"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 10,
+          "to_name": "add"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "operator.add",
+      "type": "operator",
+      "module": "builtin",
+      "context": "simple_matrix_computation#1->operator.add#L1",
+      "performance": {
+        "execution_time_ms": 0.01,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 6,
+          "from_name": "c"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 7,
+          "to_name": "d"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "e",
+      "type": "variable",
+      "module": "global",
+      "context": "simple_matrix_computation#1->e#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          100,
+          100
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.03814697265625
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "simple_matrix_computation"
+        },
+        {
+          "type": "produces",
+          "from_id": 10,
+          "from_name": "add"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 11,
+          "to_name": "amax"
+        },
+        {
+          "type": "uses",
+          "to_id": 16,
+          "to_name": "operator.div"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "add",
+      "type": "function_call",
+      "module": "library",
+      "context": "simple_matrix_computation#1->add#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 7,
+          "from_name": "d"
+        },
+        {
+          "type": "uses",
+          "from_id": 1,
+          "from_name": "matrix_a"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 9,
+          "to_name": "e"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "amax",
+      "type": "function",
+      "module": "unknown",
+      "context": "simple_matrix_computation#1->amax#1",
+      "performance": {
+        "execution_time_ms": 0.6480216979980469,
+        "memory_before_mb": 0.18018817901611328,
+        "memory_after_mb": 0.18501567840576172,
+        "memory_allocated_mb": 0.0048274993896484375,
+        "peak_memory_mb": 0.18501567840576172,
+        "memory_usage": 194003
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 0,
+          "from_name": "simple_matrix_computation"
+        },
+        {
+          "type": "uses",
+          "from_id": 9,
+          "from_name": "e"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 12,
+          "to_name": "relevant_args"
+        },
+        {
+          "type": "produces",
+          "to_id": 14,
+          "to_name": "max_val"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "relevant_args",
+      "type": "variable",
+      "module": "simple_matrix_computation#1",
+      "context": "simple_matrix_computation#1->amax#1->relevant_args#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.002
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 11,
+          "from_name": "amax"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "<return_expression>",
+      "type": "variable",
+      "module": "anonymous",
+      "context": "simple_matrix_computation#1->amax#1-><return_expression>",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 0,
+        "actual_value": null,
+        "shape": [],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 3.814697265625e-06
+      },
+      "output_edges": [
+        {
+          "type": "flows_to",
+          "to_id": 14,
+          "to_name": "max_val"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "max_val",
+      "type": "variable",
+      "module": "global",
+      "context": "simple_matrix_computation#1->max_val#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 3.814697265625e-06
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "simple_matrix_computation"
+        },
+        {
+          "type": "flows_to",
+          "from_id": 13,
+          "from_name": "<return_expression>"
+        },
+        {
+          "type": "produces",
+          "from_id": 11,
+          "from_name": "amax"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 16,
+          "to_name": "operator.div"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "f",
+      "type": "variable",
+      "module": "global",
+      "context": "simple_matrix_computation#1->f#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          100,
+          100
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.03814697265625
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "simple_matrix_computation"
+        },
+        {
+          "type": "produces",
+          "from_id": 16,
+          "from_name": "operator.div"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 17,
+          "to_name": "mean"
+        },
+        {
+          "type": "uses",
+          "to_id": 28,
+          "to_name": "sum"
+        },
+        {
+          "type": "uses",
+          "to_id": 32,
+          "to_name": "reshape"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "operator.div",
+      "type": "operator",
+      "module": "builtin",
+      "context": "simple_matrix_computation#1->operator.div#L1",
+      "performance": {
+        "execution_time_ms": 0.01,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 9,
+          "from_name": "e"
+        },
+        {
+          "type": "uses",
+          "from_id": 14,
+          "from_name": "max_val"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 15,
+          "to_name": "f"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "mean",
+      "type": "function",
+      "module": "unknown",
+      "context": "simple_matrix_computation#1->mean#1",
+      "performance": {
+        "execution_time_ms": 3.157377243041992,
+        "memory_before_mb": 0.23550033569335938,
+        "memory_after_mb": 0.28498172760009766,
+        "memory_allocated_mb": 0.04948139190673828,
+        "peak_memory_mb": 0.28498172760009766,
+        "memory_usage": 298825
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 0,
+          "from_name": "simple_matrix_computation"
+        },
+        {
+          "type": "uses",
+          "from_id": 15,
+          "from_name": "f"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 18,
+          "to_name": "relevant_args"
+        },
+        {
+          "type": "calls",
+          "to_id": 19,
+          "to_name": "asanyarray"
+        },
+        {
+          "type": "produces",
+          "to_id": 27,
+          "to_name": "mean_val"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "relevant_args",
+      "type": "variable",
+      "module": "simple_matrix_computation#1",
+      "context": "simple_matrix_computation#1->mean#1->relevant_args#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.002
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 17,
+          "from_name": "mean"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "asanyarray",
+      "type": "function",
+      "module": "numpy.core._asarray",
+      "context": "simple_matrix_computation#1->mean#1->asanyarray#1",
+      "performance": {
+        "execution_time_ms": 1.7139911651611328,
+        "memory_before_mb": 0.24038314819335938,
+        "memory_after_mb": 0.2799491882324219,
+        "memory_allocated_mb": 0.0395660400390625,
+        "peak_memory_mb": 0.2799491882324219,
+        "memory_usage": 293548
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 17,
+          "from_name": "mean"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 20,
+          "to_name": "a"
+        },
+        {
+          "type": "creates",
+          "to_id": 21,
+          "to_name": "dtype"
+        },
+        {
+          "type": "creates",
+          "to_id": 22,
+          "to_name": "order"
+        },
+        {
+          "type": "creates",
+          "to_id": 23,
+          "to_name": "a"
+        },
+        {
+          "type": "creates",
+          "to_id": 24,
+          "to_name": "dtype"
+        },
+        {
+          "type": "creates",
+          "to_id": 25,
+          "to_name": "order"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "a",
+      "type": "variable",
+      "module": "simple_matrix_computation#1",
+      "context": "simple_matrix_computation#1->mean#1->asanyarray#1->a#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          100,
+          100
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.03814697265625
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 19,
+          "from_name": "asanyarray"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "dtype",
+      "type": "variable",
+      "module": "simple_matrix_computation#1",
+      "context": "simple_matrix_computation#1->mean#1->asanyarray#1->dtype#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 19,
+          "from_name": "asanyarray"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "parameter",
+          "to_id": 22,
+          "to_name": "order"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "order",
+      "type": "variable",
+      "module": "simple_matrix_computation#1",
+      "context": "simple_matrix_computation#1->mean#1->asanyarray#1->order#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 19,
+          "from_name": "asanyarray"
+        },
+        {
+          "type": "parameter",
+          "from_id": 21,
+          "from_name": "dtype"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "a",
+      "type": "variable",
+      "module": "simple_matrix_computation#1",
+      "context": "simple_matrix_computation#1->mean#1->asanyarray#1->a#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          100,
+          100
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.03814697265625
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 19,
+          "from_name": "asanyarray"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "dtype",
+      "type": "variable",
+      "module": "simple_matrix_computation#1",
+      "context": "simple_matrix_computation#1->mean#1->asanyarray#1->dtype#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 19,
+          "from_name": "asanyarray"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "order",
+      "type": "variable",
+      "module": "simple_matrix_computation#1",
+      "context": "simple_matrix_computation#1->mean#1->asanyarray#1->order#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 19,
+          "from_name": "asanyarray"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "<return_expression>",
+      "type": "variable",
+      "module": "anonymous",
+      "context": "simple_matrix_computation#1->mean#1-><return_expression>",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 0,
+        "actual_value": null,
+        "shape": [],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 3.814697265625e-06
+      },
+      "output_edges": [
+        {
+          "type": "flows_to",
+          "to_id": 27,
+          "to_name": "mean_val"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "mean_val",
+      "type": "variable",
+      "module": "global",
+      "context": "simple_matrix_computation#1->mean_val#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 3.814697265625e-06
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "simple_matrix_computation"
+        },
+        {
+          "type": "flows_to",
+          "from_id": 26,
+          "from_name": "<return_expression>"
+        },
+        {
+          "type": "produces",
+          "from_id": 17,
+          "from_name": "mean"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "sum",
+      "type": "function",
+      "module": "unknown",
+      "context": "simple_matrix_computation#1->sum#1",
+      "performance": {
+        "execution_time_ms": 0.5316734313964844,
+        "memory_before_mb": 0.2815055847167969,
+        "memory_after_mb": 0.28664684295654297,
+        "memory_allocated_mb": 0.005141258239746094,
+        "peak_memory_mb": 0.28664684295654297,
+        "memory_usage": 300571
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 0,
+          "from_name": "simple_matrix_computation"
+        },
+        {
+          "type": "uses",
+          "from_id": 15,
+          "from_name": "f"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 29,
+          "to_name": "relevant_args"
+        },
+        {
+          "type": "produces",
+          "to_id": 31,
+          "to_name": "sum_val"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "relevant_args",
+      "type": "variable",
+      "module": "simple_matrix_computation#1",
+      "context": "simple_matrix_computation#1->sum#1->relevant_args#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.002
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 28,
+          "from_name": "sum"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "<return_expression>",
+      "type": "variable",
+      "module": "anonymous",
+      "context": "simple_matrix_computation#1->sum#1-><return_expression>",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 0,
+        "actual_value": null,
+        "shape": [],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 3.814697265625e-06
+      },
+      "output_edges": [
+        {
+          "type": "flows_to",
+          "to_id": 31,
+          "to_name": "sum_val"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "sum_val",
+      "type": "variable",
+      "module": "global",
+      "context": "simple_matrix_computation#1->sum_val#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 3.814697265625e-06
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "simple_matrix_computation"
+        },
+        {
+          "type": "flows_to",
+          "from_id": 30,
+          "from_name": "<return_expression>"
+        },
+        {
+          "type": "produces",
+          "from_id": 28,
+          "from_name": "sum"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "reshape",
+      "type": "function",
+      "module": "unknown",
+      "context": "simple_matrix_computation#1->reshape#1",
+      "performance": {
+        "execution_time_ms": 0.3199577331542969,
+        "memory_before_mb": 0.2937898635864258,
+        "memory_after_mb": 0.298583984375,
+        "memory_allocated_mb": 0.004794120788574219,
+        "peak_memory_mb": 0.298583984375,
+        "memory_usage": 313088
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 0,
+          "from_name": "simple_matrix_computation"
+        },
+        {
+          "type": "uses",
+          "from_id": 15,
+          "from_name": "f"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 33,
+          "to_name": "relevant_args"
+        },
+        {
+          "type": "produces",
+          "to_id": 35,
+          "to_name": "g"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "relevant_args",
+      "type": "variable",
+      "module": "simple_matrix_computation#1",
+      "context": "simple_matrix_computation#1->reshape#1->relevant_args#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.001
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 32,
+          "from_name": "reshape"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "<return_expression>",
+      "type": "variable",
+      "module": "anonymous",
+      "context": "simple_matrix_computation#1->reshape#1-><return_expression>",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 0,
+        "actual_value": null,
+        "shape": [
+          10000
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.03814697265625
+      },
+      "output_edges": [
+        {
+          "type": "flows_to",
+          "to_id": 35,
+          "to_name": "g"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "g",
+      "type": "variable",
+      "module": "global",
+      "context": "simple_matrix_computation#1->g#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          10000
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.03814697265625
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "simple_matrix_computation"
+        },
+        {
+          "type": "flows_to",
+          "from_id": 34,
+          "from_name": "<return_expression>"
+        },
+        {
+          "type": "produces",
+          "from_id": 32,
+          "from_name": "reshape"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "<return_expression>",
+      "type": "variable",
+      "module": "anonymous",
+      "context": "simple_matrix_computation#1-><return_expression>",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 0,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.005
+      }
+    }
+  ],
+  "edges": [
+    [
+      0,
+      1,
+      "creates"
+    ],
+    [
+      0,
+      2,
+      "creates"
+    ],
+    [
+      0,
+      3,
+      "calls"
+    ],
+    [
+      3,
+      4,
+      "creates"
+    ],
+    [
+      0,
+      6,
+      "creates"
+    ],
+    [
+      5,
+      6,
+      "flows_to"
+    ],
+    [
+      1,
+      3,
+      "uses"
+    ],
+    [
+      2,
+      3,
+      "uses"
+    ],
+    [
+      3,
+      6,
+      "produces"
+    ],
+    [
+      0,
+      7,
+      "creates"
+    ],
+    [
+      6,
+      8,
+      "uses"
+    ],
+    [
+      8,
+      7,
+      "produces"
+    ],
+    [
+      0,
+      9,
+      "creates"
+    ],
+    [
+      7,
+      10,
+      "uses"
+    ],
+    [
+      1,
+      10,
+      "uses"
+    ],
+    [
+      10,
+      9,
+      "produces"
+    ],
+    [
+      0,
+      11,
+      "calls"
+    ],
+    [
+      11,
+      12,
+      "creates"
+    ],
+    [
+      0,
+      14,
+      "creates"
+    ],
+    [
+      13,
+      14,
+      "flows_to"
+    ],
+    [
+      9,
+      11,
+      "uses"
+    ],
+    [
+      11,
+      14,
+      "produces"
+    ],
+    [
+      0,
+      15,
+      "creates"
+    ],
+    [
+      9,
+      16,
+      "uses"
+    ],
+    [
+      14,
+      16,
+      "uses"
+    ],
+    [
+      16,
+      15,
+      "produces"
+    ],
+    [
+      0,
+      17,
+      "calls"
+    ],
+    [
+      17,
+      18,
+      "creates"
+    ],
+    [
+      17,
+      19,
+      "calls"
+    ],
+    [
+      19,
+      20,
+      "creates"
+    ],
+    [
+      19,
+      21,
+      "creates"
+    ],
+    [
+      19,
+      22,
+      "creates"
+    ],
+    [
+      21,
+      22,
+      "parameter"
+    ],
+    [
+      19,
+      23,
+      "creates"
+    ],
+    [
+      19,
+      24,
+      "creates"
+    ],
+    [
+      19,
+      25,
+      "creates"
+    ],
+    [
+      0,
+      27,
+      "creates"
+    ],
+    [
+      26,
+      27,
+      "flows_to"
+    ],
+    [
+      15,
+      17,
+      "uses"
+    ],
+    [
+      17,
+      27,
+      "produces"
+    ],
+    [
+      0,
+      28,
+      "calls"
+    ],
+    [
+      28,
+      29,
+      "creates"
+    ],
+    [
+      0,
+      31,
+      "creates"
+    ],
+    [
+      30,
+      31,
+      "flows_to"
+    ],
+    [
+      15,
+      28,
+      "uses"
+    ],
+    [
+      28,
+      31,
+      "produces"
+    ],
+    [
+      0,
+      32,
+      "calls"
+    ],
+    [
+      32,
+      33,
+      "creates"
+    ],
+    [
+      0,
+      35,
+      "creates"
+    ],
+    [
+      34,
+      35,
+      "flows_to"
+    ],
+    [
+      15,
+      32,
+      "uses"
+    ],
+    [
+      32,
+      35,
+      "produces"
+    ]
+  ],
+  "memory_report": {
+    "peak_memory_mb": 0.30902671813964844,
+    "peak_gpu_memory_mb": 0,
+    "total_variables_tracked": 0,
+    "function_profiles": {
+      "simple_matrix_computation#1": {
+        "function": "simple_matrix_computation",
+        "call_count": 1,
+        "peak_memory_mb": 0.30902671813964844,
+        "allocated_mb": 0.3037395477294922,
+        "freed_mb": 0,
+        "duration_ms": 97.47076034545898
+      },
+      "simple_matrix_computation#1->dot#1": {
+        "function": "dot",
+        "call_count": 1,
+        "peak_memory_mb": 0.07174015045166016,
+        "allocated_mb": 0.049663543701171875,
+        "freed_mb": 0,
+        "duration_ms": 4.762411117553711
+      },
+      "simple_matrix_computation#1->amax#1": {
+        "function": "amax",
+        "call_count": 1,
+        "peak_memory_mb": 0.18503856658935547,
+        "allocated_mb": 0.0049953460693359375,
+        "freed_mb": 0,
+        "duration_ms": 0.7038116455078125
+      },
+      "simple_matrix_computation#1->mean#1": {
+        "function": "mean",
+        "call_count": 1,
+        "peak_memory_mb": 0.2850046157836914,
+        "allocated_mb": 0.04964923858642578,
+        "freed_mb": 0,
+        "duration_ms": 3.197908401489258
+      },
+      "simple_matrix_computation#1->mean#1->asanyarray#1": {
+        "function": "asanyarray",
+        "call_count": 1,
+        "peak_memory_mb": 0.2799720764160156,
+        "allocated_mb": 0.03985595703125,
+        "freed_mb": 0,
+        "duration_ms": 1.766204833984375
+      },
+      "simple_matrix_computation#1->sum#1": {
+        "function": "sum",
+        "call_count": 1,
+        "peak_memory_mb": 0.2866697311401367,
+        "allocated_mb": 0.005591392517089844,
+        "freed_mb": 0,
+        "duration_ms": 0.5762577056884766
+      },
+      "simple_matrix_computation#1->reshape#1": {
+        "function": "reshape",
+        "call_count": 1,
+        "peak_memory_mb": 0.29860687255859375,
+        "allocated_mb": 0.004961967468261719,
+        "freed_mb": 0,
+        "duration_ms": 0.3459453582763672
+      }
+    },
+    "variable_summary": {}
+  },
+  "flame_graph": {
+    "name": "root",
+    "value": 0.30902671813964844,
+    "children": [
+      {
+        "name": "simple_matrix_computation#1",
+        "value": 0.30902671813964844,
+        "children": [
+          {
+            "name": "dot#1",
+            "value": 0.07174015045166016,
+            "children": []
+          },
+          {
+            "name": "amax#1",
+            "value": 0.18503856658935547,
+            "children": []
+          },
+          {
+            "name": "mean#1",
+            "value": 0.2850046157836914,
+            "children": [
+              {
+                "name": "asanyarray#1",
+                "value": 0.2799720764160156,
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "sum#1",
+            "value": 0.2866697311401367,
+            "children": []
+          },
+          {
+            "name": "reshape#1",
+            "value": 0.29860687255859375,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "statistics": {
+    "total_nodes": 37,
+    "function_nodes": 7,
+    "variable_nodes": 27,
+    "total_variables_tracked": 15,
+    "peak_memory_mb": 0.30902671813964844
+  }
+}

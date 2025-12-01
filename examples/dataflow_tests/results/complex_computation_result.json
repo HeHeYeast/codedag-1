@@ -1,0 +1,5395 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "name": "current_thread",
+      "type": "function",
+      "module": "threading",
+      "context": "current_thread#1",
+      "performance": {
+        "execution_time_ms": 0.6651878356933594,
+        "memory_before_mb": 1069.921875,
+        "memory_after_mb": 1070.87890625,
+        "memory_allocated_mb": 0.95703125,
+        "peak_memory_mb": 1070.87890625,
+        "memory_usage": 1122897920
+      }
+    },
+    {
+      "id": 1,
+      "name": "complex_computation",
+      "type": "function",
+      "module": "__main__",
+      "context": "complex_computation#1",
+      "performance": {
+        "execution_time_ms": 34.24501419067383,
+        "memory_before_mb": 0.000885009765625,
+        "memory_after_mb": 0.16661548614501953,
+        "memory_allocated_mb": 0.16573047637939453,
+        "peak_memory_mb": 0.16661548614501953,
+        "memory_usage": 174709
+      },
+      "output_edges": [
+        {
+          "type": "calls",
+          "to_id": 2,
+          "to_name": "matrix_operations"
+        },
+        {
+          "type": "creates",
+          "to_id": 39,
+          "to_name": "matrix_result"
+        },
+        {
+          "type": "calls",
+          "to_id": 40,
+          "to_name": "fibonacci_computation"
+        },
+        {
+          "type": "creates",
+          "to_id": 80,
+          "to_name": "fib_result"
+        },
+        {
+          "type": "calls",
+          "to_id": 81,
+          "to_name": "complex_math_operations"
+        },
+        {
+          "type": "creates",
+          "to_id": 109,
+          "to_name": "math_result"
+        },
+        {
+          "type": "creates",
+          "to_id": 110,
+          "to_name": "final_result"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "matrix_operations",
+      "type": "function",
+      "module": "__main__",
+      "context": "complex_computation#1->matrix_operations#1",
+      "performance": {
+        "execution_time_ms": 9.55963134765625,
+        "memory_before_mb": 0.004324913024902344,
+        "memory_after_mb": 0.05894279479980469,
+        "memory_allocated_mb": 0.054617881774902344,
+        "peak_memory_mb": 0.05894279479980469,
+        "memory_usage": 61806
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 1,
+          "from_name": "complex_computation"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 3,
+          "to_name": "matrix"
+        },
+        {
+          "type": "creates",
+          "to_id": 4,
+          "to_name": "result"
+        },
+        {
+          "type": "creates",
+          "to_id": 5,
+          "to_name": "i"
+        },
+        {
+          "type": "creates",
+          "to_id": 6,
+          "to_name": "row"
+        },
+        {
+          "type": "creates",
+          "to_id": 7,
+          "to_name": "j"
+        },
+        {
+          "type": "creates",
+          "to_id": 8,
+          "to_name": "val"
+        },
+        {
+          "type": "modifies",
+          "to_id": 9,
+          "to_name": "result"
+        },
+        {
+          "type": "modifies",
+          "to_id": 10,
+          "to_name": "j"
+        },
+        {
+          "type": "modifies",
+          "to_id": 11,
+          "to_name": "val"
+        },
+        {
+          "type": "modifies",
+          "to_id": 13,
+          "to_name": "result"
+        },
+        {
+          "type": "modifies",
+          "to_id": 14,
+          "to_name": "j"
+        },
+        {
+          "type": "modifies",
+          "to_id": 15,
+          "to_name": "val"
+        },
+        {
+          "type": "modifies",
+          "to_id": 16,
+          "to_name": "result"
+        },
+        {
+          "type": "modifies",
+          "to_id": 17,
+          "to_name": "i"
+        },
+        {
+          "type": "modifies",
+          "to_id": 18,
+          "to_name": "row"
+        },
+        {
+          "type": "modifies",
+          "to_id": 19,
+          "to_name": "j"
+        },
+        {
+          "type": "modifies",
+          "to_id": 20,
+          "to_name": "val"
+        },
+        {
+          "type": "modifies",
+          "to_id": 21,
+          "to_name": "result"
+        },
+        {
+          "type": "modifies",
+          "to_id": 22,
+          "to_name": "j"
+        },
+        {
+          "type": "modifies",
+          "to_id": 23,
+          "to_name": "val"
+        },
+        {
+          "type": "modifies",
+          "to_id": 24,
+          "to_name": "result"
+        },
+        {
+          "type": "modifies",
+          "to_id": 25,
+          "to_name": "j"
+        },
+        {
+          "type": "modifies",
+          "to_id": 26,
+          "to_name": "val"
+        },
+        {
+          "type": "modifies",
+          "to_id": 27,
+          "to_name": "result"
+        },
+        {
+          "type": "modifies",
+          "to_id": 28,
+          "to_name": "i"
+        },
+        {
+          "type": "modifies",
+          "to_id": 29,
+          "to_name": "row"
+        },
+        {
+          "type": "modifies",
+          "to_id": 30,
+          "to_name": "j"
+        },
+        {
+          "type": "modifies",
+          "to_id": 31,
+          "to_name": "val"
+        },
+        {
+          "type": "modifies",
+          "to_id": 32,
+          "to_name": "result"
+        },
+        {
+          "type": "modifies",
+          "to_id": 33,
+          "to_name": "j"
+        },
+        {
+          "type": "modifies",
+          "to_id": 34,
+          "to_name": "val"
+        },
+        {
+          "type": "modifies",
+          "to_id": 35,
+          "to_name": "result"
+        },
+        {
+          "type": "modifies",
+          "to_id": 36,
+          "to_name": "j"
+        },
+        {
+          "type": "modifies",
+          "to_id": 37,
+          "to_name": "val"
+        },
+        {
+          "type": "modifies",
+          "to_id": 38,
+          "to_name": "result"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "matrix",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->matrix#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.003
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "flows_to",
+          "to_id": 39,
+          "to_name": "matrix_result"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "result",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->result#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 0,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "i",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->i#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 0,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "row",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->row#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.003
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "j",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->j#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 0,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "val",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->val#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 1,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "result",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->result#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": 1,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "j",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->j#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": 1,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "val",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->val#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": 2,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 12,
+          "to_name": "operator.mul"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "operator.mul",
+      "type": "operator",
+      "module": "builtin",
+      "context": "complex_computation#1->matrix_operations#1->operator.mul#1",
+      "performance": {
+        "execution_time_ms": 0.01,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 11,
+          "from_name": "val"
+        },
+        {
+          "type": "uses",
+          "from_id": 20,
+          "from_name": "val"
+        },
+        {
+          "type": "uses",
+          "from_id": 26,
+          "from_name": "val"
+        },
+        {
+          "type": "uses",
+          "from_id": 34,
+          "from_name": "val"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "result",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->result#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": 5,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "j",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->j#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": 2,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "val",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->val#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": 3,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "result",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->result#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": 8,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "i",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->i#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": 1,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "row",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->row#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.003
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "j",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->j#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": 0,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "val",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->val#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": 4,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 12,
+          "to_name": "operator.mul"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "result",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->result#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": 16,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "j",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->j#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": 1,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "val",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->val#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": 5,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "result",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->result#6",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 6,
+        "actual_value": 21,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "j",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->j#6",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 6,
+        "actual_value": 2,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "val",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->val#6",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 6,
+        "actual_value": 6,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 12,
+          "to_name": "operator.mul"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "result",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->result#7",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 7,
+        "actual_value": 33,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "i",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->i#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": 2,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "row",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->row#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.003
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "j",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->j#7",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 7,
+        "actual_value": 0,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "val",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->val#7",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 7,
+        "actual_value": 7,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "result",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->result#8",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 8,
+        "actual_value": 40,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "j",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->j#8",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 8,
+        "actual_value": 1,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "val",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->val#8",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 8,
+        "actual_value": 8,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 12,
+          "to_name": "operator.mul"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "result",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->result#9",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 9,
+        "actual_value": 56,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "j",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->j#9",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 9,
+        "actual_value": 2,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "val",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->val#9",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 9,
+        "actual_value": 9,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "name": "result",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->matrix_operations#1->result#10",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 10,
+        "actual_value": 65,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 2,
+          "from_name": "matrix_operations"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "name": "matrix_result",
+      "type": "variable",
+      "module": "global",
+      "context": "complex_computation#1->matrix_result#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 65,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 1,
+          "from_name": "complex_computation"
+        },
+        {
+          "type": "flows_to",
+          "from_id": 3,
+          "from_name": "matrix"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "name": "fibonacci_computation",
+      "type": "function",
+      "module": "__main__",
+      "context": "complex_computation#1->fibonacci_computation#1",
+      "performance": {
+        "execution_time_ms": 10.291099548339844,
+        "memory_before_mb": 0.061455726623535156,
+        "memory_after_mb": 0.11513614654541016,
+        "memory_allocated_mb": 0.053680419921875,
+        "peak_memory_mb": 0.11513614654541016,
+        "memory_usage": 120729
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 1,
+          "from_name": "complex_computation"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 41,
+          "to_name": "n"
+        },
+        {
+          "type": "creates",
+          "to_id": 42,
+          "to_name": "n"
+        },
+        {
+          "type": "creates",
+          "to_id": 43,
+          "to_name": "a"
+        },
+        {
+          "type": "creates",
+          "to_id": 44,
+          "to_name": "b"
+        },
+        {
+          "type": "creates",
+          "to_id": 45,
+          "to_name": "i"
+        },
+        {
+          "type": "creates",
+          "to_id": 47,
+          "to_name": "temp"
+        },
+        {
+          "type": "modifies",
+          "to_id": 48,
+          "to_name": "a"
+        },
+        {
+          "type": "modifies",
+          "to_id": 49,
+          "to_name": "i"
+        },
+        {
+          "type": "modifies",
+          "to_id": 50,
+          "to_name": "temp"
+        },
+        {
+          "type": "modifies",
+          "to_id": 51,
+          "to_name": "b"
+        },
+        {
+          "type": "modifies",
+          "to_id": 52,
+          "to_name": "i"
+        },
+        {
+          "type": "modifies",
+          "to_id": 53,
+          "to_name": "temp"
+        },
+        {
+          "type": "modifies",
+          "to_id": 54,
+          "to_name": "a"
+        },
+        {
+          "type": "modifies",
+          "to_id": 55,
+          "to_name": "b"
+        },
+        {
+          "type": "modifies",
+          "to_id": 56,
+          "to_name": "i"
+        },
+        {
+          "type": "modifies",
+          "to_id": 57,
+          "to_name": "temp"
+        },
+        {
+          "type": "modifies",
+          "to_id": 58,
+          "to_name": "a"
+        },
+        {
+          "type": "modifies",
+          "to_id": 59,
+          "to_name": "b"
+        },
+        {
+          "type": "modifies",
+          "to_id": 60,
+          "to_name": "i"
+        },
+        {
+          "type": "modifies",
+          "to_id": 61,
+          "to_name": "temp"
+        },
+        {
+          "type": "modifies",
+          "to_id": 62,
+          "to_name": "a"
+        },
+        {
+          "type": "modifies",
+          "to_id": 63,
+          "to_name": "b"
+        },
+        {
+          "type": "modifies",
+          "to_id": 64,
+          "to_name": "i"
+        },
+        {
+          "type": "modifies",
+          "to_id": 65,
+          "to_name": "temp"
+        },
+        {
+          "type": "modifies",
+          "to_id": 66,
+          "to_name": "a"
+        },
+        {
+          "type": "modifies",
+          "to_id": 67,
+          "to_name": "b"
+        },
+        {
+          "type": "modifies",
+          "to_id": 68,
+          "to_name": "i"
+        },
+        {
+          "type": "modifies",
+          "to_id": 69,
+          "to_name": "temp"
+        },
+        {
+          "type": "modifies",
+          "to_id": 70,
+          "to_name": "a"
+        },
+        {
+          "type": "modifies",
+          "to_id": 71,
+          "to_name": "b"
+        },
+        {
+          "type": "modifies",
+          "to_id": 72,
+          "to_name": "i"
+        },
+        {
+          "type": "modifies",
+          "to_id": 73,
+          "to_name": "temp"
+        },
+        {
+          "type": "modifies",
+          "to_id": 74,
+          "to_name": "a"
+        },
+        {
+          "type": "modifies",
+          "to_id": 75,
+          "to_name": "b"
+        },
+        {
+          "type": "modifies",
+          "to_id": 76,
+          "to_name": "i"
+        },
+        {
+          "type": "modifies",
+          "to_id": 77,
+          "to_name": "temp"
+        },
+        {
+          "type": "modifies",
+          "to_id": 78,
+          "to_name": "a"
+        },
+        {
+          "type": "modifies",
+          "to_id": 79,
+          "to_name": "b"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "name": "n",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->n#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 10,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        },
+        {
+          "type": "parameter",
+          "from_id": 41,
+          "from_name": "n"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "parameter",
+          "to_id": 41,
+          "to_name": "n"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "n",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->n#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 10,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "name": "a",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->a#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 0,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 46,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "name": "b",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->b#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 1,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 46,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "name": "i",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->i#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 2,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "name": "operator.add",
+      "type": "operator",
+      "module": "builtin",
+      "context": "complex_computation#1->fibonacci_computation#1->operator.add#1",
+      "performance": {
+        "execution_time_ms": 0.01,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 43,
+          "from_name": "a"
+        },
+        {
+          "type": "uses",
+          "from_id": 44,
+          "from_name": "b"
+        },
+        {
+          "type": "uses",
+          "from_id": 48,
+          "from_name": "a"
+        },
+        {
+          "type": "uses",
+          "from_id": 51,
+          "from_name": "b"
+        },
+        {
+          "type": "uses",
+          "from_id": 54,
+          "from_name": "a"
+        },
+        {
+          "type": "uses",
+          "from_id": 55,
+          "from_name": "b"
+        },
+        {
+          "type": "uses",
+          "from_id": 58,
+          "from_name": "a"
+        },
+        {
+          "type": "uses",
+          "from_id": 59,
+          "from_name": "b"
+        },
+        {
+          "type": "uses",
+          "from_id": 62,
+          "from_name": "a"
+        },
+        {
+          "type": "uses",
+          "from_id": 63,
+          "from_name": "b"
+        },
+        {
+          "type": "uses",
+          "from_id": 66,
+          "from_name": "a"
+        },
+        {
+          "type": "uses",
+          "from_id": 67,
+          "from_name": "b"
+        },
+        {
+          "type": "uses",
+          "from_id": 70,
+          "from_name": "a"
+        },
+        {
+          "type": "uses",
+          "from_id": 71,
+          "from_name": "b"
+        },
+        {
+          "type": "uses",
+          "from_id": 74,
+          "from_name": "a"
+        },
+        {
+          "type": "uses",
+          "from_id": 75,
+          "from_name": "b"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 47,
+          "to_name": "temp"
+        },
+        {
+          "type": "produces",
+          "to_id": 50,
+          "to_name": "temp"
+        },
+        {
+          "type": "produces",
+          "to_id": 53,
+          "to_name": "temp"
+        },
+        {
+          "type": "produces",
+          "to_id": 57,
+          "to_name": "temp"
+        },
+        {
+          "type": "produces",
+          "to_id": 61,
+          "to_name": "temp"
+        },
+        {
+          "type": "produces",
+          "to_id": 65,
+          "to_name": "temp"
+        },
+        {
+          "type": "produces",
+          "to_id": 69,
+          "to_name": "temp"
+        },
+        {
+          "type": "produces",
+          "to_id": 73,
+          "to_name": "temp"
+        },
+        {
+          "type": "produces",
+          "to_id": 77,
+          "to_name": "temp"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "name": "temp",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->temp#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 1,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        },
+        {
+          "type": "produces",
+          "from_id": 46,
+          "from_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "name": "a",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->a#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": 1,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 46,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "name": "i",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->i#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": 3,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "name": "temp",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->temp#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": 2,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        },
+        {
+          "type": "produces",
+          "from_id": 46,
+          "from_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "name": "b",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->b#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": 2,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 46,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "name": "i",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->i#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": 4,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "name": "temp",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->temp#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": 3,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        },
+        {
+          "type": "produces",
+          "from_id": 46,
+          "from_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "name": "a",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->a#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": 2,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 46,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "name": "b",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->b#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": 3,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 46,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "name": "i",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->i#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": 5,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "name": "temp",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->temp#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": 5,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        },
+        {
+          "type": "produces",
+          "from_id": 46,
+          "from_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "name": "a",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->a#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": 3,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 46,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "name": "b",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->b#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": 5,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 46,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "name": "i",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->i#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": 6,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "name": "temp",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->temp#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": 8,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        },
+        {
+          "type": "produces",
+          "from_id": 46,
+          "from_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "name": "a",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->a#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": 5,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 46,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "name": "b",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->b#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": 8,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 46,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "name": "i",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->i#6",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 6,
+        "actual_value": 7,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "name": "temp",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->temp#6",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 6,
+        "actual_value": 13,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        },
+        {
+          "type": "produces",
+          "from_id": 46,
+          "from_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "name": "a",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->a#6",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 6,
+        "actual_value": 8,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 46,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "name": "b",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->b#6",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 6,
+        "actual_value": 13,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 46,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "name": "i",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->i#7",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 7,
+        "actual_value": 8,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "name": "temp",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->temp#7",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 7,
+        "actual_value": 21,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        },
+        {
+          "type": "produces",
+          "from_id": 46,
+          "from_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "name": "a",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->a#7",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 7,
+        "actual_value": 13,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 46,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "name": "b",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->b#7",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 7,
+        "actual_value": 21,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 46,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "name": "i",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->i#8",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 8,
+        "actual_value": 9,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "name": "temp",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->temp#8",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 8,
+        "actual_value": 34,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        },
+        {
+          "type": "produces",
+          "from_id": 46,
+          "from_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "name": "a",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->a#8",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 8,
+        "actual_value": 21,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 46,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "name": "b",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->b#8",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 8,
+        "actual_value": 34,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 46,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "name": "i",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->i#9",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 9,
+        "actual_value": 10,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "flows_to",
+          "to_id": 80,
+          "to_name": "fib_result"
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "name": "temp",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->temp#9",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 9,
+        "actual_value": 55,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        },
+        {
+          "type": "produces",
+          "from_id": 46,
+          "from_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "name": "a",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->a#9",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 9,
+        "actual_value": 34,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "name": "b",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->fibonacci_computation#1->b#9",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 9,
+        "actual_value": 55,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 40,
+          "from_name": "fibonacci_computation"
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "name": "fib_result",
+      "type": "variable",
+      "module": "global",
+      "context": "complex_computation#1->fib_result#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 55,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 1,
+          "from_name": "complex_computation"
+        },
+        {
+          "type": "flows_to",
+          "from_id": 76,
+          "from_name": "i"
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "name": "complex_math_operations",
+      "type": "function",
+      "module": "__main__",
+      "context": "complex_computation#1->complex_math_operations#1",
+      "performance": {
+        "execution_time_ms": 11.195182800292969,
+        "memory_before_mb": 0.11823081970214844,
+        "memory_after_mb": 0.15954113006591797,
+        "memory_allocated_mb": 0.04131031036376953,
+        "peak_memory_mb": 0.15954113006591797,
+        "memory_usage": 167291
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 1,
+          "from_name": "complex_computation"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 82,
+          "to_name": "numbers"
+        },
+        {
+          "type": "creates",
+          "to_id": 83,
+          "to_name": "results"
+        },
+        {
+          "type": "creates",
+          "to_id": 84,
+          "to_name": "num"
+        },
+        {
+          "type": "creates",
+          "to_id": 85,
+          "to_name": "sqrt_val"
+        },
+        {
+          "type": "creates",
+          "to_id": 86,
+          "to_name": "log_val"
+        },
+        {
+          "type": "creates",
+          "to_id": 88,
+          "to_name": "processed"
+        },
+        {
+          "type": "modifies",
+          "to_id": 89,
+          "to_name": "num"
+        },
+        {
+          "type": "modifies",
+          "to_id": 90,
+          "to_name": "sqrt_val"
+        },
+        {
+          "type": "modifies",
+          "to_id": 91,
+          "to_name": "log_val"
+        },
+        {
+          "type": "modifies",
+          "to_id": 92,
+          "to_name": "processed"
+        },
+        {
+          "type": "modifies",
+          "to_id": 93,
+          "to_name": "num"
+        },
+        {
+          "type": "modifies",
+          "to_id": 94,
+          "to_name": "sqrt_val"
+        },
+        {
+          "type": "modifies",
+          "to_id": 95,
+          "to_name": "log_val"
+        },
+        {
+          "type": "modifies",
+          "to_id": 96,
+          "to_name": "processed"
+        },
+        {
+          "type": "modifies",
+          "to_id": 97,
+          "to_name": "num"
+        },
+        {
+          "type": "modifies",
+          "to_id": 98,
+          "to_name": "sqrt_val"
+        },
+        {
+          "type": "modifies",
+          "to_id": 99,
+          "to_name": "log_val"
+        },
+        {
+          "type": "modifies",
+          "to_id": 101,
+          "to_name": "processed"
+        },
+        {
+          "type": "modifies",
+          "to_id": 102,
+          "to_name": "num"
+        },
+        {
+          "type": "modifies",
+          "to_id": 103,
+          "to_name": "sqrt_val"
+        },
+        {
+          "type": "modifies",
+          "to_id": 104,
+          "to_name": "log_val"
+        },
+        {
+          "type": "modifies",
+          "to_id": 105,
+          "to_name": "processed"
+        },
+        {
+          "type": "creates",
+          "to_id": 106,
+          "to_name": "total_sum"
+        },
+        {
+          "type": "creates",
+          "to_id": 108,
+          "to_name": "average"
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "name": "numbers",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->complex_math_operations#1->numbers#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.005
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 81,
+          "from_name": "complex_math_operations"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "flows_to",
+          "to_id": 109,
+          "to_name": "math_result"
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "name": "results",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->complex_math_operations#1->results#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.0
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 81,
+          "from_name": "complex_math_operations"
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "name": "num",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->complex_math_operations#1->num#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 1.0,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 81,
+          "from_name": "complex_math_operations"
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "name": "sqrt_val",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->complex_math_operations#1->sqrt_val#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 1.0,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 81,
+          "from_name": "complex_math_operations"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 87,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "name": "log_val",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->complex_math_operations#1->log_val#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 0.0,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 81,
+          "from_name": "complex_math_operations"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 87,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "name": "operator.add",
+      "type": "operator",
+      "module": "builtin",
+      "context": "complex_computation#1->complex_math_operations#1->operator.add#1",
+      "performance": {
+        "execution_time_ms": 0.01,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 85,
+          "from_name": "sqrt_val"
+        },
+        {
+          "type": "uses",
+          "from_id": 86,
+          "from_name": "log_val"
+        },
+        {
+          "type": "uses",
+          "from_id": 90,
+          "from_name": "sqrt_val"
+        },
+        {
+          "type": "uses",
+          "from_id": 91,
+          "from_name": "log_val"
+        },
+        {
+          "type": "uses",
+          "from_id": 94,
+          "from_name": "sqrt_val"
+        },
+        {
+          "type": "uses",
+          "from_id": 95,
+          "from_name": "log_val"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 88,
+          "to_name": "processed"
+        },
+        {
+          "type": "produces",
+          "to_id": 92,
+          "to_name": "processed"
+        },
+        {
+          "type": "produces",
+          "to_id": 96,
+          "to_name": "processed"
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "name": "processed",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->complex_math_operations#1->processed#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 1.0,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 81,
+          "from_name": "complex_math_operations"
+        },
+        {
+          "type": "produces",
+          "from_id": 87,
+          "from_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "name": "num",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->complex_math_operations#1->num#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": 4.0,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 81,
+          "from_name": "complex_math_operations"
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "name": "sqrt_val",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->complex_math_operations#1->sqrt_val#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": 2.0,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 81,
+          "from_name": "complex_math_operations"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 87,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "name": "log_val",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->complex_math_operations#1->log_val#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": 1.3862943611198906,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 81,
+          "from_name": "complex_math_operations"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 87,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "name": "processed",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->complex_math_operations#1->processed#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": 3.386294361119891,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 81,
+          "from_name": "complex_math_operations"
+        },
+        {
+          "type": "produces",
+          "from_id": 87,
+          "from_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "name": "num",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->complex_math_operations#1->num#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": 9.0,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 81,
+          "from_name": "complex_math_operations"
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "name": "sqrt_val",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->complex_math_operations#1->sqrt_val#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": 3.0,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 81,
+          "from_name": "complex_math_operations"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 87,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "name": "log_val",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->complex_math_operations#1->log_val#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": 2.1972245773362196,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 81,
+          "from_name": "complex_math_operations"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 87,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "name": "processed",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->complex_math_operations#1->processed#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": 5.19722457733622,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 81,
+          "from_name": "complex_math_operations"
+        },
+        {
+          "type": "produces",
+          "from_id": 87,
+          "from_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "name": "num",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->complex_math_operations#1->num#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": 16.0,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 81,
+          "from_name": "complex_math_operations"
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "name": "sqrt_val",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->complex_math_operations#1->sqrt_val#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": 4.0,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 81,
+          "from_name": "complex_math_operations"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 100,
+          "to_name": "operator.mul"
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "name": "log_val",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->complex_math_operations#1->log_val#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": 2.772588722239781,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 81,
+          "from_name": "complex_math_operations"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 100,
+          "to_name": "operator.mul"
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "name": "operator.mul",
+      "type": "operator",
+      "module": "builtin",
+      "context": "complex_computation#1->complex_math_operations#1->operator.mul#1",
+      "performance": {
+        "execution_time_ms": 0.01,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 98,
+          "from_name": "sqrt_val"
+        },
+        {
+          "type": "uses",
+          "from_id": 99,
+          "from_name": "log_val"
+        },
+        {
+          "type": "uses",
+          "from_id": 103,
+          "from_name": "sqrt_val"
+        },
+        {
+          "type": "uses",
+          "from_id": 104,
+          "from_name": "log_val"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 101,
+          "to_name": "processed"
+        },
+        {
+          "type": "produces",
+          "to_id": 105,
+          "to_name": "processed"
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "name": "processed",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->complex_math_operations#1->processed#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": 11.090354888959125,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 81,
+          "from_name": "complex_math_operations"
+        },
+        {
+          "type": "produces",
+          "from_id": 100,
+          "from_name": "operator.mul"
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "name": "num",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->complex_math_operations#1->num#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": 25.0,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 81,
+          "from_name": "complex_math_operations"
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "name": "sqrt_val",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->complex_math_operations#1->sqrt_val#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": 5.0,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 81,
+          "from_name": "complex_math_operations"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 100,
+          "to_name": "operator.mul"
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "name": "log_val",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->complex_math_operations#1->log_val#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": 3.2188758248682006,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 81,
+          "from_name": "complex_math_operations"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 100,
+          "to_name": "operator.mul"
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "name": "processed",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->complex_math_operations#1->processed#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": 16.094379124341003,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 81,
+          "from_name": "complex_math_operations"
+        },
+        {
+          "type": "produces",
+          "from_id": 100,
+          "from_name": "operator.mul"
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "name": "total_sum",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->complex_math_operations#1->total_sum#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 36.76825295175624,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 81,
+          "from_name": "complex_math_operations"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 107,
+          "to_name": "operator.div"
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "name": "operator.div",
+      "type": "operator",
+      "module": "builtin",
+      "context": "complex_computation#1->complex_math_operations#1->operator.div#1",
+      "performance": {
+        "execution_time_ms": 0.01,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 106,
+          "from_name": "total_sum"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 108,
+          "to_name": "average"
+        }
+      ]
+    },
+    {
+      "id": 108,
+      "name": "average",
+      "type": "variable",
+      "module": "complex_computation#1",
+      "context": "complex_computation#1->complex_math_operations#1->average#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 7.353650590351248,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 81,
+          "from_name": "complex_math_operations"
+        },
+        {
+          "type": "produces",
+          "from_id": 107,
+          "from_name": "operator.div"
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "name": "math_result",
+      "type": "variable",
+      "module": "global",
+      "context": "complex_computation#1->math_result#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.003
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 1,
+          "from_name": "complex_computation"
+        },
+        {
+          "type": "flows_to",
+          "from_id": 82,
+          "from_name": "numbers"
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "name": "final_result",
+      "type": "variable",
+      "module": "global",
+      "context": "complex_computation#1->final_result#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.004
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 1,
+          "from_name": "complex_computation"
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "name": "tracing_context",
+      "type": "function",
+      "module": "core.enhanced_tracer",
+      "context": "tracing_context#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0.16862106323242188,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0.16862106323242188,
+        "memory_usage": 176812
+      },
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 112,
+          "to_name": "self"
+        },
+        {
+          "type": "calls",
+          "to_id": 113,
+          "to_name": "stop_tracing"
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "name": "self",
+      "type": "variable",
+      "module": "global",
+      "context": "tracing_context#1->self#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 111,
+          "from_name": "tracing_context"
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "name": "stop_tracing",
+      "type": "function",
+      "module": "core.enhanced_tracer",
+      "context": "tracing_context#1->stop_tracing#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0.17201709747314453,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0.17201709747314453,
+        "memory_usage": 180373
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 111,
+          "from_name": "tracing_context"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 114,
+          "to_name": "self"
+        },
+        {
+          "type": "creates",
+          "to_id": 115,
+          "to_name": "self"
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "name": "self",
+      "type": "variable",
+      "module": "tracing_context#1",
+      "context": "tracing_context#1->stop_tracing#1->self#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 113,
+          "from_name": "stop_tracing"
+        },
+        {
+          "type": "parameter",
+          "from_id": 114,
+          "from_name": "self"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "parameter",
+          "to_id": 114,
+          "to_name": "self"
+        }
+      ]
+    },
+    {
+      "id": 115,
+      "name": "self",
+      "type": "variable",
+      "module": "tracing_context#1",
+      "context": "tracing_context#1->stop_tracing#1->self#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 113,
+          "from_name": "stop_tracing"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2,
+      "type": "calls"
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "type": "creates"
+    },
+    {
+      "from": 2,
+      "to": 4,
+      "type": "creates"
+    },
+    {
+      "from": 2,
+      "to": 5,
+      "type": "creates"
+    },
+    {
+      "from": 2,
+      "to": 6,
+      "type": "creates"
+    },
+    {
+      "from": 2,
+      "to": 7,
+      "type": "creates"
+    },
+    {
+      "from": 2,
+      "to": 8,
+      "type": "creates"
+    },
+    {
+      "from": 2,
+      "to": 9,
+      "type": "modifies"
+    },
+    {
+      "from": 2,
+      "to": 10,
+      "type": "modifies"
+    },
+    {
+      "from": 2,
+      "to": 11,
+      "type": "modifies"
+    },
+    {
+      "from": 11,
+      "to": 12,
+      "type": "uses"
+    },
+    {
+      "from": 2,
+      "to": 13,
+      "type": "modifies"
+    },
+    {
+      "from": 2,
+      "to": 14,
+      "type": "modifies"
+    },
+    {
+      "from": 2,
+      "to": 15,
+      "type": "modifies"
+    },
+    {
+      "from": 2,
+      "to": 16,
+      "type": "modifies"
+    },
+    {
+      "from": 2,
+      "to": 17,
+      "type": "modifies"
+    },
+    {
+      "from": 2,
+      "to": 18,
+      "type": "modifies"
+    },
+    {
+      "from": 2,
+      "to": 19,
+      "type": "modifies"
+    },
+    {
+      "from": 2,
+      "to": 20,
+      "type": "modifies"
+    },
+    {
+      "from": 20,
+      "to": 12,
+      "type": "uses"
+    },
+    {
+      "from": 2,
+      "to": 21,
+      "type": "modifies"
+    },
+    {
+      "from": 2,
+      "to": 22,
+      "type": "modifies"
+    },
+    {
+      "from": 2,
+      "to": 23,
+      "type": "modifies"
+    },
+    {
+      "from": 2,
+      "to": 24,
+      "type": "modifies"
+    },
+    {
+      "from": 2,
+      "to": 25,
+      "type": "modifies"
+    },
+    {
+      "from": 2,
+      "to": 26,
+      "type": "modifies"
+    },
+    {
+      "from": 26,
+      "to": 12,
+      "type": "uses"
+    },
+    {
+      "from": 2,
+      "to": 27,
+      "type": "modifies"
+    },
+    {
+      "from": 2,
+      "to": 28,
+      "type": "modifies"
+    },
+    {
+      "from": 2,
+      "to": 29,
+      "type": "modifies"
+    },
+    {
+      "from": 2,
+      "to": 30,
+      "type": "modifies"
+    },
+    {
+      "from": 2,
+      "to": 31,
+      "type": "modifies"
+    },
+    {
+      "from": 2,
+      "to": 32,
+      "type": "modifies"
+    },
+    {
+      "from": 2,
+      "to": 33,
+      "type": "modifies"
+    },
+    {
+      "from": 2,
+      "to": 34,
+      "type": "modifies"
+    },
+    {
+      "from": 34,
+      "to": 12,
+      "type": "uses"
+    },
+    {
+      "from": 2,
+      "to": 35,
+      "type": "modifies"
+    },
+    {
+      "from": 2,
+      "to": 36,
+      "type": "modifies"
+    },
+    {
+      "from": 2,
+      "to": 37,
+      "type": "modifies"
+    },
+    {
+      "from": 2,
+      "to": 38,
+      "type": "modifies"
+    },
+    {
+      "from": 1,
+      "to": 39,
+      "type": "creates"
+    },
+    {
+      "from": 3,
+      "to": 39,
+      "type": "flows_to"
+    },
+    {
+      "from": 1,
+      "to": 40,
+      "type": "calls"
+    },
+    {
+      "from": 40,
+      "to": 41,
+      "type": "creates"
+    },
+    {
+      "from": 41,
+      "to": 41,
+      "type": "parameter"
+    },
+    {
+      "from": 40,
+      "to": 42,
+      "type": "creates"
+    },
+    {
+      "from": 40,
+      "to": 43,
+      "type": "creates"
+    },
+    {
+      "from": 40,
+      "to": 44,
+      "type": "creates"
+    },
+    {
+      "from": 40,
+      "to": 45,
+      "type": "creates"
+    },
+    {
+      "from": 43,
+      "to": 46,
+      "type": "uses"
+    },
+    {
+      "from": 44,
+      "to": 46,
+      "type": "uses"
+    },
+    {
+      "from": 40,
+      "to": 47,
+      "type": "creates"
+    },
+    {
+      "from": 46,
+      "to": 47,
+      "type": "produces"
+    },
+    {
+      "from": 40,
+      "to": 48,
+      "type": "modifies"
+    },
+    {
+      "from": 40,
+      "to": 49,
+      "type": "modifies"
+    },
+    {
+      "from": 48,
+      "to": 46,
+      "type": "uses"
+    },
+    {
+      "from": 40,
+      "to": 50,
+      "type": "modifies"
+    },
+    {
+      "from": 46,
+      "to": 50,
+      "type": "produces"
+    },
+    {
+      "from": 40,
+      "to": 51,
+      "type": "modifies"
+    },
+    {
+      "from": 40,
+      "to": 52,
+      "type": "modifies"
+    },
+    {
+      "from": 51,
+      "to": 46,
+      "type": "uses"
+    },
+    {
+      "from": 40,
+      "to": 53,
+      "type": "modifies"
+    },
+    {
+      "from": 46,
+      "to": 53,
+      "type": "produces"
+    },
+    {
+      "from": 40,
+      "to": 54,
+      "type": "modifies"
+    },
+    {
+      "from": 40,
+      "to": 55,
+      "type": "modifies"
+    },
+    {
+      "from": 40,
+      "to": 56,
+      "type": "modifies"
+    },
+    {
+      "from": 54,
+      "to": 46,
+      "type": "uses"
+    },
+    {
+      "from": 55,
+      "to": 46,
+      "type": "uses"
+    },
+    {
+      "from": 40,
+      "to": 57,
+      "type": "modifies"
+    },
+    {
+      "from": 46,
+      "to": 57,
+      "type": "produces"
+    },
+    {
+      "from": 40,
+      "to": 58,
+      "type": "modifies"
+    },
+    {
+      "from": 40,
+      "to": 59,
+      "type": "modifies"
+    },
+    {
+      "from": 40,
+      "to": 60,
+      "type": "modifies"
+    },
+    {
+      "from": 58,
+      "to": 46,
+      "type": "uses"
+    },
+    {
+      "from": 59,
+      "to": 46,
+      "type": "uses"
+    },
+    {
+      "from": 40,
+      "to": 61,
+      "type": "modifies"
+    },
+    {
+      "from": 46,
+      "to": 61,
+      "type": "produces"
+    },
+    {
+      "from": 40,
+      "to": 62,
+      "type": "modifies"
+    },
+    {
+      "from": 40,
+      "to": 63,
+      "type": "modifies"
+    },
+    {
+      "from": 40,
+      "to": 64,
+      "type": "modifies"
+    },
+    {
+      "from": 62,
+      "to": 46,
+      "type": "uses"
+    },
+    {
+      "from": 63,
+      "to": 46,
+      "type": "uses"
+    },
+    {
+      "from": 40,
+      "to": 65,
+      "type": "modifies"
+    },
+    {
+      "from": 46,
+      "to": 65,
+      "type": "produces"
+    },
+    {
+      "from": 40,
+      "to": 66,
+      "type": "modifies"
+    },
+    {
+      "from": 40,
+      "to": 67,
+      "type": "modifies"
+    },
+    {
+      "from": 40,
+      "to": 68,
+      "type": "modifies"
+    },
+    {
+      "from": 66,
+      "to": 46,
+      "type": "uses"
+    },
+    {
+      "from": 67,
+      "to": 46,
+      "type": "uses"
+    },
+    {
+      "from": 40,
+      "to": 69,
+      "type": "modifies"
+    },
+    {
+      "from": 46,
+      "to": 69,
+      "type": "produces"
+    },
+    {
+      "from": 40,
+      "to": 70,
+      "type": "modifies"
+    },
+    {
+      "from": 40,
+      "to": 71,
+      "type": "modifies"
+    },
+    {
+      "from": 40,
+      "to": 72,
+      "type": "modifies"
+    },
+    {
+      "from": 70,
+      "to": 46,
+      "type": "uses"
+    },
+    {
+      "from": 71,
+      "to": 46,
+      "type": "uses"
+    },
+    {
+      "from": 40,
+      "to": 73,
+      "type": "modifies"
+    },
+    {
+      "from": 46,
+      "to": 73,
+      "type": "produces"
+    },
+    {
+      "from": 40,
+      "to": 74,
+      "type": "modifies"
+    },
+    {
+      "from": 40,
+      "to": 75,
+      "type": "modifies"
+    },
+    {
+      "from": 40,
+      "to": 76,
+      "type": "modifies"
+    },
+    {
+      "from": 74,
+      "to": 46,
+      "type": "uses"
+    },
+    {
+      "from": 75,
+      "to": 46,
+      "type": "uses"
+    },
+    {
+      "from": 40,
+      "to": 77,
+      "type": "modifies"
+    },
+    {
+      "from": 46,
+      "to": 77,
+      "type": "produces"
+    },
+    {
+      "from": 40,
+      "to": 78,
+      "type": "modifies"
+    },
+    {
+      "from": 40,
+      "to": 79,
+      "type": "modifies"
+    },
+    {
+      "from": 1,
+      "to": 80,
+      "type": "creates"
+    },
+    {
+      "from": 76,
+      "to": 80,
+      "type": "flows_to"
+    },
+    {
+      "from": 1,
+      "to": 81,
+      "type": "calls"
+    },
+    {
+      "from": 81,
+      "to": 82,
+      "type": "creates"
+    },
+    {
+      "from": 81,
+      "to": 83,
+      "type": "creates"
+    },
+    {
+      "from": 81,
+      "to": 84,
+      "type": "creates"
+    },
+    {
+      "from": 81,
+      "to": 85,
+      "type": "creates"
+    },
+    {
+      "from": 81,
+      "to": 86,
+      "type": "creates"
+    },
+    {
+      "from": 85,
+      "to": 87,
+      "type": "uses"
+    },
+    {
+      "from": 86,
+      "to": 87,
+      "type": "uses"
+    },
+    {
+      "from": 81,
+      "to": 88,
+      "type": "creates"
+    },
+    {
+      "from": 87,
+      "to": 88,
+      "type": "produces"
+    },
+    {
+      "from": 81,
+      "to": 89,
+      "type": "modifies"
+    },
+    {
+      "from": 81,
+      "to": 90,
+      "type": "modifies"
+    },
+    {
+      "from": 81,
+      "to": 91,
+      "type": "modifies"
+    },
+    {
+      "from": 90,
+      "to": 87,
+      "type": "uses"
+    },
+    {
+      "from": 91,
+      "to": 87,
+      "type": "uses"
+    },
+    {
+      "from": 81,
+      "to": 92,
+      "type": "modifies"
+    },
+    {
+      "from": 87,
+      "to": 92,
+      "type": "produces"
+    },
+    {
+      "from": 81,
+      "to": 93,
+      "type": "modifies"
+    },
+    {
+      "from": 81,
+      "to": 94,
+      "type": "modifies"
+    },
+    {
+      "from": 81,
+      "to": 95,
+      "type": "modifies"
+    },
+    {
+      "from": 94,
+      "to": 87,
+      "type": "uses"
+    },
+    {
+      "from": 95,
+      "to": 87,
+      "type": "uses"
+    },
+    {
+      "from": 81,
+      "to": 96,
+      "type": "modifies"
+    },
+    {
+      "from": 87,
+      "to": 96,
+      "type": "produces"
+    },
+    {
+      "from": 81,
+      "to": 97,
+      "type": "modifies"
+    },
+    {
+      "from": 81,
+      "to": 98,
+      "type": "modifies"
+    },
+    {
+      "from": 81,
+      "to": 99,
+      "type": "modifies"
+    },
+    {
+      "from": 98,
+      "to": 100,
+      "type": "uses"
+    },
+    {
+      "from": 99,
+      "to": 100,
+      "type": "uses"
+    },
+    {
+      "from": 81,
+      "to": 101,
+      "type": "modifies"
+    },
+    {
+      "from": 100,
+      "to": 101,
+      "type": "produces"
+    },
+    {
+      "from": 81,
+      "to": 102,
+      "type": "modifies"
+    },
+    {
+      "from": 81,
+      "to": 103,
+      "type": "modifies"
+    },
+    {
+      "from": 81,
+      "to": 104,
+      "type": "modifies"
+    },
+    {
+      "from": 103,
+      "to": 100,
+      "type": "uses"
+    },
+    {
+      "from": 104,
+      "to": 100,
+      "type": "uses"
+    },
+    {
+      "from": 81,
+      "to": 105,
+      "type": "modifies"
+    },
+    {
+      "from": 100,
+      "to": 105,
+      "type": "produces"
+    },
+    {
+      "from": 81,
+      "to": 106,
+      "type": "creates"
+    },
+    {
+      "from": 106,
+      "to": 107,
+      "type": "uses"
+    },
+    {
+      "from": 81,
+      "to": 108,
+      "type": "creates"
+    },
+    {
+      "from": 107,
+      "to": 108,
+      "type": "produces"
+    },
+    {
+      "from": 1,
+      "to": 109,
+      "type": "creates"
+    },
+    {
+      "from": 82,
+      "to": 109,
+      "type": "flows_to"
+    },
+    {
+      "from": 1,
+      "to": 110,
+      "type": "creates"
+    },
+    {
+      "from": 111,
+      "to": 112,
+      "type": "creates"
+    },
+    {
+      "from": 111,
+      "to": 113,
+      "type": "calls"
+    },
+    {
+      "from": 113,
+      "to": 114,
+      "type": "creates"
+    },
+    {
+      "from": 114,
+      "to": 114,
+      "type": "parameter"
+    },
+    {
+      "from": 113,
+      "to": 115,
+      "type": "creates"
+    }
+  ],
+  "memory_report": {
+    "peak_memory_mb": 1070.87890625,
+    "peak_gpu_memory_mb": 0,
+    "total_variables_tracked": 0,
+    "function_profiles": {
+      "current_thread#1": {
+        "function": "current_thread",
+        "call_count": 1,
+        "peak_memory_mb": 1070.87890625,
+        "allocated_mb": 0.95703125,
+        "freed_mb": 0,
+        "duration_ms": 0.9791851043701172
+      },
+      "complex_computation#1": {
+        "function": "complex_computation",
+        "call_count": 1,
+        "peak_memory_mb": 0.16663837432861328,
+        "allocated_mb": 0.16590595245361328,
+        "freed_mb": 0,
+        "duration_ms": 34.28244590759277
+      },
+      "complex_computation#1->matrix_operations#1": {
+        "function": "matrix_operations",
+        "call_count": 1,
+        "peak_memory_mb": 0.05896568298339844,
+        "allocated_mb": 0.054785728454589844,
+        "freed_mb": 0,
+        "duration_ms": 9.598493576049805
+      },
+      "complex_computation#1->fibonacci_computation#1": {
+        "function": "fibonacci_computation",
+        "call_count": 1,
+        "peak_memory_mb": 0.1151590347290039,
+        "allocated_mb": 0.05382537841796875,
+        "freed_mb": 0,
+        "duration_ms": 10.334491729736328
+      },
+      "complex_computation#1->complex_math_operations#1": {
+        "function": "complex_math_operations",
+        "call_count": 1,
+        "peak_memory_mb": 0.15956401824951172,
+        "allocated_mb": 0.04145526885986328,
+        "freed_mb": 0,
+        "duration_ms": 11.237859725952148
+      },
+      "tracing_context#1": {
+        "function": "tracing_context",
+        "call_count": 1,
+        "peak_memory_mb": 0.16818618774414062,
+        "allocated_mb": 0,
+        "freed_mb": 0,
+        "duration_ms": 0
+      },
+      "tracing_context#1->stop_tracing#1": {
+        "function": "stop_tracing",
+        "call_count": 1,
+        "peak_memory_mb": 0.17184925079345703,
+        "allocated_mb": 0,
+        "freed_mb": 0,
+        "duration_ms": 0
+      }
+    },
+    "variable_summary": {}
+  },
+  "flame_graph": {
+    "name": "root",
+    "value": 1070.87890625,
+    "children": [
+      {
+        "name": "current_thread#1",
+        "value": 1070.87890625,
+        "children": []
+      },
+      {
+        "name": "complex_computation#1",
+        "value": 0.16663837432861328,
+        "children": [
+          {
+            "name": "matrix_operations#1",
+            "value": 0.05896568298339844,
+            "children": []
+          },
+          {
+            "name": "fibonacci_computation#1",
+            "value": 0.1151590347290039,
+            "children": []
+          },
+          {
+            "name": "complex_math_operations#1",
+            "value": 0.15956401824951172,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "tracing_context#1",
+        "value": 0.16818618774414062,
+        "children": [
+          {
+            "name": "stop_tracing#1",
+            "value": 0.17184925079345703,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "statistics": {
+    "total_nodes": 116,
+    "function_nodes": 7,
+    "variable_nodes": 104,
+    "total_variables_tracked": 23,
+    "peak_memory_mb": 1070.87890625
+  }
+}

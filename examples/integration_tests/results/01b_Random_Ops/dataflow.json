@@ -1,0 +1,924 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "name": "random_pipeline",
+      "type": "function",
+      "module": "__main__",
+      "context": "random_pipeline#1",
+      "performance": {
+        "execution_time_ms": 11.056900024414062,
+        "memory_before_mb": 0.000911712646484375,
+        "memory_after_mb": 0.1333751678466797,
+        "memory_allocated_mb": 0.1324634552001953,
+        "peak_memory_mb": 0.1333751678466797,
+        "memory_usage": 139854
+      },
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 1,
+          "to_name": "a"
+        },
+        {
+          "type": "creates",
+          "to_id": 3,
+          "to_name": "b"
+        },
+        {
+          "type": "creates",
+          "to_id": 5,
+          "to_name": "c"
+        },
+        {
+          "type": "creates",
+          "to_id": 7,
+          "to_name": "d"
+        },
+        {
+          "type": "creates",
+          "to_id": 9,
+          "to_name": "result"
+        },
+        {
+          "type": "calls",
+          "to_id": 11,
+          "to_name": "mean"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "a",
+      "type": "variable",
+      "module": "global",
+      "context": "random_pipeline#1->a#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          50,
+          50
+        ],
+        "dtype": "float64",
+        "device": null,
+        "size_mb": 0.019073486328125
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "random_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 2,
+          "from_name": "rand"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 10,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "rand",
+      "type": "function_call",
+      "module": "library",
+      "context": "random_pipeline#1->rand#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 1,
+          "to_name": "a"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "b",
+      "type": "variable",
+      "module": "global",
+      "context": "random_pipeline#1->b#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          50,
+          50
+        ],
+        "dtype": "float64",
+        "device": null,
+        "size_mb": 0.019073486328125
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "random_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 4,
+          "from_name": "randn"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 10,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "randn",
+      "type": "function_call",
+      "module": "library",
+      "context": "random_pipeline#1->randn#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 3,
+          "to_name": "b"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "c",
+      "type": "variable",
+      "module": "global",
+      "context": "random_pipeline#1->c#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          50,
+          50
+        ],
+        "dtype": "float64",
+        "device": null,
+        "size_mb": 0.019073486328125
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "random_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 6,
+          "from_name": "normal"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 10,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "normal",
+      "type": "function_call",
+      "module": "library",
+      "context": "random_pipeline#1->normal#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 5,
+          "to_name": "c"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "d",
+      "type": "variable",
+      "module": "global",
+      "context": "random_pipeline#1->d#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          50,
+          50
+        ],
+        "dtype": "float64",
+        "device": null,
+        "size_mb": 0.019073486328125
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "random_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 8,
+          "from_name": "uniform"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 10,
+          "to_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "uniform",
+      "type": "function_call",
+      "module": "library",
+      "context": "random_pipeline#1->uniform#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 7,
+          "to_name": "d"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "result",
+      "type": "variable",
+      "module": "global",
+      "context": "random_pipeline#1->result#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          50,
+          50
+        ],
+        "dtype": "float64",
+        "device": null,
+        "size_mb": 0.019073486328125
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "random_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 10,
+          "from_name": "operator.add"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "operator.add",
+      "type": "operator",
+      "module": "builtin",
+      "context": "random_pipeline#1->operator.add#L1",
+      "performance": {
+        "execution_time_ms": 0.01,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 1,
+          "from_name": "a"
+        },
+        {
+          "type": "uses",
+          "from_id": 3,
+          "from_name": "b"
+        },
+        {
+          "type": "uses",
+          "from_id": 5,
+          "from_name": "c"
+        },
+        {
+          "type": "uses",
+          "from_id": 7,
+          "from_name": "d"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 9,
+          "to_name": "result"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "mean",
+      "type": "function",
+      "module": "unknown",
+      "context": "random_pipeline#1->mean#1",
+      "performance": {
+        "execution_time_ms": 3.5097599029541016,
+        "memory_before_mb": 0.1155405044555664,
+        "memory_after_mb": 0.1364269256591797,
+        "memory_allocated_mb": 0.02088642120361328,
+        "peak_memory_mb": 0.1364269256591797,
+        "memory_usage": 143054
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 0,
+          "from_name": "random_pipeline"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 12,
+          "to_name": "relevant_args"
+        },
+        {
+          "type": "calls",
+          "to_id": 13,
+          "to_name": "asanyarray"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "relevant_args",
+      "type": "variable",
+      "module": "random_pipeline#1",
+      "context": "random_pipeline#1->mean#1->relevant_args#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.002
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 11,
+          "from_name": "mean"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "asanyarray",
+      "type": "function",
+      "module": "numpy.core._asarray",
+      "context": "random_pipeline#1->mean#1->asanyarray#1",
+      "performance": {
+        "execution_time_ms": 1.5137195587158203,
+        "memory_before_mb": 0.12038803100585938,
+        "memory_after_mb": 0.13174152374267578,
+        "memory_allocated_mb": 0.011353492736816406,
+        "peak_memory_mb": 0.13174152374267578,
+        "memory_usage": 138141
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 11,
+          "from_name": "mean"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 14,
+          "to_name": "a"
+        },
+        {
+          "type": "creates",
+          "to_id": 15,
+          "to_name": "dtype"
+        },
+        {
+          "type": "creates",
+          "to_id": 16,
+          "to_name": "order"
+        },
+        {
+          "type": "creates",
+          "to_id": 17,
+          "to_name": "a"
+        },
+        {
+          "type": "creates",
+          "to_id": 18,
+          "to_name": "dtype"
+        },
+        {
+          "type": "creates",
+          "to_id": 19,
+          "to_name": "order"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "a",
+      "type": "variable",
+      "module": "random_pipeline#1",
+      "context": "random_pipeline#1->mean#1->asanyarray#1->a#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          50,
+          50
+        ],
+        "dtype": "float64",
+        "device": null,
+        "size_mb": 0.019073486328125
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 13,
+          "from_name": "asanyarray"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "dtype",
+      "type": "variable",
+      "module": "random_pipeline#1",
+      "context": "random_pipeline#1->mean#1->asanyarray#1->dtype#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 13,
+          "from_name": "asanyarray"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "parameter",
+          "to_id": 16,
+          "to_name": "order"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "order",
+      "type": "variable",
+      "module": "random_pipeline#1",
+      "context": "random_pipeline#1->mean#1->asanyarray#1->order#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 13,
+          "from_name": "asanyarray"
+        },
+        {
+          "type": "parameter",
+          "from_id": 15,
+          "from_name": "dtype"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "a",
+      "type": "variable",
+      "module": "random_pipeline#1",
+      "context": "random_pipeline#1->mean#1->asanyarray#1->a#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          50,
+          50
+        ],
+        "dtype": "float64",
+        "device": null,
+        "size_mb": 0.019073486328125
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 13,
+          "from_name": "asanyarray"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "dtype",
+      "type": "variable",
+      "module": "random_pipeline#1",
+      "context": "random_pipeline#1->mean#1->asanyarray#1->dtype#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 13,
+          "from_name": "asanyarray"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "order",
+      "type": "variable",
+      "module": "random_pipeline#1",
+      "context": "random_pipeline#1->mean#1->asanyarray#1->order#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 13,
+          "from_name": "asanyarray"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "<return_expression>",
+      "type": "variable",
+      "module": "anonymous",
+      "context": "random_pipeline#1->mean#1-><return_expression>",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 0,
+        "actual_value": 0.48783502783939164,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      }
+    }
+  ],
+  "edges": [
+    [
+      0,
+      1,
+      "creates"
+    ],
+    [
+      2,
+      1,
+      "produces"
+    ],
+    [
+      0,
+      3,
+      "creates"
+    ],
+    [
+      4,
+      3,
+      "produces"
+    ],
+    [
+      0,
+      5,
+      "creates"
+    ],
+    [
+      6,
+      5,
+      "produces"
+    ],
+    [
+      0,
+      7,
+      "creates"
+    ],
+    [
+      8,
+      7,
+      "produces"
+    ],
+    [
+      0,
+      9,
+      "creates"
+    ],
+    [
+      1,
+      10,
+      "uses"
+    ],
+    [
+      3,
+      10,
+      "uses"
+    ],
+    [
+      5,
+      10,
+      "uses"
+    ],
+    [
+      7,
+      10,
+      "uses"
+    ],
+    [
+      10,
+      9,
+      "produces"
+    ],
+    [
+      0,
+      11,
+      "calls"
+    ],
+    [
+      11,
+      12,
+      "creates"
+    ],
+    [
+      11,
+      13,
+      "calls"
+    ],
+    [
+      13,
+      14,
+      "creates"
+    ],
+    [
+      13,
+      15,
+      "creates"
+    ],
+    [
+      13,
+      16,
+      "creates"
+    ],
+    [
+      15,
+      16,
+      "parameter"
+    ],
+    [
+      13,
+      17,
+      "creates"
+    ],
+    [
+      13,
+      18,
+      "creates"
+    ],
+    [
+      13,
+      19,
+      "creates"
+    ]
+  ],
+  "memory_report": {
+    "peak_memory_mb": 0.1364269256591797,
+    "peak_gpu_memory_mb": 0,
+    "total_variables_tracked": 0,
+    "function_profiles": {
+      "random_pipeline#1": {
+        "function": "random_pipeline",
+        "call_count": 1,
+        "peak_memory_mb": 0.1333751678466797,
+        "allocated_mb": 0.1326160430908203,
+        "freed_mb": 0,
+        "duration_ms": 11.205673217773438
+      },
+      "random_pipeline#1->mean#1": {
+        "function": "mean",
+        "call_count": 1,
+        "peak_memory_mb": 0.1364269256591797,
+        "allocated_mb": 0.02100849151611328,
+        "freed_mb": 0,
+        "duration_ms": 3.5789012908935547
+      },
+      "random_pipeline#1->mean#1->asanyarray#1": {
+        "function": "asanyarray",
+        "call_count": 1,
+        "peak_memory_mb": 0.13174152374267578,
+        "allocated_mb": 0.011597633361816406,
+        "freed_mb": 0,
+        "duration_ms": 1.6162395477294922
+      }
+    },
+    "variable_summary": {}
+  },
+  "flame_graph": {
+    "name": "root",
+    "value": 0.1364269256591797,
+    "children": [
+      {
+        "name": "random_pipeline#1",
+        "value": 0.1333751678466797,
+        "children": [
+          {
+            "name": "mean#1",
+            "value": 0.1364269256591797,
+            "children": [
+              {
+                "name": "asanyarray#1",
+                "value": 0.13174152374267578,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "statistics": {
+    "total_nodes": 21,
+    "function_nodes": 3,
+    "variable_nodes": 13,
+    "total_variables_tracked": 9,
+    "peak_memory_mb": 0.1364269256591797
+  }
+}

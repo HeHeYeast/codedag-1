@@ -1,0 +1,68 @@
+{
+  "case_name": "04b_OpenCVGenerator",
+  "success": true,
+  "trace_time": 0.07937932014465332,
+  "node_count": 141,
+  "edge_count": 213,
+  "function_nodes": 7,
+  "variable_nodes": 102,
+  "optimize_time": 2.075469732284546,
+  "coarsening_stats": {
+    "pattern_count": 0,
+    "total_instances": 0,
+    "nodes_saved": 0,
+    "pattern_details": []
+  },
+  "partition_stats": {
+    "partition_count": 2,
+    "partition_sizes": [
+      128,
+      13
+    ],
+    "partition_loads": [
+      0.009000000000000001,
+      0.008
+    ],
+    "avg_load": 0.0085,
+    "max_load": 0.009000000000000001,
+    "min_load": 0.008,
+    "load_balance": 0.8823529411764705,
+    "total_nodes": 141
+  },
+  "optimization_stats": {
+    "iterations": 10,
+    "moves_executed": 1,
+    "initial_objective": 1.1035294117647056,
+    "final_objective": 0.6588235294117647,
+    "improvement": 0.44470588235294095,
+    "improvement_ratio": 40.29850746268656
+  },
+  "partition_count": 2,
+  "migration_time": 0.04541373252868652,
+  "migration_stats": {
+    "is_applied": false,
+    "context_mappings": 17,
+    "registry_stats": {
+      "total": 153,
+      "exact_match": 145,
+      "prefix_match": 8,
+      "by_strategy": {
+        "StandardOp": 118,
+        "MoveOnly": 8,
+        "NonMigratable": 13,
+        "FactoryOp": 6
+      },
+      "by_priority": {
+        "0": 35,
+        "1": 6,
+        "2": 86,
+        "3": 18
+      }
+    },
+    "gpu_count": 1,
+    "default_device": "cuda:0"
+  },
+  "patched_count": 122,
+  "errors": [],
+  "warnings": []
+}

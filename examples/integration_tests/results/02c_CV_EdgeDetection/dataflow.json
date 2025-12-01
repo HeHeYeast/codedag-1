@@ -1,0 +1,1754 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "name": "edge_detection_pipeline",
+      "type": "function",
+      "module": "__main__",
+      "context": "edge_detection_pipeline#1",
+      "performance": {
+        "execution_time_ms": 62.180280685424805,
+        "memory_before_mb": 0.000980377197265625,
+        "memory_after_mb": 5.805362701416016,
+        "memory_allocated_mb": 5.80438232421875,
+        "peak_memory_mb": 5.805362701416016,
+        "memory_usage": 6087364
+      },
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 1,
+          "to_name": "img_list"
+        },
+        {
+          "type": "creates",
+          "to_id": 2,
+          "to_name": "edges_list"
+        },
+        {
+          "type": "creates",
+          "to_id": 3,
+          "to_name": "img"
+        },
+        {
+          "type": "creates",
+          "to_id": 4,
+          "to_name": "gray"
+        },
+        {
+          "type": "creates",
+          "to_id": 6,
+          "to_name": "canny"
+        },
+        {
+          "type": "creates",
+          "to_id": 8,
+          "to_name": "sobel_x"
+        },
+        {
+          "type": "creates",
+          "to_id": 10,
+          "to_name": "sobel_y"
+        },
+        {
+          "type": "creates",
+          "to_id": 11,
+          "to_name": "edges"
+        },
+        {
+          "type": "modifies",
+          "to_id": 15,
+          "to_name": "edges"
+        },
+        {
+          "type": "modifies",
+          "to_id": 17,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 18,
+          "to_name": "gray"
+        },
+        {
+          "type": "modifies",
+          "to_id": 19,
+          "to_name": "canny"
+        },
+        {
+          "type": "modifies",
+          "to_id": 20,
+          "to_name": "sobel_x"
+        },
+        {
+          "type": "modifies",
+          "to_id": 21,
+          "to_name": "sobel_y"
+        },
+        {
+          "type": "modifies",
+          "to_id": 22,
+          "to_name": "edges"
+        },
+        {
+          "type": "modifies",
+          "to_id": 23,
+          "to_name": "edges"
+        },
+        {
+          "type": "modifies",
+          "to_id": 24,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 25,
+          "to_name": "gray"
+        },
+        {
+          "type": "modifies",
+          "to_id": 26,
+          "to_name": "canny"
+        },
+        {
+          "type": "modifies",
+          "to_id": 27,
+          "to_name": "sobel_x"
+        },
+        {
+          "type": "modifies",
+          "to_id": 28,
+          "to_name": "sobel_y"
+        },
+        {
+          "type": "modifies",
+          "to_id": 29,
+          "to_name": "edges"
+        },
+        {
+          "type": "modifies",
+          "to_id": 30,
+          "to_name": "edges"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "img_list",
+      "type": "variable",
+      "module": "global",
+      "context": "edge_detection_pipeline#1->img_list#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.003
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "edge_detection_pipeline"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "edges_list",
+      "type": "variable",
+      "module": "global",
+      "context": "edge_detection_pipeline#1->edges_list#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.0
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "edge_detection_pipeline"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "img",
+      "type": "variable",
+      "module": "global",
+      "context": "edge_detection_pipeline#1->img#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          512,
+          512,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.75
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "edge_detection_pipeline"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 5,
+          "to_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "gray",
+      "type": "variable",
+      "module": "global",
+      "context": "edge_detection_pipeline#1->gray#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.25
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "edge_detection_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 5,
+          "from_name": "cvtColor"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 7,
+          "to_name": "Canny"
+        },
+        {
+          "type": "uses",
+          "to_id": 9,
+          "to_name": "Sobel"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "cvtColor",
+      "type": "function_call",
+      "module": "library",
+      "context": "edge_detection_pipeline#1->cvtColor#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 3,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 17,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 24,
+          "from_name": "img"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 4,
+          "to_name": "gray"
+        },
+        {
+          "type": "produces",
+          "to_id": 18,
+          "to_name": "gray"
+        },
+        {
+          "type": "produces",
+          "to_id": 25,
+          "to_name": "gray"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "canny",
+      "type": "variable",
+      "module": "global",
+      "context": "edge_detection_pipeline#1->canny#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.25
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "edge_detection_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 7,
+          "from_name": "Canny"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Canny",
+      "type": "function_call",
+      "module": "library",
+      "context": "edge_detection_pipeline#1->Canny#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 4,
+          "from_name": "gray"
+        },
+        {
+          "type": "uses",
+          "from_id": 18,
+          "from_name": "gray"
+        },
+        {
+          "type": "uses",
+          "from_id": 25,
+          "from_name": "gray"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 6,
+          "to_name": "canny"
+        },
+        {
+          "type": "produces",
+          "to_id": 19,
+          "to_name": "canny"
+        },
+        {
+          "type": "produces",
+          "to_id": 26,
+          "to_name": "canny"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "sobel_x",
+      "type": "variable",
+      "module": "global",
+      "context": "edge_detection_pipeline#1->sobel_x#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "float64",
+        "device": null,
+        "size_mb": 2.0
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "edge_detection_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 9,
+          "from_name": "Sobel"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 13,
+          "to_name": "operator.pow"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Sobel",
+      "type": "function_call",
+      "module": "library",
+      "context": "edge_detection_pipeline#1->Sobel#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 4,
+          "from_name": "gray"
+        },
+        {
+          "type": "uses",
+          "from_id": 18,
+          "from_name": "gray"
+        },
+        {
+          "type": "uses",
+          "from_id": 25,
+          "from_name": "gray"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 8,
+          "to_name": "sobel_x"
+        },
+        {
+          "type": "produces",
+          "to_id": 10,
+          "to_name": "sobel_y"
+        },
+        {
+          "type": "produces",
+          "to_id": 20,
+          "to_name": "sobel_x"
+        },
+        {
+          "type": "produces",
+          "to_id": 21,
+          "to_name": "sobel_y"
+        },
+        {
+          "type": "produces",
+          "to_id": 27,
+          "to_name": "sobel_x"
+        },
+        {
+          "type": "produces",
+          "to_id": 28,
+          "to_name": "sobel_y"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "sobel_y",
+      "type": "variable",
+      "module": "global",
+      "context": "edge_detection_pipeline#1->sobel_y#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "float64",
+        "device": null,
+        "size_mb": 2.0
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "edge_detection_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 9,
+          "from_name": "Sobel"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 13,
+          "to_name": "operator.pow"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "edges",
+      "type": "variable",
+      "module": "global",
+      "context": "edge_detection_pipeline#1->edges#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "float64",
+        "device": null,
+        "size_mb": 2.0
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "edge_detection_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 12,
+          "from_name": "sqrt"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "sqrt",
+      "type": "function_call",
+      "module": "library",
+      "context": "edge_detection_pipeline#1->sqrt#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 11,
+          "to_name": "edges"
+        },
+        {
+          "type": "produces",
+          "to_id": 22,
+          "to_name": "edges"
+        },
+        {
+          "type": "produces",
+          "to_id": 29,
+          "to_name": "edges"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "operator.pow",
+      "type": "operator",
+      "module": "builtin",
+      "context": "edge_detection_pipeline#1->operator.pow#L1",
+      "performance": {
+        "execution_time_ms": 0.01,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 8,
+          "from_name": "sobel_x"
+        },
+        {
+          "type": "uses",
+          "from_id": 10,
+          "from_name": "sobel_y"
+        },
+        {
+          "type": "uses",
+          "from_id": 20,
+          "from_name": "sobel_x"
+        },
+        {
+          "type": "uses",
+          "from_id": 21,
+          "from_name": "sobel_y"
+        },
+        {
+          "type": "uses",
+          "from_id": 27,
+          "from_name": "sobel_x"
+        },
+        {
+          "type": "uses",
+          "from_id": 28,
+          "from_name": "sobel_y"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "operator.add",
+      "type": "operator",
+      "module": "builtin",
+      "context": "edge_detection_pipeline#1->operator.add#L1",
+      "performance": {
+        "execution_time_ms": 0.01,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      }
+    },
+    {
+      "id": 15,
+      "name": "edges",
+      "type": "variable",
+      "module": "global",
+      "context": "edge_detection_pipeline#1->edges#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": null,
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.25
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "edge_detection_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 16,
+          "from_name": "astype"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "astype",
+      "type": "function_call",
+      "module": "library",
+      "context": "edge_detection_pipeline#1->astype#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 15,
+          "to_name": "edges"
+        },
+        {
+          "type": "produces",
+          "to_id": 23,
+          "to_name": "edges"
+        },
+        {
+          "type": "produces",
+          "to_id": 30,
+          "to_name": "edges"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "img",
+      "type": "variable",
+      "module": "global",
+      "context": "edge_detection_pipeline#1->img#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": null,
+        "shape": [
+          512,
+          512,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.75
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "edge_detection_pipeline"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 5,
+          "to_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "gray",
+      "type": "variable",
+      "module": "global",
+      "context": "edge_detection_pipeline#1->gray#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": null,
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.25
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "edge_detection_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 5,
+          "from_name": "cvtColor"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 7,
+          "to_name": "Canny"
+        },
+        {
+          "type": "uses",
+          "to_id": 9,
+          "to_name": "Sobel"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "canny",
+      "type": "variable",
+      "module": "global",
+      "context": "edge_detection_pipeline#1->canny#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": null,
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.25
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "edge_detection_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 7,
+          "from_name": "Canny"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "sobel_x",
+      "type": "variable",
+      "module": "global",
+      "context": "edge_detection_pipeline#1->sobel_x#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": null,
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "float64",
+        "device": null,
+        "size_mb": 2.0
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "edge_detection_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 9,
+          "from_name": "Sobel"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 13,
+          "to_name": "operator.pow"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "sobel_y",
+      "type": "variable",
+      "module": "global",
+      "context": "edge_detection_pipeline#1->sobel_y#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": null,
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "float64",
+        "device": null,
+        "size_mb": 2.0
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "edge_detection_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 9,
+          "from_name": "Sobel"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 13,
+          "to_name": "operator.pow"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "edges",
+      "type": "variable",
+      "module": "global",
+      "context": "edge_detection_pipeline#1->edges#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": null,
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "float64",
+        "device": null,
+        "size_mb": 2.0
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "edge_detection_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 12,
+          "from_name": "sqrt"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "edges",
+      "type": "variable",
+      "module": "global",
+      "context": "edge_detection_pipeline#1->edges#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": null,
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.25
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "edge_detection_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 16,
+          "from_name": "astype"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "img",
+      "type": "variable",
+      "module": "global",
+      "context": "edge_detection_pipeline#1->img#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": null,
+        "shape": [
+          512,
+          512,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.75
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "edge_detection_pipeline"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 5,
+          "to_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "gray",
+      "type": "variable",
+      "module": "global",
+      "context": "edge_detection_pipeline#1->gray#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": null,
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.25
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "edge_detection_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 5,
+          "from_name": "cvtColor"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 7,
+          "to_name": "Canny"
+        },
+        {
+          "type": "uses",
+          "to_id": 9,
+          "to_name": "Sobel"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "canny",
+      "type": "variable",
+      "module": "global",
+      "context": "edge_detection_pipeline#1->canny#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": null,
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.25
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "edge_detection_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 7,
+          "from_name": "Canny"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "sobel_x",
+      "type": "variable",
+      "module": "global",
+      "context": "edge_detection_pipeline#1->sobel_x#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": null,
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "float64",
+        "device": null,
+        "size_mb": 2.0
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "edge_detection_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 9,
+          "from_name": "Sobel"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 13,
+          "to_name": "operator.pow"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "sobel_y",
+      "type": "variable",
+      "module": "global",
+      "context": "edge_detection_pipeline#1->sobel_y#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": null,
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "float64",
+        "device": null,
+        "size_mb": 2.0
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "edge_detection_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 9,
+          "from_name": "Sobel"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 13,
+          "to_name": "operator.pow"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "edges",
+      "type": "variable",
+      "module": "global",
+      "context": "edge_detection_pipeline#1->edges#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": null,
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "float64",
+        "device": null,
+        "size_mb": 2.0
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "edge_detection_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 12,
+          "from_name": "sqrt"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "edges",
+      "type": "variable",
+      "module": "global",
+      "context": "edge_detection_pipeline#1->edges#6",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 6,
+        "actual_value": null,
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.25
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "edge_detection_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 16,
+          "from_name": "astype"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "<return_expression>",
+      "type": "variable",
+      "module": "anonymous",
+      "context": "edge_detection_pipeline#1-><return_expression>",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 0,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.002
+      }
+    },
+    {
+      "id": 32,
+      "name": "<return_expression>",
+      "type": "variable",
+      "module": "anonymous",
+      "context": "edge_detection_pipeline#1-><return_expression>",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 0,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.002
+      }
+    },
+    {
+      "id": 33,
+      "name": "<return_expression>",
+      "type": "variable",
+      "module": "anonymous",
+      "context": "edge_detection_pipeline#1-><return_expression>",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 0,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.002
+      }
+    }
+  ],
+  "edges": [
+    [
+      0,
+      1,
+      "creates"
+    ],
+    [
+      0,
+      2,
+      "creates"
+    ],
+    [
+      0,
+      3,
+      "creates"
+    ],
+    [
+      0,
+      4,
+      "creates"
+    ],
+    [
+      3,
+      5,
+      "uses"
+    ],
+    [
+      5,
+      4,
+      "produces"
+    ],
+    [
+      0,
+      6,
+      "creates"
+    ],
+    [
+      4,
+      7,
+      "uses"
+    ],
+    [
+      7,
+      6,
+      "produces"
+    ],
+    [
+      0,
+      8,
+      "creates"
+    ],
+    [
+      4,
+      9,
+      "uses"
+    ],
+    [
+      9,
+      8,
+      "produces"
+    ],
+    [
+      0,
+      10,
+      "creates"
+    ],
+    [
+      9,
+      10,
+      "produces"
+    ],
+    [
+      0,
+      11,
+      "creates"
+    ],
+    [
+      8,
+      13,
+      "uses"
+    ],
+    [
+      10,
+      13,
+      "uses"
+    ],
+    [
+      12,
+      11,
+      "produces"
+    ],
+    [
+      0,
+      15,
+      "modifies"
+    ],
+    [
+      16,
+      15,
+      "produces"
+    ],
+    [
+      0,
+      17,
+      "modifies"
+    ],
+    [
+      0,
+      18,
+      "modifies"
+    ],
+    [
+      17,
+      5,
+      "uses"
+    ],
+    [
+      5,
+      18,
+      "produces"
+    ],
+    [
+      0,
+      19,
+      "modifies"
+    ],
+    [
+      18,
+      7,
+      "uses"
+    ],
+    [
+      7,
+      19,
+      "produces"
+    ],
+    [
+      0,
+      20,
+      "modifies"
+    ],
+    [
+      18,
+      9,
+      "uses"
+    ],
+    [
+      9,
+      20,
+      "produces"
+    ],
+    [
+      0,
+      21,
+      "modifies"
+    ],
+    [
+      9,
+      21,
+      "produces"
+    ],
+    [
+      0,
+      22,
+      "modifies"
+    ],
+    [
+      20,
+      13,
+      "uses"
+    ],
+    [
+      21,
+      13,
+      "uses"
+    ],
+    [
+      12,
+      22,
+      "produces"
+    ],
+    [
+      0,
+      23,
+      "modifies"
+    ],
+    [
+      16,
+      23,
+      "produces"
+    ],
+    [
+      0,
+      24,
+      "modifies"
+    ],
+    [
+      0,
+      25,
+      "modifies"
+    ],
+    [
+      24,
+      5,
+      "uses"
+    ],
+    [
+      5,
+      25,
+      "produces"
+    ],
+    [
+      0,
+      26,
+      "modifies"
+    ],
+    [
+      25,
+      7,
+      "uses"
+    ],
+    [
+      7,
+      26,
+      "produces"
+    ],
+    [
+      0,
+      27,
+      "modifies"
+    ],
+    [
+      25,
+      9,
+      "uses"
+    ],
+    [
+      9,
+      27,
+      "produces"
+    ],
+    [
+      0,
+      28,
+      "modifies"
+    ],
+    [
+      9,
+      28,
+      "produces"
+    ],
+    [
+      0,
+      29,
+      "modifies"
+    ],
+    [
+      27,
+      13,
+      "uses"
+    ],
+    [
+      28,
+      13,
+      "uses"
+    ],
+    [
+      12,
+      29,
+      "produces"
+    ],
+    [
+      0,
+      30,
+      "modifies"
+    ],
+    [
+      16,
+      30,
+      "produces"
+    ]
+  ],
+  "memory_report": {
+    "peak_memory_mb": 5.805362701416016,
+    "peak_gpu_memory_mb": 0,
+    "total_variables_tracked": 0,
+    "function_profiles": {
+      "edge_detection_pipeline#1": {
+        "function": "edge_detection_pipeline",
+        "call_count": 1,
+        "peak_memory_mb": 5.805362701416016,
+        "allocated_mb": 5.804534912109375,
+        "freed_mb": 0,
+        "duration_ms": 62.29043006896973
+      }
+    },
+    "variable_summary": {}
+  },
+  "flame_graph": {
+    "name": "root",
+    "value": 5.805362701416016,
+    "children": [
+      {
+        "name": "edge_detection_pipeline#1",
+        "value": 5.805362701416016,
+        "children": []
+      }
+    ]
+  },
+  "statistics": {
+    "total_nodes": 34,
+    "function_nodes": 1,
+    "variable_nodes": 26,
+    "total_variables_tracked": 9,
+    "peak_memory_mb": 5.805362701416016
+  }
+}

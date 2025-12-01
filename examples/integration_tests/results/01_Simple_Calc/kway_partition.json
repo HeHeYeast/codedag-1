@@ -1,0 +1,730 @@
+{
+  "partitioning_statistics": {
+    "partition_count": 2,
+    "partition_sizes": [
+      14,
+      23
+    ],
+    "partition_loads": [
+      0.001,
+      0.002
+    ],
+    "avg_load": 0.0015,
+    "max_load": 0.002,
+    "min_load": 0.001,
+    "load_balance": 0.33333333333333337,
+    "total_nodes": 37
+  },
+  "edge_cut_statistics": {
+    "total_edges": 52,
+    "cut_edges": 16,
+    "internal_edges": 36,
+    "cut_ratio": 0.3076923076923077
+  },
+  "partition_count": 2,
+  "nodes": [
+    {
+      "id": 0,
+      "name": "simple_matrix_computation",
+      "type": "function",
+      "partition_id": 0,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.3660333,
+        "end_time": 1764580559.4633365,
+        "execution_time_ms": 97.30315208435059,
+        "memory_before_mb": 0.00618743896484375,
+        "memory_after_mb": 0.3090038299560547,
+        "memory_allocated_mb": 0.30281639099121094,
+        "peak_memory_mb": 0.3090038299560547
+      }
+    },
+    {
+      "id": 1,
+      "name": "matrix_a",
+      "type": "variable",
+      "partition_id": 0,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.3664455,
+        "end_time": 1764580559.3664472,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 2,
+      "name": "matrix_b",
+      "type": "variable",
+      "partition_id": 0,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.3666835,
+        "end_time": 1764580559.366685,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 3,
+      "name": "dot",
+      "type": "function",
+      "partition_id": 0,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.367111,
+        "end_time": 1764580559.371772,
+        "execution_time_ms": 4.661083221435547,
+        "memory_before_mb": 0.02236652374267578,
+        "memory_after_mb": 0.07126712799072266,
+        "memory_allocated_mb": 0.048900604248046875,
+        "peak_memory_mb": 0.07126712799072266
+      }
+    },
+    {
+      "id": 4,
+      "name": "relevant_args",
+      "type": "variable",
+      "partition_id": 0,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.3673995,
+        "end_time": 1764580559.3674011,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 5,
+      "name": "<return_expression>",
+      "type": "variable",
+      "partition_id": 0,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.371574,
+        "end_time": 1764580559.3715768,
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0
+      }
+    },
+    {
+      "id": 6,
+      "name": "c",
+      "type": "variable",
+      "partition_id": 0,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.44509,
+        "end_time": 1764580559.4450917,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 7,
+      "name": "d",
+      "type": "variable",
+      "partition_id": 0,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.450387,
+        "end_time": 1764580559.4503884,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 8,
+      "name": "operator.add",
+      "type": "operator",
+      "partition_id": 0,
+      "performance": {
+        "execution_time": 0.001,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 0.0,
+        "end_time": 0.0,
+        "execution_time_ms": 0.01,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0
+      }
+    },
+    {
+      "id": 9,
+      "name": "e",
+      "type": "variable",
+      "partition_id": 1,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.4511735,
+        "end_time": 1764580559.4511747,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 10,
+      "name": "add",
+      "type": "function_call",
+      "partition_id": 1,
+      "performance": {
+        "execution_time": 0.001,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 0.0,
+        "end_time": 0.0,
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0
+      }
+    },
+    {
+      "id": 11,
+      "name": "amax",
+      "type": "function",
+      "partition_id": 1,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.45237,
+        "end_time": 1764580559.453018,
+        "execution_time_ms": 0.6480216979980469,
+        "memory_before_mb": 0.18018817901611328,
+        "memory_after_mb": 0.18501567840576172,
+        "memory_allocated_mb": 0.0048274993896484375,
+        "peak_memory_mb": 0.18501567840576172
+      }
+    },
+    {
+      "id": 12,
+      "name": "relevant_args",
+      "type": "variable",
+      "partition_id": 1,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.452584,
+        "end_time": 1764580559.452585,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 13,
+      "name": "<return_expression>",
+      "type": "variable",
+      "partition_id": 0,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.4529498,
+        "end_time": 1764580559.4529507,
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0
+      }
+    },
+    {
+      "id": 14,
+      "name": "max_val",
+      "type": "variable",
+      "partition_id": 1,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.4536724,
+        "end_time": 1764580559.4536731,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 15,
+      "name": "f",
+      "type": "variable",
+      "partition_id": 1,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.454332,
+        "end_time": 1764580559.4543335,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 16,
+      "name": "operator.div",
+      "type": "operator",
+      "partition_id": 1,
+      "performance": {
+        "execution_time": 0.001,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 0.0,
+        "end_time": 0.0,
+        "execution_time_ms": 0.01,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0
+      }
+    },
+    {
+      "id": 17,
+      "name": "mean",
+      "type": "function",
+      "partition_id": 1,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.454801,
+        "end_time": 1764580559.4579585,
+        "execution_time_ms": 3.157377243041992,
+        "memory_before_mb": 0.23550033569335938,
+        "memory_after_mb": 0.28498172760009766,
+        "memory_allocated_mb": 0.04948139190673828,
+        "peak_memory_mb": 0.28498172760009766
+      }
+    },
+    {
+      "id": 18,
+      "name": "relevant_args",
+      "type": "variable",
+      "partition_id": 1,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.4552495,
+        "end_time": 1764580559.455251,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 19,
+      "name": "asanyarray",
+      "type": "function",
+      "partition_id": 1,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.4556391,
+        "end_time": 1764580559.457353,
+        "execution_time_ms": 1.7139911651611328,
+        "memory_before_mb": 0.24038314819335938,
+        "memory_after_mb": 0.2799491882324219,
+        "memory_allocated_mb": 0.0395660400390625,
+        "peak_memory_mb": 0.2799491882324219
+      }
+    },
+    {
+      "id": 20,
+      "name": "a",
+      "type": "variable",
+      "partition_id": 1,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.4557805,
+        "end_time": 1764580559.4557817,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 21,
+      "name": "dtype",
+      "type": "variable",
+      "partition_id": 1,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.4558752,
+        "end_time": 1764580559.455876,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 22,
+      "name": "order",
+      "type": "variable",
+      "partition_id": 1,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.4559727,
+        "end_time": 1764580559.4559736,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 23,
+      "name": "a",
+      "type": "variable",
+      "partition_id": 1,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.4564748,
+        "end_time": 1764580559.456476,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 24,
+      "name": "dtype",
+      "type": "variable",
+      "partition_id": 1,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.4565558,
+        "end_time": 1764580559.4565566,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 25,
+      "name": "order",
+      "type": "variable",
+      "partition_id": 1,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.45663,
+        "end_time": 1764580559.4566307,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 26,
+      "name": "<return_expression>",
+      "type": "variable",
+      "partition_id": 0,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.4578927,
+        "end_time": 1764580559.4578934,
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0
+      }
+    },
+    {
+      "id": 27,
+      "name": "mean_val",
+      "type": "variable",
+      "partition_id": 1,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.4587615,
+        "end_time": 1764580559.4587622,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 28,
+      "name": "sum",
+      "type": "function",
+      "partition_id": 1,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.4593136,
+        "end_time": 1764580559.4598453,
+        "execution_time_ms": 0.5316734313964844,
+        "memory_before_mb": 0.2815055847167969,
+        "memory_after_mb": 0.28664684295654297,
+        "memory_allocated_mb": 0.005141258239746094,
+        "peak_memory_mb": 0.28664684295654297
+      }
+    },
+    {
+      "id": 29,
+      "name": "relevant_args",
+      "type": "variable",
+      "partition_id": 1,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.459472,
+        "end_time": 1764580559.459473,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 30,
+      "name": "<return_expression>",
+      "type": "variable",
+      "partition_id": 0,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.459782,
+        "end_time": 1764580559.4597828,
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0
+      }
+    },
+    {
+      "id": 31,
+      "name": "sum_val",
+      "type": "variable",
+      "partition_id": 1,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.4605033,
+        "end_time": 1764580559.4605038,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 32,
+      "name": "reshape",
+      "type": "function",
+      "partition_id": 1,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.4608674,
+        "end_time": 1764580559.4611874,
+        "execution_time_ms": 0.3199577331542969,
+        "memory_before_mb": 0.2937898635864258,
+        "memory_after_mb": 0.298583984375,
+        "memory_allocated_mb": 0.004794120788574219,
+        "peak_memory_mb": 0.298583984375
+      }
+    },
+    {
+      "id": 33,
+      "name": "relevant_args",
+      "type": "variable",
+      "partition_id": 1,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.4609632,
+        "end_time": 1764580559.4609642,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 34,
+      "name": "<return_expression>",
+      "type": "variable",
+      "partition_id": 0,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.4611475,
+        "end_time": 1764580559.4611483,
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0
+      }
+    },
+    {
+      "id": 35,
+      "name": "g",
+      "type": "variable",
+      "partition_id": 1,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.4616008,
+        "end_time": 1764580559.461601,
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0
+      }
+    },
+    {
+      "id": 36,
+      "name": "<return_expression>",
+      "type": "variable",
+      "partition_id": 0,
+      "performance": {
+        "execution_time": 0.0,
+        "call_count": 0,
+        "memory_usage": 0,
+        "device": "cpu",
+        "start_time": 1764580559.4631243,
+        "end_time": 1764580559.4631248,
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0
+      }
+    }
+  ]
+}

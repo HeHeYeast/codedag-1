@@ -1,0 +1,68 @@
+{
+  "case_name": "02b_CV_Augmentation",
+  "success": true,
+  "trace_time": 0.03133082389831543,
+  "node_count": 34,
+  "edge_count": 74,
+  "function_nodes": 5,
+  "variable_nodes": 28,
+  "optimize_time": 0.03176307678222656,
+  "coarsening_stats": {
+    "pattern_count": 0,
+    "total_instances": 0,
+    "nodes_saved": 0,
+    "pattern_details": []
+  },
+  "partition_stats": {
+    "partition_count": 2,
+    "partition_sizes": [
+      15,
+      19
+    ],
+    "partition_loads": [
+      0.002,
+      0.003
+    ],
+    "avg_load": 0.0025,
+    "max_load": 0.003,
+    "min_load": 0.002,
+    "load_balance": 0.6,
+    "total_nodes": 34
+  },
+  "optimization_stats": {
+    "iterations": 11,
+    "moves_executed": 1,
+    "initial_objective": 0.8800133328889037,
+    "final_objective": 0.6799999999999999,
+    "improvement": 0.20001333288890377,
+    "improvement_ratio": 22.72844346940755
+  },
+  "partition_count": 2,
+  "migration_time": 0.049979209899902344,
+  "migration_stats": {
+    "is_applied": false,
+    "context_mappings": 14,
+    "registry_stats": {
+      "total": 153,
+      "exact_match": 145,
+      "prefix_match": 8,
+      "by_strategy": {
+        "StandardOp": 118,
+        "MoveOnly": 8,
+        "NonMigratable": 13,
+        "FactoryOp": 6
+      },
+      "by_priority": {
+        "0": 35,
+        "1": 6,
+        "2": 86,
+        "3": 18
+      }
+    },
+    "gpu_count": 1,
+    "default_device": "cuda:0"
+  },
+  "patched_count": 122,
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,917 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "name": "single_image_ops",
+      "type": "function",
+      "module": "__main__",
+      "context": "single_image_ops#1",
+      "performance": {
+        "execution_time_ms": 12.758016586303711,
+        "memory_before_mb": 0.0009822845458984375,
+        "memory_after_mb": 0.24312210083007812,
+        "memory_allocated_mb": 0.2421398162841797,
+        "peak_memory_mb": 0.24312210083007812,
+        "memory_usage": 254932
+      },
+      "output_edges": [
+        {
+          "type": "calls",
+          "to_id": 1,
+          "to_name": "prod"
+        },
+        {
+          "type": "creates",
+          "to_id": 4,
+          "to_name": "img"
+        },
+        {
+          "type": "creates",
+          "to_id": 6,
+          "to_name": "resized1"
+        },
+        {
+          "type": "creates",
+          "to_id": 8,
+          "to_name": "resized2"
+        },
+        {
+          "type": "creates",
+          "to_id": 9,
+          "to_name": "rgb"
+        },
+        {
+          "type": "creates",
+          "to_id": 11,
+          "to_name": "hsv"
+        },
+        {
+          "type": "creates",
+          "to_id": 12,
+          "to_name": "gray"
+        },
+        {
+          "type": "creates",
+          "to_id": 13,
+          "to_name": "gaussian"
+        },
+        {
+          "type": "creates",
+          "to_id": 15,
+          "to_name": "median"
+        },
+        {
+          "type": "creates",
+          "to_id": 17,
+          "to_name": "box"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "prod",
+      "type": "function",
+      "module": "unknown",
+      "context": "single_image_ops#1->prod#1",
+      "performance": {
+        "execution_time_ms": 0.9107589721679688,
+        "memory_before_mb": 0.0025815963745117188,
+        "memory_after_mb": 0.007069587707519531,
+        "memory_allocated_mb": 0.0044879913330078125,
+        "peak_memory_mb": 0.007069587707519531,
+        "memory_usage": 7413
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 0,
+          "from_name": "single_image_ops"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 2,
+          "to_name": "relevant_args"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "relevant_args",
+      "type": "variable",
+      "module": "single_image_ops#1",
+      "context": "single_image_ops#1->prod#1->relevant_args#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": [
+          [
+            100,
+            100,
+            3
+          ],
+          null
+        ],
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.002
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 1,
+          "from_name": "prod"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "<return_expression>",
+      "type": "variable",
+      "module": "anonymous",
+      "context": "single_image_ops#1->prod#1-><return_expression>",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 0,
+        "actual_value": null,
+        "shape": [],
+        "dtype": "int64",
+        "device": null,
+        "size_mb": 7.62939453125e-06
+      }
+    },
+    {
+      "id": 4,
+      "name": "img",
+      "type": "variable",
+      "module": "global",
+      "context": "single_image_ops#1->img#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          100,
+          100,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.0286102294921875
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "single_image_ops"
+        },
+        {
+          "type": "produces",
+          "from_id": 5,
+          "from_name": "randint"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 7,
+          "to_name": "resize"
+        },
+        {
+          "type": "uses",
+          "to_id": 10,
+          "to_name": "cvtColor"
+        },
+        {
+          "type": "uses",
+          "to_id": 14,
+          "to_name": "GaussianBlur"
+        },
+        {
+          "type": "uses",
+          "to_id": 16,
+          "to_name": "medianBlur"
+        },
+        {
+          "type": "uses",
+          "to_id": 18,
+          "to_name": "blur"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "randint",
+      "type": "function_call",
+      "module": "library",
+      "context": "single_image_ops#1->randint#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 4,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "resized1",
+      "type": "variable",
+      "module": "global",
+      "context": "single_image_ops#1->resized1#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          50,
+          50,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.007152557373046875
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "single_image_ops"
+        },
+        {
+          "type": "produces",
+          "from_id": 7,
+          "from_name": "resize"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "resize",
+      "type": "function_call",
+      "module": "library",
+      "context": "single_image_ops#1->resize#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 4,
+          "from_name": "img"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 6,
+          "to_name": "resized1"
+        },
+        {
+          "type": "produces",
+          "to_id": 8,
+          "to_name": "resized2"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "resized2",
+      "type": "variable",
+      "module": "global",
+      "context": "single_image_ops#1->resized2#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          75,
+          75,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01609325408935547
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "single_image_ops"
+        },
+        {
+          "type": "produces",
+          "from_id": 7,
+          "from_name": "resize"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "rgb",
+      "type": "variable",
+      "module": "global",
+      "context": "single_image_ops#1->rgb#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          100,
+          100,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.0286102294921875
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "single_image_ops"
+        },
+        {
+          "type": "produces",
+          "from_id": 10,
+          "from_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "cvtColor",
+      "type": "function_call",
+      "module": "library",
+      "context": "single_image_ops#1->cvtColor#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 4,
+          "from_name": "img"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 9,
+          "to_name": "rgb"
+        },
+        {
+          "type": "produces",
+          "to_id": 11,
+          "to_name": "hsv"
+        },
+        {
+          "type": "produces",
+          "to_id": 12,
+          "to_name": "gray"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "hsv",
+      "type": "variable",
+      "module": "global",
+      "context": "single_image_ops#1->hsv#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          100,
+          100,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.0286102294921875
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "single_image_ops"
+        },
+        {
+          "type": "produces",
+          "from_id": 10,
+          "from_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "gray",
+      "type": "variable",
+      "module": "global",
+      "context": "single_image_ops#1->gray#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          100,
+          100
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.0095367431640625
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "single_image_ops"
+        },
+        {
+          "type": "produces",
+          "from_id": 10,
+          "from_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "gaussian",
+      "type": "variable",
+      "module": "global",
+      "context": "single_image_ops#1->gaussian#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          100,
+          100,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.0286102294921875
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "single_image_ops"
+        },
+        {
+          "type": "produces",
+          "from_id": 14,
+          "from_name": "GaussianBlur"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "GaussianBlur",
+      "type": "function_call",
+      "module": "library",
+      "context": "single_image_ops#1->GaussianBlur#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 4,
+          "from_name": "img"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 13,
+          "to_name": "gaussian"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "median",
+      "type": "variable",
+      "module": "global",
+      "context": "single_image_ops#1->median#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          100,
+          100,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.0286102294921875
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "single_image_ops"
+        },
+        {
+          "type": "produces",
+          "from_id": 16,
+          "from_name": "medianBlur"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "medianBlur",
+      "type": "function_call",
+      "module": "library",
+      "context": "single_image_ops#1->medianBlur#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 4,
+          "from_name": "img"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 15,
+          "to_name": "median"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "box",
+      "type": "variable",
+      "module": "global",
+      "context": "single_image_ops#1->box#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          100,
+          100,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.0286102294921875
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "single_image_ops"
+        },
+        {
+          "type": "produces",
+          "from_id": 18,
+          "from_name": "blur"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "blur",
+      "type": "function_call",
+      "module": "library",
+      "context": "single_image_ops#1->blur#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 4,
+          "from_name": "img"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 17,
+          "to_name": "box"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "<return_expression>",
+      "type": "variable",
+      "module": "anonymous",
+      "context": "single_image_ops#1-><return_expression>",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 0,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.008
+      }
+    }
+  ],
+  "edges": [
+    [
+      0,
+      1,
+      "calls"
+    ],
+    [
+      1,
+      2,
+      "creates"
+    ],
+    [
+      0,
+      4,
+      "creates"
+    ],
+    [
+      5,
+      4,
+      "produces"
+    ],
+    [
+      0,
+      6,
+      "creates"
+    ],
+    [
+      4,
+      7,
+      "uses"
+    ],
+    [
+      7,
+      6,
+      "produces"
+    ],
+    [
+      0,
+      8,
+      "creates"
+    ],
+    [
+      7,
+      8,
+      "produces"
+    ],
+    [
+      0,
+      9,
+      "creates"
+    ],
+    [
+      4,
+      10,
+      "uses"
+    ],
+    [
+      10,
+      9,
+      "produces"
+    ],
+    [
+      0,
+      11,
+      "creates"
+    ],
+    [
+      10,
+      11,
+      "produces"
+    ],
+    [
+      0,
+      12,
+      "creates"
+    ],
+    [
+      10,
+      12,
+      "produces"
+    ],
+    [
+      0,
+      13,
+      "creates"
+    ],
+    [
+      4,
+      14,
+      "uses"
+    ],
+    [
+      14,
+      13,
+      "produces"
+    ],
+    [
+      0,
+      15,
+      "creates"
+    ],
+    [
+      4,
+      16,
+      "uses"
+    ],
+    [
+      16,
+      15,
+      "produces"
+    ],
+    [
+      0,
+      17,
+      "creates"
+    ],
+    [
+      4,
+      18,
+      "uses"
+    ],
+    [
+      18,
+      17,
+      "produces"
+    ]
+  ],
+  "memory_report": {
+    "peak_memory_mb": 0.24312210083007812,
+    "peak_gpu_memory_mb": 0,
+    "total_variables_tracked": 0,
+    "function_profiles": {
+      "single_image_ops#1": {
+        "function": "single_image_ops",
+        "call_count": 1,
+        "peak_memory_mb": 0.24312210083007812,
+        "allocated_mb": 0.2422924041748047,
+        "freed_mb": 0,
+        "duration_ms": 12.858390808105469
+      },
+      "single_image_ops#1->prod#1": {
+        "function": "prod",
+        "call_count": 1,
+        "peak_memory_mb": 0.007069587707519531,
+        "allocated_mb": 0.0046100616455078125,
+        "freed_mb": 0,
+        "duration_ms": 0.9744167327880859
+      }
+    },
+    "variable_summary": {}
+  },
+  "flame_graph": {
+    "name": "root",
+    "value": 0.24312210083007812,
+    "children": [
+      {
+        "name": "single_image_ops#1",
+        "value": 0.24312210083007812,
+        "children": [
+          {
+            "name": "prod#1",
+            "value": 0.007069587707519531,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "statistics": {
+    "total_nodes": 20,
+    "function_nodes": 2,
+    "variable_nodes": 12,
+    "total_variables_tracked": 11,
+    "peak_memory_mb": 0.24312210083007812
+  }
+}

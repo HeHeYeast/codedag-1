@@ -1,0 +1,738 @@
+{
+  "timestamp": "2025-12-01T01:51:51.579500",
+  "total_time": 14.973456382751465,
+  "features": {
+    "torch": true,
+    "cuda": true,
+    "kornia": false,
+    "opencv": true,
+    "tensorflow": false,
+    "graphviz": true
+  },
+  "total_tests": 12,
+  "passed": 7,
+  "failed": 5,
+  "results": [
+    {
+      "case_name": "01_Simple_Calc",
+      "success": false,
+      "trace_time": 0.05653524398803711,
+      "node_count": 149,
+      "edge_count": 126,
+      "function_nodes": 0,
+      "variable_nodes": 117,
+      "optimize_time": 0.0371403694152832,
+      "coarsening_stats": {
+        "pattern_count": 0,
+        "total_instances": 0,
+        "nodes_saved": 0,
+        "pattern_details": []
+      },
+      "partition_stats": {
+        "partition_count": 2,
+        "partition_sizes": [
+          148,
+          1
+        ],
+        "partition_loads": [
+          0.0,
+          0.0
+        ],
+        "avg_load": 0.0,
+        "max_load": 0.0,
+        "min_load": 0.0,
+        "load_balance": 1.0,
+        "total_nodes": 149
+      },
+      "optimization_stats": {
+        "iterations": 0,
+        "moves_executed": 0,
+        "initial_objective": 0.0,
+        "final_objective": 0.0,
+        "improvement": 0.0,
+        "improvement_ratio": 0
+      },
+      "partition_count": 2,
+      "migration_time": 0.0,
+      "migration_stats": {},
+      "patched_count": 122,
+      "errors": [
+        "迁移后函数执行异常: 'UniversalWrapper' object has no attribute 'reduce'",
+        "'UniversalWrapper' object has no attribute 'reduce'"
+      ],
+      "warnings": []
+    },
+    {
+      "case_name": "01b_Random_Ops",
+      "success": true,
+      "trace_time": 0.051360130310058594,
+      "node_count": 131,
+      "edge_count": 117,
+      "function_nodes": 0,
+      "variable_nodes": 102,
+      "optimize_time": 0.03518867492675781,
+      "coarsening_stats": {
+        "pattern_count": 0,
+        "total_instances": 0,
+        "nodes_saved": 0,
+        "pattern_details": []
+      },
+      "partition_stats": {
+        "partition_count": 2,
+        "partition_sizes": [
+          130,
+          1
+        ],
+        "partition_loads": [
+          0.0,
+          0.0
+        ],
+        "avg_load": 0.0,
+        "max_load": 0.0,
+        "min_load": 0.0,
+        "load_balance": 1.0,
+        "total_nodes": 131
+      },
+      "optimization_stats": {
+        "iterations": 0,
+        "moves_executed": 0,
+        "initial_objective": 0.0,
+        "final_objective": 0.0,
+        "improvement": 0.0,
+        "improvement_ratio": 0
+      },
+      "partition_count": 2,
+      "migration_time": 0.018507957458496094,
+      "migration_stats": {
+        "is_applied": false,
+        "context_mappings": 67,
+        "registry_stats": {
+          "total": 153,
+          "exact_match": 145,
+          "prefix_match": 8,
+          "by_strategy": {
+            "StandardOp": 118,
+            "MoveOnly": 8,
+            "NonMigratable": 13,
+            "FactoryOp": 6
+          },
+          "by_priority": {
+            "0": 35,
+            "1": 6,
+            "2": 86,
+            "3": 18
+          }
+        },
+        "gpu_count": 1,
+        "default_device": "cuda:0"
+      },
+      "patched_count": 122,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "case_name": "02a_CV_Preprocessing",
+      "success": true,
+      "trace_time": 0.06206560134887695,
+      "node_count": 119,
+      "edge_count": 106,
+      "function_nodes": 0,
+      "variable_nodes": 92,
+      "optimize_time": 0.03654885292053223,
+      "coarsening_stats": {
+        "pattern_count": 0,
+        "total_instances": 0,
+        "nodes_saved": 0,
+        "pattern_details": []
+      },
+      "partition_stats": {
+        "partition_count": 2,
+        "partition_sizes": [
+          118,
+          1
+        ],
+        "partition_loads": [
+          0.0,
+          0.0
+        ],
+        "avg_load": 0.0,
+        "max_load": 0.0,
+        "min_load": 0.0,
+        "load_balance": 1.0,
+        "total_nodes": 119
+      },
+      "optimization_stats": {
+        "iterations": 0,
+        "moves_executed": 0,
+        "initial_objective": 0.0,
+        "final_objective": 0.0,
+        "improvement": 0.0,
+        "improvement_ratio": 0
+      },
+      "partition_count": 2,
+      "migration_time": 0.025296688079833984,
+      "migration_stats": {
+        "is_applied": false,
+        "context_mappings": 43,
+        "registry_stats": {
+          "total": 153,
+          "exact_match": 145,
+          "prefix_match": 8,
+          "by_strategy": {
+            "StandardOp": 118,
+            "MoveOnly": 8,
+            "NonMigratable": 13,
+            "FactoryOp": 6
+          },
+          "by_priority": {
+            "0": 35,
+            "1": 6,
+            "2": 86,
+            "3": 18
+          }
+        },
+        "gpu_count": 1,
+        "default_device": "cuda:0"
+      },
+      "patched_count": 122,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "case_name": "02b_CV_Augmentation",
+      "success": true,
+      "trace_time": 0.04754495620727539,
+      "node_count": 118,
+      "edge_count": 101,
+      "function_nodes": 0,
+      "variable_nodes": 92,
+      "optimize_time": 0.03258466720581055,
+      "coarsening_stats": {
+        "pattern_count": 0,
+        "total_instances": 0,
+        "nodes_saved": 0,
+        "pattern_details": []
+      },
+      "partition_stats": {
+        "partition_count": 2,
+        "partition_sizes": [
+          117,
+          1
+        ],
+        "partition_loads": [
+          0.0,
+          0.0
+        ],
+        "avg_load": 0.0,
+        "max_load": 0.0,
+        "min_load": 0.0,
+        "load_balance": 1.0,
+        "total_nodes": 118
+      },
+      "optimization_stats": {
+        "iterations": 0,
+        "moves_executed": 0,
+        "initial_objective": 0.0,
+        "final_objective": 0.0,
+        "improvement": 0.0,
+        "improvement_ratio": 0
+      },
+      "partition_count": 2,
+      "migration_time": 0.02642345428466797,
+      "migration_stats": {
+        "is_applied": false,
+        "context_mappings": 45,
+        "registry_stats": {
+          "total": 153,
+          "exact_match": 145,
+          "prefix_match": 8,
+          "by_strategy": {
+            "StandardOp": 118,
+            "MoveOnly": 8,
+            "NonMigratable": 13,
+            "FactoryOp": 6
+          },
+          "by_priority": {
+            "0": 35,
+            "1": 6,
+            "2": 86,
+            "3": 18
+          }
+        },
+        "gpu_count": 1,
+        "default_device": "cuda:0"
+      },
+      "patched_count": 122,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "case_name": "02d_CV_SingleImage",
+      "success": false,
+      "trace_time": 0.0366518497467041,
+      "node_count": 119,
+      "edge_count": 101,
+      "function_nodes": 0,
+      "variable_nodes": 92,
+      "optimize_time": 0.03435468673706055,
+      "coarsening_stats": {
+        "pattern_count": 0,
+        "total_instances": 0,
+        "nodes_saved": 0,
+        "pattern_details": []
+      },
+      "partition_stats": {
+        "partition_count": 2,
+        "partition_sizes": [
+          118,
+          1
+        ],
+        "partition_loads": [
+          0.0,
+          0.0
+        ],
+        "avg_load": 0.0,
+        "max_load": 0.0,
+        "min_load": 0.0,
+        "load_balance": 1.0,
+        "total_nodes": 119
+      },
+      "optimization_stats": {
+        "iterations": 0,
+        "moves_executed": 0,
+        "initial_objective": 0.0,
+        "final_objective": 0.0,
+        "improvement": 0.0,
+        "improvement_ratio": 0
+      },
+      "partition_count": 2,
+      "migration_time": 0.0,
+      "migration_stats": {},
+      "patched_count": 122,
+      "errors": [
+        "迁移后函数执行异常: 'UniversalWrapper' object has no attribute 'reduce'",
+        "'UniversalWrapper' object has no attribute 'reduce'"
+      ],
+      "warnings": []
+    },
+    {
+      "case_name": "03a_MockDataset",
+      "success": false,
+      "trace_time": 0.18369436264038086,
+      "node_count": 871,
+      "edge_count": 872,
+      "function_nodes": 0,
+      "variable_nodes": 748,
+      "optimize_time": 0.2725799083709717,
+      "coarsening_stats": {
+        "pattern_count": 0,
+        "total_instances": 0,
+        "nodes_saved": 0,
+        "pattern_details": []
+      },
+      "partition_stats": {
+        "partition_count": 2,
+        "partition_sizes": [
+          870,
+          1
+        ],
+        "partition_loads": [
+          0.0,
+          0.0
+        ],
+        "avg_load": 0.0,
+        "max_load": 0.0,
+        "min_load": 0.0,
+        "load_balance": 1.0,
+        "total_nodes": 871
+      },
+      "optimization_stats": {
+        "iterations": 0,
+        "moves_executed": 0,
+        "initial_objective": 0.0,
+        "final_objective": 0.0,
+        "improvement": 0.0,
+        "improvement_ratio": 0
+      },
+      "partition_count": 2,
+      "migration_time": 0.0,
+      "migration_stats": {},
+      "patched_count": 122,
+      "errors": [
+        "迁移后函数执行异常: 'UniversalWrapper' object has no attribute 'reduce'",
+        "'UniversalWrapper' object has no attribute 'reduce'"
+      ],
+      "warnings": []
+    },
+    {
+      "case_name": "03b_OpenCVDataset",
+      "success": false,
+      "trace_time": 0.15285682678222656,
+      "node_count": 679,
+      "edge_count": 696,
+      "function_nodes": 0,
+      "variable_nodes": 604,
+      "optimize_time": 0.21337151527404785,
+      "coarsening_stats": {
+        "pattern_count": 0,
+        "total_instances": 0,
+        "nodes_saved": 0,
+        "pattern_details": []
+      },
+      "partition_stats": {
+        "partition_count": 2,
+        "partition_sizes": [
+          678,
+          1
+        ],
+        "partition_loads": [
+          0.0,
+          0.0
+        ],
+        "avg_load": 0.0,
+        "max_load": 0.0,
+        "min_load": 0.0,
+        "load_balance": 1.0,
+        "total_nodes": 679
+      },
+      "optimization_stats": {
+        "iterations": 0,
+        "moves_executed": 0,
+        "initial_objective": 0.0,
+        "final_objective": 0.0,
+        "improvement": 0.0,
+        "improvement_ratio": 0
+      },
+      "partition_count": 2,
+      "migration_time": 0.0,
+      "migration_stats": {},
+      "patched_count": 122,
+      "errors": [
+        "迁移后函数执行异常: 'UniversalWrapper' object has no attribute 'reduce'",
+        "'UniversalWrapper' object has no attribute 'reduce'"
+      ],
+      "warnings": []
+    },
+    {
+      "case_name": "03c_TorchDataLoader",
+      "success": true,
+      "trace_time": 0.40598130226135254,
+      "node_count": 1363,
+      "edge_count": 1268,
+      "function_nodes": 0,
+      "variable_nodes": 1161,
+      "optimize_time": 0.4889566898345947,
+      "coarsening_stats": {
+        "pattern_count": 0,
+        "total_instances": 0,
+        "nodes_saved": 0,
+        "pattern_details": []
+      },
+      "partition_stats": {
+        "partition_count": 2,
+        "partition_sizes": [
+          1362,
+          1
+        ],
+        "partition_loads": [
+          0.0,
+          0.0
+        ],
+        "avg_load": 0.0,
+        "max_load": 0.0,
+        "min_load": 0.0,
+        "load_balance": 1.0,
+        "total_nodes": 1363
+      },
+      "optimization_stats": {
+        "iterations": 0,
+        "moves_executed": 0,
+        "initial_objective": 0.0,
+        "final_objective": 0.0,
+        "improvement": 0.0,
+        "improvement_ratio": 0
+      },
+      "partition_count": 2,
+      "migration_time": 0.02095508575439453,
+      "migration_stats": {
+        "is_applied": false,
+        "context_mappings": 274,
+        "registry_stats": {
+          "total": 153,
+          "exact_match": 145,
+          "prefix_match": 8,
+          "by_strategy": {
+            "StandardOp": 118,
+            "MoveOnly": 8,
+            "NonMigratable": 13,
+            "FactoryOp": 6
+          },
+          "by_priority": {
+            "0": 35,
+            "1": 6,
+            "2": 86,
+            "3": 18
+          }
+        },
+        "gpu_count": 1,
+        "default_device": "cuda:0"
+      },
+      "patched_count": 122,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "case_name": "04a_PureGenerator",
+      "success": true,
+      "trace_time": 0.17670702934265137,
+      "node_count": 814,
+      "edge_count": 696,
+      "function_nodes": 0,
+      "variable_nodes": 685,
+      "optimize_time": 0.20606040954589844,
+      "coarsening_stats": {
+        "pattern_count": 0,
+        "total_instances": 0,
+        "nodes_saved": 0,
+        "pattern_details": []
+      },
+      "partition_stats": {
+        "partition_count": 2,
+        "partition_sizes": [
+          813,
+          1
+        ],
+        "partition_loads": [
+          0.0,
+          0.0
+        ],
+        "avg_load": 0.0,
+        "max_load": 0.0,
+        "min_load": 0.0,
+        "load_balance": 1.0,
+        "total_nodes": 814
+      },
+      "optimization_stats": {
+        "iterations": 0,
+        "moves_executed": 0,
+        "initial_objective": 0.0,
+        "final_objective": 0.0,
+        "improvement": 0.0,
+        "improvement_ratio": 0
+      },
+      "partition_count": 2,
+      "migration_time": 0.021908283233642578,
+      "migration_stats": {
+        "is_applied": false,
+        "context_mappings": 113,
+        "registry_stats": {
+          "total": 153,
+          "exact_match": 145,
+          "prefix_match": 8,
+          "by_strategy": {
+            "StandardOp": 118,
+            "MoveOnly": 8,
+            "NonMigratable": 13,
+            "FactoryOp": 6
+          },
+          "by_priority": {
+            "0": 35,
+            "1": 6,
+            "2": 86,
+            "3": 18
+          }
+        },
+        "gpu_count": 1,
+        "default_device": "cuda:0"
+      },
+      "patched_count": 122,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "case_name": "04b_OpenCVGenerator",
+      "success": false,
+      "trace_time": 0.10685992240905762,
+      "node_count": 463,
+      "edge_count": 426,
+      "function_nodes": 0,
+      "variable_nodes": 416,
+      "optimize_time": 0.10390377044677734,
+      "coarsening_stats": {
+        "pattern_count": 0,
+        "total_instances": 0,
+        "nodes_saved": 0,
+        "pattern_details": []
+      },
+      "partition_stats": {
+        "partition_count": 2,
+        "partition_sizes": [
+          462,
+          1
+        ],
+        "partition_loads": [
+          0.0,
+          0.0
+        ],
+        "avg_load": 0.0,
+        "max_load": 0.0,
+        "min_load": 0.0,
+        "load_balance": 1.0,
+        "total_nodes": 463
+      },
+      "optimization_stats": {
+        "iterations": 0,
+        "moves_executed": 0,
+        "initial_objective": 0.0,
+        "final_objective": 0.0,
+        "improvement": 0.0,
+        "improvement_ratio": 0
+      },
+      "partition_count": 2,
+      "migration_time": 0.0,
+      "migration_stats": {},
+      "patched_count": 122,
+      "errors": [
+        "迁移后函数执行异常: 'UniversalWrapper' object has no attribute 'reduce'",
+        "'UniversalWrapper' object has no attribute 'reduce'"
+      ],
+      "warnings": []
+    },
+    {
+      "case_name": "04c_BatchGenerator",
+      "success": true,
+      "trace_time": 0.3359341621398926,
+      "node_count": 1055,
+      "edge_count": 996,
+      "function_nodes": 0,
+      "variable_nodes": 903,
+      "optimize_time": 0.3210725784301758,
+      "coarsening_stats": {
+        "pattern_count": 0,
+        "total_instances": 0,
+        "nodes_saved": 0,
+        "pattern_details": []
+      },
+      "partition_stats": {
+        "partition_count": 2,
+        "partition_sizes": [
+          1054,
+          1
+        ],
+        "partition_loads": [
+          0.0,
+          0.0
+        ],
+        "avg_load": 0.0,
+        "max_load": 0.0,
+        "min_load": 0.0,
+        "load_balance": 1.0,
+        "total_nodes": 1055
+      },
+      "optimization_stats": {
+        "iterations": 0,
+        "moves_executed": 0,
+        "initial_objective": 0.0,
+        "final_objective": 0.0,
+        "improvement": 0.0,
+        "improvement_ratio": 0
+      },
+      "partition_count": 2,
+      "migration_time": 0.022188425064086914,
+      "migration_stats": {
+        "is_applied": false,
+        "context_mappings": 202,
+        "registry_stats": {
+          "total": 153,
+          "exact_match": 145,
+          "prefix_match": 8,
+          "by_strategy": {
+            "StandardOp": 118,
+            "MoveOnly": 8,
+            "NonMigratable": 13,
+            "FactoryOp": 6
+          },
+          "by_priority": {
+            "0": 35,
+            "1": 6,
+            "2": 86,
+            "3": 18
+          }
+        },
+        "gpu_count": 1,
+        "default_device": "cuda:0"
+      },
+      "patched_count": 122,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "case_name": "04e_ComplexPipeline",
+      "success": true,
+      "trace_time": 0.17706060409545898,
+      "node_count": 888,
+      "edge_count": 796,
+      "function_nodes": 0,
+      "variable_nodes": 742,
+      "optimize_time": 0.2587316036224365,
+      "coarsening_stats": {
+        "pattern_count": 0,
+        "total_instances": 0,
+        "nodes_saved": 0,
+        "pattern_details": []
+      },
+      "partition_stats": {
+        "partition_count": 2,
+        "partition_sizes": [
+          887,
+          1
+        ],
+        "partition_loads": [
+          0.0,
+          0.0
+        ],
+        "avg_load": 0.0,
+        "max_load": 0.0,
+        "min_load": 0.0,
+        "load_balance": 1.0,
+        "total_nodes": 888
+      },
+      "optimization_stats": {
+        "iterations": 0,
+        "moves_executed": 0,
+        "initial_objective": 0.0,
+        "final_objective": 0.0,
+        "improvement": 0.0,
+        "improvement_ratio": 0
+      },
+      "partition_count": 2,
+      "migration_time": 0.02023148536682129,
+      "migration_stats": {
+        "is_applied": false,
+        "context_mappings": 147,
+        "registry_stats": {
+          "total": 153,
+          "exact_match": 145,
+          "prefix_match": 8,
+          "by_strategy": {
+            "StandardOp": 118,
+            "MoveOnly": 8,
+            "NonMigratable": 13,
+            "FactoryOp": 6
+          },
+          "by_priority": {
+            "0": 35,
+            "1": 6,
+            "2": 86,
+            "3": 18
+          }
+        },
+        "gpu_count": 1,
+        "default_device": "cuda:0"
+      },
+      "patched_count": 122,
+      "errors": [],
+      "warnings": []
+    }
+  ]
+}

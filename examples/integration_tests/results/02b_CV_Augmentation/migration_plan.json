@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "gpu_count": 1,
+  "partition_count": 2,
+  "partition_device_map": {
+    "0": "cuda:0",
+    "1": "cuda:0"
+  },
+  "context_device_map": {
+    "image_augmentation_pipeline": "cuda:0",
+    "image_augmentation_pipeline->img_list": "cuda:0",
+    "image_augmentation_pipeline->augmented": "cuda:0",
+    "image_augmentation_pipeline->img": "cuda:0",
+    "image_augmentation_pipeline->flipped": "cuda:0",
+    "image_augmentation_pipeline->flip#L1": "cuda:0",
+    "image_augmentation_pipeline->gray": "cuda:0",
+    "image_augmentation_pipeline->cvtColor#L1": "cuda:0",
+    "image_augmentation_pipeline->binary": "cuda:0",
+    "image_augmentation_pipeline->threshold#L1": "cuda:0",
+    "image_augmentation_pipeline->_": "cuda:0",
+    "image_augmentation_pipeline->blurred": "cuda:0",
+    "image_augmentation_pipeline->blur#L1": "cuda:0",
+    "image_augmentation_pipeline->append#L1": "cuda:0"
+  }
+}

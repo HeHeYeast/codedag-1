@@ -1,0 +1,1983 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "name": "image_preprocessing_pipeline",
+      "type": "function",
+      "module": "__main__",
+      "context": "image_preprocessing_pipeline#1",
+      "performance": {
+        "execution_time_ms": 30.60293197631836,
+        "memory_before_mb": 0.0044384002685546875,
+        "memory_after_mb": 2.952850341796875,
+        "memory_allocated_mb": 2.9484119415283203,
+        "peak_memory_mb": 2.952850341796875,
+        "memory_usage": 3096288
+      },
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 1,
+          "to_name": "img_list"
+        },
+        {
+          "type": "creates",
+          "to_id": 2,
+          "to_name": "processed"
+        },
+        {
+          "type": "creates",
+          "to_id": 3,
+          "to_name": "img"
+        },
+        {
+          "type": "creates",
+          "to_id": 4,
+          "to_name": "x"
+        },
+        {
+          "type": "modifies",
+          "to_id": 6,
+          "to_name": "x"
+        },
+        {
+          "type": "modifies",
+          "to_id": 8,
+          "to_name": "x"
+        },
+        {
+          "type": "modifies",
+          "to_id": 10,
+          "to_name": "x"
+        },
+        {
+          "type": "modifies",
+          "to_id": 14,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 15,
+          "to_name": "x"
+        },
+        {
+          "type": "modifies",
+          "to_id": 16,
+          "to_name": "x"
+        },
+        {
+          "type": "modifies",
+          "to_id": 17,
+          "to_name": "x"
+        },
+        {
+          "type": "modifies",
+          "to_id": 18,
+          "to_name": "x"
+        },
+        {
+          "type": "modifies",
+          "to_id": 19,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 20,
+          "to_name": "x"
+        },
+        {
+          "type": "modifies",
+          "to_id": 21,
+          "to_name": "x"
+        },
+        {
+          "type": "modifies",
+          "to_id": 22,
+          "to_name": "x"
+        },
+        {
+          "type": "modifies",
+          "to_id": 23,
+          "to_name": "x"
+        },
+        {
+          "type": "modifies",
+          "to_id": 24,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 25,
+          "to_name": "x"
+        },
+        {
+          "type": "modifies",
+          "to_id": 26,
+          "to_name": "x"
+        },
+        {
+          "type": "modifies",
+          "to_id": 27,
+          "to_name": "x"
+        },
+        {
+          "type": "modifies",
+          "to_id": 28,
+          "to_name": "x"
+        },
+        {
+          "type": "modifies",
+          "to_id": 29,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 30,
+          "to_name": "x"
+        },
+        {
+          "type": "modifies",
+          "to_id": 31,
+          "to_name": "x"
+        },
+        {
+          "type": "modifies",
+          "to_id": 32,
+          "to_name": "x"
+        },
+        {
+          "type": "modifies",
+          "to_id": 33,
+          "to_name": "x"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "img_list",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->img_list#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.005
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "processed",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->processed#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.0
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "img",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->img#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          800,
+          600,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 1.373291015625
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 5,
+          "to_name": "resize"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "x",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->x#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.1435546875
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 5,
+          "from_name": "resize"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "resize",
+      "type": "function_call",
+      "module": "library",
+      "context": "image_preprocessing_pipeline#1->resize#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 3,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 14,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 19,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 24,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 29,
+          "from_name": "img"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 4,
+          "to_name": "x"
+        },
+        {
+          "type": "produces",
+          "to_id": 15,
+          "to_name": "x"
+        },
+        {
+          "type": "produces",
+          "to_id": 20,
+          "to_name": "x"
+        },
+        {
+          "type": "produces",
+          "to_id": 25,
+          "to_name": "x"
+        },
+        {
+          "type": "produces",
+          "to_id": 30,
+          "to_name": "x"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "x",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->x#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": null,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.1435546875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 7,
+          "from_name": "cvtColor"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 7,
+          "to_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "cvtColor",
+      "type": "function_call",
+      "module": "library",
+      "context": "image_preprocessing_pipeline#1->cvtColor#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 6,
+          "from_name": "x"
+        },
+        {
+          "type": "uses",
+          "from_id": 16,
+          "from_name": "x"
+        },
+        {
+          "type": "uses",
+          "from_id": 21,
+          "from_name": "x"
+        },
+        {
+          "type": "uses",
+          "from_id": 26,
+          "from_name": "x"
+        },
+        {
+          "type": "uses",
+          "from_id": 31,
+          "from_name": "x"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 6,
+          "to_name": "x"
+        },
+        {
+          "type": "produces",
+          "to_id": 16,
+          "to_name": "x"
+        },
+        {
+          "type": "produces",
+          "to_id": 21,
+          "to_name": "x"
+        },
+        {
+          "type": "produces",
+          "to_id": 26,
+          "to_name": "x"
+        },
+        {
+          "type": "produces",
+          "to_id": 31,
+          "to_name": "x"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "x",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->x#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": null,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.1435546875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 9,
+          "from_name": "GaussianBlur"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 9,
+          "to_name": "GaussianBlur"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "GaussianBlur",
+      "type": "function_call",
+      "module": "library",
+      "context": "image_preprocessing_pipeline#1->GaussianBlur#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 8,
+          "from_name": "x"
+        },
+        {
+          "type": "uses",
+          "from_id": 17,
+          "from_name": "x"
+        },
+        {
+          "type": "uses",
+          "from_id": 22,
+          "from_name": "x"
+        },
+        {
+          "type": "uses",
+          "from_id": 27,
+          "from_name": "x"
+        },
+        {
+          "type": "uses",
+          "from_id": 32,
+          "from_name": "x"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 8,
+          "to_name": "x"
+        },
+        {
+          "type": "produces",
+          "to_id": 17,
+          "to_name": "x"
+        },
+        {
+          "type": "produces",
+          "to_id": 22,
+          "to_name": "x"
+        },
+        {
+          "type": "produces",
+          "to_id": 27,
+          "to_name": "x"
+        },
+        {
+          "type": "produces",
+          "to_id": 32,
+          "to_name": "x"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "x",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->x#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": null,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.57421875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 12,
+          "from_name": "operator.div"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 13,
+          "to_name": "append"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "astype",
+      "type": "function_call",
+      "module": "library",
+      "context": "image_preprocessing_pipeline#1->astype#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      }
+    },
+    {
+      "id": 12,
+      "name": "operator.div",
+      "type": "operator",
+      "module": "builtin",
+      "context": "image_preprocessing_pipeline#1->operator.div#L1",
+      "performance": {
+        "execution_time_ms": 0.01,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 10,
+          "to_name": "x"
+        },
+        {
+          "type": "produces",
+          "to_id": 18,
+          "to_name": "x"
+        },
+        {
+          "type": "produces",
+          "to_id": 23,
+          "to_name": "x"
+        },
+        {
+          "type": "produces",
+          "to_id": 28,
+          "to_name": "x"
+        },
+        {
+          "type": "produces",
+          "to_id": 33,
+          "to_name": "x"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "append",
+      "type": "function_call",
+      "module": "library",
+      "context": "image_preprocessing_pipeline#1->append#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 10,
+          "from_name": "x"
+        },
+        {
+          "type": "uses",
+          "from_id": 18,
+          "from_name": "x"
+        },
+        {
+          "type": "uses",
+          "from_id": 23,
+          "from_name": "x"
+        },
+        {
+          "type": "uses",
+          "from_id": 28,
+          "from_name": "x"
+        },
+        {
+          "type": "uses",
+          "from_id": 33,
+          "from_name": "x"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "img",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->img#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": null,
+        "shape": [
+          800,
+          600,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 1.373291015625
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 5,
+          "to_name": "resize"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "x",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->x#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": null,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.1435546875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 5,
+          "from_name": "resize"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "x",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->x#6",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 6,
+        "actual_value": null,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.1435546875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 7,
+          "from_name": "cvtColor"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 7,
+          "to_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "x",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->x#7",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 7,
+        "actual_value": null,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.1435546875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 9,
+          "from_name": "GaussianBlur"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 9,
+          "to_name": "GaussianBlur"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "x",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->x#8",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 8,
+        "actual_value": null,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.57421875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 12,
+          "from_name": "operator.div"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 13,
+          "to_name": "append"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "img",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->img#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": null,
+        "shape": [
+          800,
+          600,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 1.373291015625
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 5,
+          "to_name": "resize"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "x",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->x#9",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 9,
+        "actual_value": null,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.1435546875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 5,
+          "from_name": "resize"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "x",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->x#10",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 10,
+        "actual_value": null,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.1435546875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 7,
+          "from_name": "cvtColor"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 7,
+          "to_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "x",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->x#11",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 11,
+        "actual_value": null,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.1435546875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 9,
+          "from_name": "GaussianBlur"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 9,
+          "to_name": "GaussianBlur"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "x",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->x#12",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 12,
+        "actual_value": null,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.57421875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 12,
+          "from_name": "operator.div"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 13,
+          "to_name": "append"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "img",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->img#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": null,
+        "shape": [
+          800,
+          600,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 1.373291015625
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 5,
+          "to_name": "resize"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "x",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->x#13",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 13,
+        "actual_value": null,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.1435546875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 5,
+          "from_name": "resize"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "x",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->x#14",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 14,
+        "actual_value": null,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.1435546875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 7,
+          "from_name": "cvtColor"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 7,
+          "to_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "x",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->x#15",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 15,
+        "actual_value": null,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.1435546875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 9,
+          "from_name": "GaussianBlur"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 9,
+          "to_name": "GaussianBlur"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "x",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->x#16",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 16,
+        "actual_value": null,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.57421875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 12,
+          "from_name": "operator.div"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 13,
+          "to_name": "append"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "img",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->img#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": null,
+        "shape": [
+          800,
+          600,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 1.373291015625
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 5,
+          "to_name": "resize"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "x",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->x#17",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 17,
+        "actual_value": null,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.1435546875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 5,
+          "from_name": "resize"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "x",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->x#18",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 18,
+        "actual_value": null,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.1435546875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 7,
+          "from_name": "cvtColor"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 7,
+          "to_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "x",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->x#19",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 19,
+        "actual_value": null,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.1435546875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 9,
+          "from_name": "GaussianBlur"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 9,
+          "to_name": "GaussianBlur"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "x",
+      "type": "variable",
+      "module": "global",
+      "context": "image_preprocessing_pipeline#1->x#20",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 20,
+        "actual_value": null,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.57421875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 0,
+          "from_name": "image_preprocessing_pipeline"
+        },
+        {
+          "type": "produces",
+          "from_id": 12,
+          "from_name": "operator.div"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 13,
+          "to_name": "append"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    [
+      0,
+      1,
+      "creates"
+    ],
+    [
+      0,
+      2,
+      "creates"
+    ],
+    [
+      0,
+      3,
+      "creates"
+    ],
+    [
+      0,
+      4,
+      "creates"
+    ],
+    [
+      3,
+      5,
+      "uses"
+    ],
+    [
+      5,
+      4,
+      "produces"
+    ],
+    [
+      0,
+      6,
+      "modifies"
+    ],
+    [
+      6,
+      7,
+      "uses"
+    ],
+    [
+      7,
+      6,
+      "produces"
+    ],
+    [
+      0,
+      8,
+      "modifies"
+    ],
+    [
+      8,
+      9,
+      "uses"
+    ],
+    [
+      9,
+      8,
+      "produces"
+    ],
+    [
+      0,
+      10,
+      "modifies"
+    ],
+    [
+      12,
+      10,
+      "produces"
+    ],
+    [
+      10,
+      13,
+      "uses"
+    ],
+    [
+      0,
+      14,
+      "modifies"
+    ],
+    [
+      0,
+      15,
+      "modifies"
+    ],
+    [
+      14,
+      5,
+      "uses"
+    ],
+    [
+      5,
+      15,
+      "produces"
+    ],
+    [
+      0,
+      16,
+      "modifies"
+    ],
+    [
+      16,
+      7,
+      "uses"
+    ],
+    [
+      7,
+      16,
+      "produces"
+    ],
+    [
+      0,
+      17,
+      "modifies"
+    ],
+    [
+      17,
+      9,
+      "uses"
+    ],
+    [
+      9,
+      17,
+      "produces"
+    ],
+    [
+      0,
+      18,
+      "modifies"
+    ],
+    [
+      12,
+      18,
+      "produces"
+    ],
+    [
+      18,
+      13,
+      "uses"
+    ],
+    [
+      0,
+      19,
+      "modifies"
+    ],
+    [
+      0,
+      20,
+      "modifies"
+    ],
+    [
+      19,
+      5,
+      "uses"
+    ],
+    [
+      5,
+      20,
+      "produces"
+    ],
+    [
+      0,
+      21,
+      "modifies"
+    ],
+    [
+      21,
+      7,
+      "uses"
+    ],
+    [
+      7,
+      21,
+      "produces"
+    ],
+    [
+      0,
+      22,
+      "modifies"
+    ],
+    [
+      22,
+      9,
+      "uses"
+    ],
+    [
+      9,
+      22,
+      "produces"
+    ],
+    [
+      0,
+      23,
+      "modifies"
+    ],
+    [
+      12,
+      23,
+      "produces"
+    ],
+    [
+      23,
+      13,
+      "uses"
+    ],
+    [
+      0,
+      24,
+      "modifies"
+    ],
+    [
+      0,
+      25,
+      "modifies"
+    ],
+    [
+      24,
+      5,
+      "uses"
+    ],
+    [
+      5,
+      25,
+      "produces"
+    ],
+    [
+      0,
+      26,
+      "modifies"
+    ],
+    [
+      26,
+      7,
+      "uses"
+    ],
+    [
+      7,
+      26,
+      "produces"
+    ],
+    [
+      0,
+      27,
+      "modifies"
+    ],
+    [
+      27,
+      9,
+      "uses"
+    ],
+    [
+      9,
+      27,
+      "produces"
+    ],
+    [
+      0,
+      28,
+      "modifies"
+    ],
+    [
+      12,
+      28,
+      "produces"
+    ],
+    [
+      28,
+      13,
+      "uses"
+    ],
+    [
+      0,
+      29,
+      "modifies"
+    ],
+    [
+      0,
+      30,
+      "modifies"
+    ],
+    [
+      29,
+      5,
+      "uses"
+    ],
+    [
+      5,
+      30,
+      "produces"
+    ],
+    [
+      0,
+      31,
+      "modifies"
+    ],
+    [
+      31,
+      7,
+      "uses"
+    ],
+    [
+      7,
+      31,
+      "produces"
+    ],
+    [
+      0,
+      32,
+      "modifies"
+    ],
+    [
+      32,
+      9,
+      "uses"
+    ],
+    [
+      9,
+      32,
+      "produces"
+    ],
+    [
+      0,
+      33,
+      "modifies"
+    ],
+    [
+      12,
+      33,
+      "produces"
+    ],
+    [
+      33,
+      13,
+      "uses"
+    ]
+  ],
+  "memory_report": {
+    "peak_memory_mb": 2.9528732299804688,
+    "peak_gpu_memory_mb": 0,
+    "total_variables_tracked": 0,
+    "function_profiles": {
+      "image_preprocessing_pipeline#1": {
+        "function": "image_preprocessing_pipeline",
+        "call_count": 1,
+        "peak_memory_mb": 2.9528732299804688,
+        "allocated_mb": 2.9493350982666016,
+        "freed_mb": 0,
+        "duration_ms": 30.74336051940918
+      }
+    },
+    "variable_summary": {}
+  },
+  "flame_graph": {
+    "name": "root",
+    "value": 2.9528732299804688,
+    "children": [
+      {
+        "name": "image_preprocessing_pipeline#1",
+        "value": 2.9528732299804688,
+        "children": []
+      }
+    ]
+  },
+  "statistics": {
+    "total_nodes": 34,
+    "function_nodes": 1,
+    "variable_nodes": 27,
+    "total_variables_tracked": 4,
+    "peak_memory_mb": 2.9528732299804688
+  }
+}

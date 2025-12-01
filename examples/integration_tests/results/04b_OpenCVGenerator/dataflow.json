@@ -1,0 +1,7166 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "name": "run_opencv_generator",
+      "type": "function",
+      "module": "__main__",
+      "context": "run_opencv_generator#1",
+      "performance": {
+        "execution_time_ms": 76.67875289916992,
+        "memory_before_mb": 0.0004787445068359375,
+        "memory_after_mb": 0.7484159469604492,
+        "memory_allocated_mb": 0.7479372024536133,
+        "peak_memory_mb": 0.7484159469604492,
+        "memory_usage": 784771
+      },
+      "output_edges": [
+        {
+          "type": "calls",
+          "to_id": 1,
+          "to_name": "opencv_data_generator"
+        },
+        {
+          "type": "calls",
+          "to_id": 18,
+          "to_name": "opencv_data_generator"
+        },
+        {
+          "type": "calls",
+          "to_id": 31,
+          "to_name": "opencv_data_generator"
+        },
+        {
+          "type": "calls",
+          "to_id": 44,
+          "to_name": "opencv_data_generator"
+        },
+        {
+          "type": "calls",
+          "to_id": 57,
+          "to_name": "opencv_data_generator"
+        },
+        {
+          "type": "calls",
+          "to_id": 70,
+          "to_name": "opencv_data_generator"
+        },
+        {
+          "type": "calls",
+          "to_id": 83,
+          "to_name": "opencv_data_generator"
+        },
+        {
+          "type": "calls",
+          "to_id": 96,
+          "to_name": "opencv_data_generator"
+        },
+        {
+          "type": "calls",
+          "to_id": 109,
+          "to_name": "opencv_data_generator"
+        },
+        {
+          "type": "calls",
+          "to_id": 122,
+          "to_name": "opencv_data_generator"
+        },
+        {
+          "type": "calls",
+          "to_id": 135,
+          "to_name": "opencv_data_generator"
+        },
+        {
+          "type": "creates",
+          "to_id": 138,
+          "to_name": "results"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "opencv_data_generator",
+      "type": "function",
+      "module": "__main__",
+      "context": "run_opencv_generator#1->opencv_data_generator#1",
+      "performance": {
+        "execution_time_ms": 9.267330169677734,
+        "memory_before_mb": 0.00279998779296875,
+        "memory_after_mb": 0.0774068832397461,
+        "memory_allocated_mb": 0.07460689544677734,
+        "peak_memory_mb": 0.0774068832397461,
+        "memory_usage": 81167
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 0,
+          "from_name": "run_opencv_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 2,
+          "to_name": "i"
+        },
+        {
+          "type": "calls",
+          "to_id": 4,
+          "to_name": "prod"
+        },
+        {
+          "type": "creates",
+          "to_id": 7,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 9,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 11,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 13,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 15,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "i",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#1->i#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 0,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 1,
+          "from_name": "opencv_data_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 3,
+          "to_name": "seed"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "seed",
+      "type": "function_call",
+      "module": "library",
+      "context": "run_opencv_generator#1->opencv_data_generator#1->seed#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 2,
+          "from_name": "i"
+        },
+        {
+          "type": "uses",
+          "from_id": 21,
+          "from_name": "i"
+        },
+        {
+          "type": "uses",
+          "from_id": 34,
+          "from_name": "i"
+        },
+        {
+          "type": "uses",
+          "from_id": 47,
+          "from_name": "i"
+        },
+        {
+          "type": "uses",
+          "from_id": 60,
+          "from_name": "i"
+        },
+        {
+          "type": "uses",
+          "from_id": 73,
+          "from_name": "i"
+        },
+        {
+          "type": "uses",
+          "from_id": 86,
+          "from_name": "i"
+        },
+        {
+          "type": "uses",
+          "from_id": 99,
+          "from_name": "i"
+        },
+        {
+          "type": "uses",
+          "from_id": 112,
+          "from_name": "i"
+        },
+        {
+          "type": "uses",
+          "from_id": 125,
+          "from_name": "i"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "prod",
+      "type": "function",
+      "module": "unknown",
+      "context": "run_opencv_generator#1->opencv_data_generator#1->prod#1",
+      "performance": {
+        "execution_time_ms": 0.8983612060546875,
+        "memory_before_mb": 0.007373809814453125,
+        "memory_after_mb": 0.014334678649902344,
+        "memory_allocated_mb": 0.006960868835449219,
+        "peak_memory_mb": 0.014334678649902344,
+        "memory_usage": 15031
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 1,
+          "from_name": "opencv_data_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 5,
+          "to_name": "relevant_args"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "relevant_args",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#1->prod#1->relevant_args#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": [
+          [
+            100,
+            100,
+            3
+          ],
+          null
+        ],
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.002
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 4,
+          "from_name": "prod"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "<return_expression>",
+      "type": "variable",
+      "module": "anonymous",
+      "context": "run_opencv_generator#1->opencv_data_generator#1->prod#1-><return_expression>",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 0,
+        "actual_value": null,
+        "shape": [],
+        "dtype": "int64",
+        "device": null,
+        "size_mb": 7.62939453125e-06
+      }
+    },
+    {
+      "id": 7,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#1->img#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          100,
+          100,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.0286102294921875
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 1,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 8,
+          "from_name": "randint"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "randint",
+      "type": "function_call",
+      "module": "library",
+      "context": "run_opencv_generator#1->opencv_data_generator#1->randint#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 7,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 25,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 38,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 51,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 64,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 77,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 90,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 103,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 116,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 129,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#1->img#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 1,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 10,
+          "from_name": "resize"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 10,
+          "to_name": "resize"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "resize",
+      "type": "function_call",
+      "module": "library",
+      "context": "run_opencv_generator#1->opencv_data_generator#1->resize#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 9,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 26,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 39,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 52,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 65,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 78,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 91,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 104,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 117,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 130,
+          "from_name": "img"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 9,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 26,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 39,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 52,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 65,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 78,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 91,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 104,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 117,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 130,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#1->img#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 1,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 12,
+          "from_name": "cvtColor"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 12,
+          "to_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "cvtColor",
+      "type": "function_call",
+      "module": "library",
+      "context": "run_opencv_generator#1->opencv_data_generator#1->cvtColor#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 11,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 27,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 40,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 53,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 66,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 79,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 92,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 105,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 118,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 131,
+          "from_name": "img"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 11,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 27,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 40,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 53,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 66,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 79,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 92,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 105,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 118,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 131,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#1->img#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 1,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 14,
+          "from_name": "GaussianBlur"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 14,
+          "to_name": "GaussianBlur"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "GaussianBlur",
+      "type": "function_call",
+      "module": "library",
+      "context": "run_opencv_generator#1->opencv_data_generator#1->GaussianBlur#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "input_edges": [
+        {
+          "type": "uses",
+          "from_id": 13,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 28,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 41,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 54,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 67,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 80,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 93,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 106,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 119,
+          "from_name": "img"
+        },
+        {
+          "type": "uses",
+          "from_id": 132,
+          "from_name": "img"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 13,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 28,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 41,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 54,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 67,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 80,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 93,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 106,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 119,
+          "to_name": "img"
+        },
+        {
+          "type": "produces",
+          "to_id": 132,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#1->img#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.046875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 1,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 17,
+          "from_name": "operator.div"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "flows_to",
+          "to_id": 20,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "astype",
+      "type": "function_call",
+      "module": "library",
+      "context": "run_opencv_generator#1->opencv_data_generator#1->astype#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      }
+    },
+    {
+      "id": 17,
+      "name": "operator.div",
+      "type": "operator",
+      "module": "builtin",
+      "context": "run_opencv_generator#1->opencv_data_generator#1->operator.div#L1",
+      "performance": {
+        "execution_time_ms": 0.01,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 15,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "opencv_data_generator",
+      "type": "function",
+      "module": "__main__",
+      "context": "run_opencv_generator#1->opencv_data_generator#2",
+      "performance": {
+        "execution_time_ms": 5.950212478637695,
+        "memory_before_mb": 0.08067607879638672,
+        "memory_after_mb": 0.1502542495727539,
+        "memory_allocated_mb": 0.06957817077636719,
+        "peak_memory_mb": 0.1502542495727539,
+        "memory_usage": 157553
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 0,
+          "from_name": "run_opencv_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 19,
+          "to_name": "i"
+        },
+        {
+          "type": "creates",
+          "to_id": 20,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 21,
+          "to_name": "i"
+        },
+        {
+          "type": "calls",
+          "to_id": 22,
+          "to_name": "prod"
+        },
+        {
+          "type": "modifies",
+          "to_id": 25,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 26,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 27,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 28,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 29,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "i",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#2->i#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 0,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 18,
+          "from_name": "opencv_data_generator"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#2->img#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.046875
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 18,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "flows_to",
+          "from_id": 15,
+          "from_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "i",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#2->i#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": 1,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 18,
+          "from_name": "opencv_data_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 3,
+          "to_name": "seed"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "prod",
+      "type": "function",
+      "module": "unknown",
+      "context": "run_opencv_generator#1->opencv_data_generator#2->prod#1",
+      "performance": {
+        "execution_time_ms": 0.6794929504394531,
+        "memory_before_mb": 0.08677101135253906,
+        "memory_after_mb": 0.09141731262207031,
+        "memory_allocated_mb": 0.00464630126953125,
+        "peak_memory_mb": 0.09141731262207031,
+        "memory_usage": 95858
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 18,
+          "from_name": "opencv_data_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 23,
+          "to_name": "relevant_args"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "relevant_args",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#2->prod#1->relevant_args#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": [
+          [
+            100,
+            100,
+            3
+          ],
+          null
+        ],
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.002
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 22,
+          "from_name": "prod"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "<return_expression>",
+      "type": "variable",
+      "module": "anonymous",
+      "context": "run_opencv_generator#1->opencv_data_generator#2->prod#1-><return_expression>",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 0,
+        "actual_value": null,
+        "shape": [],
+        "dtype": "int64",
+        "device": null,
+        "size_mb": 7.62939453125e-06
+      }
+    },
+    {
+      "id": 25,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#2->img#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": null,
+        "shape": [
+          100,
+          100,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.0286102294921875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 18,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 8,
+          "from_name": "randint"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#2->img#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 18,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 10,
+          "from_name": "resize"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 10,
+          "to_name": "resize"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#2->img#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 18,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 12,
+          "from_name": "cvtColor"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 12,
+          "to_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#2->img#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 18,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 14,
+          "from_name": "GaussianBlur"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 14,
+          "to_name": "GaussianBlur"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#2->img#6",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 6,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.046875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 18,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 30,
+          "from_name": "operator.div"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "flows_to",
+          "to_id": 33,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "operator.div",
+      "type": "operator",
+      "module": "builtin",
+      "context": "run_opencv_generator#1->opencv_data_generator#2->operator.div#L1",
+      "performance": {
+        "execution_time_ms": 0.01,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 29,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "opencv_data_generator",
+      "type": "function",
+      "module": "__main__",
+      "context": "run_opencv_generator#1->opencv_data_generator#3",
+      "performance": {
+        "execution_time_ms": 6.236076354980469,
+        "memory_before_mb": 0.15389728546142578,
+        "memory_after_mb": 0.22735595703125,
+        "memory_allocated_mb": 0.07345867156982422,
+        "peak_memory_mb": 0.22735595703125,
+        "memory_usage": 238400
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 0,
+          "from_name": "run_opencv_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 32,
+          "to_name": "i"
+        },
+        {
+          "type": "creates",
+          "to_id": 33,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 34,
+          "to_name": "i"
+        },
+        {
+          "type": "calls",
+          "to_id": 35,
+          "to_name": "prod"
+        },
+        {
+          "type": "modifies",
+          "to_id": 38,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 39,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 40,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 41,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 42,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "i",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#3->i#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 1,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 31,
+          "from_name": "opencv_data_generator"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#3->img#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.046875
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 31,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "flows_to",
+          "from_id": 29,
+          "from_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "i",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#3->i#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": 2,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 31,
+          "from_name": "opencv_data_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 3,
+          "to_name": "seed"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "prod",
+      "type": "function",
+      "module": "unknown",
+      "context": "run_opencv_generator#1->opencv_data_generator#3->prod#1",
+      "performance": {
+        "execution_time_ms": 0.7491111755371094,
+        "memory_before_mb": 0.1615457534790039,
+        "memory_after_mb": 0.16668033599853516,
+        "memory_allocated_mb": 0.00513458251953125,
+        "peak_memory_mb": 0.16668033599853516,
+        "memory_usage": 174777
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 31,
+          "from_name": "opencv_data_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 36,
+          "to_name": "relevant_args"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "relevant_args",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#3->prod#1->relevant_args#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": [
+          [
+            100,
+            100,
+            3
+          ],
+          null
+        ],
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.002
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 35,
+          "from_name": "prod"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "<return_expression>",
+      "type": "variable",
+      "module": "anonymous",
+      "context": "run_opencv_generator#1->opencv_data_generator#3->prod#1-><return_expression>",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 0,
+        "actual_value": null,
+        "shape": [],
+        "dtype": "int64",
+        "device": null,
+        "size_mb": 7.62939453125e-06
+      }
+    },
+    {
+      "id": 38,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#3->img#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": null,
+        "shape": [
+          100,
+          100,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.0286102294921875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 31,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 8,
+          "from_name": "randint"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#3->img#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 31,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 10,
+          "from_name": "resize"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 10,
+          "to_name": "resize"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#3->img#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 31,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 12,
+          "from_name": "cvtColor"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 12,
+          "to_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#3->img#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 31,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 14,
+          "from_name": "GaussianBlur"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 14,
+          "to_name": "GaussianBlur"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#3->img#6",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 6,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.046875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 31,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 43,
+          "from_name": "operator.div"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "flows_to",
+          "to_id": 46,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "name": "operator.div",
+      "type": "operator",
+      "module": "builtin",
+      "context": "run_opencv_generator#1->opencv_data_generator#3->operator.div#L1",
+      "performance": {
+        "execution_time_ms": 0.01,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 42,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "name": "opencv_data_generator",
+      "type": "function",
+      "module": "__main__",
+      "context": "run_opencv_generator#1->opencv_data_generator#4",
+      "performance": {
+        "execution_time_ms": 6.303548812866211,
+        "memory_before_mb": 0.23080825805664062,
+        "memory_after_mb": 0.30312633514404297,
+        "memory_allocated_mb": 0.07231807708740234,
+        "peak_memory_mb": 0.30312633514404297,
+        "memory_usage": 317851
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 0,
+          "from_name": "run_opencv_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 45,
+          "to_name": "i"
+        },
+        {
+          "type": "creates",
+          "to_id": 46,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 47,
+          "to_name": "i"
+        },
+        {
+          "type": "calls",
+          "to_id": 48,
+          "to_name": "prod"
+        },
+        {
+          "type": "modifies",
+          "to_id": 51,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 52,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 53,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 54,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 55,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "name": "i",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#4->i#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 2,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 44,
+          "from_name": "opencv_data_generator"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#4->img#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.046875
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 44,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "flows_to",
+          "from_id": 42,
+          "from_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "name": "i",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#4->i#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": 3,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 44,
+          "from_name": "opencv_data_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 3,
+          "to_name": "seed"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "name": "prod",
+      "type": "function",
+      "module": "unknown",
+      "context": "run_opencv_generator#1->opencv_data_generator#4->prod#1",
+      "performance": {
+        "execution_time_ms": 0.7681846618652344,
+        "memory_before_mb": 0.23873519897460938,
+        "memory_after_mb": 0.24386978149414062,
+        "memory_allocated_mb": 0.00513458251953125,
+        "peak_memory_mb": 0.24386978149414062,
+        "memory_usage": 255716
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 44,
+          "from_name": "opencv_data_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 49,
+          "to_name": "relevant_args"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "name": "relevant_args",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#4->prod#1->relevant_args#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": [
+          [
+            100,
+            100,
+            3
+          ],
+          null
+        ],
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.002
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 48,
+          "from_name": "prod"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "name": "<return_expression>",
+      "type": "variable",
+      "module": "anonymous",
+      "context": "run_opencv_generator#1->opencv_data_generator#4->prod#1-><return_expression>",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 0,
+        "actual_value": null,
+        "shape": [],
+        "dtype": "int64",
+        "device": null,
+        "size_mb": 7.62939453125e-06
+      }
+    },
+    {
+      "id": 51,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#4->img#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": null,
+        "shape": [
+          100,
+          100,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.0286102294921875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 44,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 8,
+          "from_name": "randint"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#4->img#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 44,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 10,
+          "from_name": "resize"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 10,
+          "to_name": "resize"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#4->img#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 44,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 12,
+          "from_name": "cvtColor"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 12,
+          "to_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#4->img#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 44,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 14,
+          "from_name": "GaussianBlur"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 14,
+          "to_name": "GaussianBlur"
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#4->img#6",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 6,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.046875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 44,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 56,
+          "from_name": "operator.div"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "flows_to",
+          "to_id": 59,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "name": "operator.div",
+      "type": "operator",
+      "module": "builtin",
+      "context": "run_opencv_generator#1->opencv_data_generator#4->operator.div#L1",
+      "performance": {
+        "execution_time_ms": 0.01,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 55,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "name": "opencv_data_generator",
+      "type": "function",
+      "module": "__main__",
+      "context": "run_opencv_generator#1->opencv_data_generator#5",
+      "performance": {
+        "execution_time_ms": 6.128072738647461,
+        "memory_before_mb": 0.3065786361694336,
+        "memory_after_mb": 0.38069629669189453,
+        "memory_allocated_mb": 0.07411766052246094,
+        "peak_memory_mb": 0.38069629669189453,
+        "memory_usage": 399189
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 0,
+          "from_name": "run_opencv_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 58,
+          "to_name": "i"
+        },
+        {
+          "type": "creates",
+          "to_id": 59,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 60,
+          "to_name": "i"
+        },
+        {
+          "type": "calls",
+          "to_id": 61,
+          "to_name": "prod"
+        },
+        {
+          "type": "modifies",
+          "to_id": 64,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 65,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 66,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 67,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 68,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "name": "i",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#5->i#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 3,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 57,
+          "from_name": "opencv_data_generator"
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#5->img#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.046875
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 57,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "flows_to",
+          "from_id": 55,
+          "from_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "name": "i",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#5->i#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": 4,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 57,
+          "from_name": "opencv_data_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 3,
+          "to_name": "seed"
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "name": "prod",
+      "type": "function",
+      "module": "unknown",
+      "context": "run_opencv_generator#1->opencv_data_generator#5->prod#1",
+      "performance": {
+        "execution_time_ms": 0.7479190826416016,
+        "memory_before_mb": 0.31392955780029297,
+        "memory_after_mb": 0.32080650329589844,
+        "memory_allocated_mb": 0.006876945495605469,
+        "peak_memory_mb": 0.32080650329589844,
+        "memory_usage": 336390
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 57,
+          "from_name": "opencv_data_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 62,
+          "to_name": "relevant_args"
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "name": "relevant_args",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#5->prod#1->relevant_args#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": [
+          [
+            100,
+            100,
+            3
+          ],
+          null
+        ],
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.002
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 61,
+          "from_name": "prod"
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "name": "<return_expression>",
+      "type": "variable",
+      "module": "anonymous",
+      "context": "run_opencv_generator#1->opencv_data_generator#5->prod#1-><return_expression>",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 0,
+        "actual_value": null,
+        "shape": [],
+        "dtype": "int64",
+        "device": null,
+        "size_mb": 7.62939453125e-06
+      }
+    },
+    {
+      "id": 64,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#5->img#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": null,
+        "shape": [
+          100,
+          100,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.0286102294921875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 57,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 8,
+          "from_name": "randint"
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#5->img#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 57,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 10,
+          "from_name": "resize"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 10,
+          "to_name": "resize"
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#5->img#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 57,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 12,
+          "from_name": "cvtColor"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 12,
+          "to_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#5->img#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 57,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 14,
+          "from_name": "GaussianBlur"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 14,
+          "to_name": "GaussianBlur"
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#5->img#6",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 6,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.046875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 57,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 69,
+          "from_name": "operator.div"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "flows_to",
+          "to_id": 72,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "name": "operator.div",
+      "type": "operator",
+      "module": "builtin",
+      "context": "run_opencv_generator#1->opencv_data_generator#5->operator.div#L1",
+      "performance": {
+        "execution_time_ms": 0.01,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 68,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "name": "opencv_data_generator",
+      "type": "function",
+      "module": "__main__",
+      "context": "run_opencv_generator#1->opencv_data_generator#6",
+      "performance": {
+        "execution_time_ms": 6.353616714477539,
+        "memory_before_mb": 0.3846292495727539,
+        "memory_after_mb": 0.4577140808105469,
+        "memory_allocated_mb": 0.07308483123779297,
+        "peak_memory_mb": 0.4577140808105469,
+        "memory_usage": 479948
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 0,
+          "from_name": "run_opencv_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 71,
+          "to_name": "i"
+        },
+        {
+          "type": "creates",
+          "to_id": 72,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 73,
+          "to_name": "i"
+        },
+        {
+          "type": "calls",
+          "to_id": 74,
+          "to_name": "prod"
+        },
+        {
+          "type": "modifies",
+          "to_id": 77,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 78,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 79,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 80,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 81,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "name": "i",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#6->i#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 4,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 70,
+          "from_name": "opencv_data_generator"
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#6->img#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.046875
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 70,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "flows_to",
+          "from_id": 68,
+          "from_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "name": "i",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#6->i#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": 5,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 70,
+          "from_name": "opencv_data_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 3,
+          "to_name": "seed"
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "name": "prod",
+      "type": "function",
+      "module": "unknown",
+      "context": "run_opencv_generator#1->opencv_data_generator#6->prod#1",
+      "performance": {
+        "execution_time_ms": 0.7715225219726562,
+        "memory_before_mb": 0.3923616409301758,
+        "memory_after_mb": 0.3979768753051758,
+        "memory_allocated_mb": 0.005615234375,
+        "peak_memory_mb": 0.3979768753051758,
+        "memory_usage": 417309
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 70,
+          "from_name": "opencv_data_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 75,
+          "to_name": "relevant_args"
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "name": "relevant_args",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#6->prod#1->relevant_args#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": [
+          [
+            100,
+            100,
+            3
+          ],
+          null
+        ],
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.002
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 74,
+          "from_name": "prod"
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "name": "<return_expression>",
+      "type": "variable",
+      "module": "anonymous",
+      "context": "run_opencv_generator#1->opencv_data_generator#6->prod#1-><return_expression>",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 0,
+        "actual_value": null,
+        "shape": [],
+        "dtype": "int64",
+        "device": null,
+        "size_mb": 7.62939453125e-06
+      }
+    },
+    {
+      "id": 77,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#6->img#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": null,
+        "shape": [
+          100,
+          100,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.0286102294921875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 70,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 8,
+          "from_name": "randint"
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#6->img#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 70,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 10,
+          "from_name": "resize"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 10,
+          "to_name": "resize"
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#6->img#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 70,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 12,
+          "from_name": "cvtColor"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 12,
+          "to_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#6->img#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 70,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 14,
+          "from_name": "GaussianBlur"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 14,
+          "to_name": "GaussianBlur"
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#6->img#6",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 6,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.046875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 70,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 82,
+          "from_name": "operator.div"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "flows_to",
+          "to_id": 85,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "name": "operator.div",
+      "type": "operator",
+      "module": "builtin",
+      "context": "run_opencv_generator#1->opencv_data_generator#6->operator.div#L1",
+      "performance": {
+        "execution_time_ms": 0.01,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 81,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "name": "opencv_data_generator",
+      "type": "function",
+      "module": "__main__",
+      "context": "run_opencv_generator#1->opencv_data_generator#7",
+      "performance": {
+        "execution_time_ms": 6.780862808227539,
+        "memory_before_mb": 0.46164703369140625,
+        "memory_after_mb": 0.5001440048217773,
+        "memory_allocated_mb": 0.038496971130371094,
+        "peak_memory_mb": 0.5001440048217773,
+        "memory_usage": 524439
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 0,
+          "from_name": "run_opencv_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 84,
+          "to_name": "i"
+        },
+        {
+          "type": "creates",
+          "to_id": 85,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 86,
+          "to_name": "i"
+        },
+        {
+          "type": "calls",
+          "to_id": 87,
+          "to_name": "prod"
+        },
+        {
+          "type": "modifies",
+          "to_id": 90,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 91,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 92,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 93,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 94,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "name": "i",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#7->i#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 5,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 83,
+          "from_name": "opencv_data_generator"
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#7->img#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.046875
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 83,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "flows_to",
+          "from_id": 81,
+          "from_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "name": "i",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#7->i#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": 6,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 83,
+          "from_name": "opencv_data_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 3,
+          "to_name": "seed"
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "name": "prod",
+      "type": "function",
+      "module": "unknown",
+      "context": "run_opencv_generator#1->opencv_data_generator#7->prod#1",
+      "performance": {
+        "execution_time_ms": 0.7665157318115234,
+        "memory_before_mb": 0.4385833740234375,
+        "memory_after_mb": 0.442840576171875,
+        "memory_allocated_mb": 0.0042572021484375,
+        "peak_memory_mb": 0.442840576171875,
+        "memory_usage": 464352
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 83,
+          "from_name": "opencv_data_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 88,
+          "to_name": "relevant_args"
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "name": "relevant_args",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#7->prod#1->relevant_args#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": [
+          [
+            100,
+            100,
+            3
+          ],
+          null
+        ],
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.002
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 87,
+          "from_name": "prod"
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "name": "<return_expression>",
+      "type": "variable",
+      "module": "anonymous",
+      "context": "run_opencv_generator#1->opencv_data_generator#7->prod#1-><return_expression>",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 0,
+        "actual_value": null,
+        "shape": [],
+        "dtype": "int64",
+        "device": null,
+        "size_mb": 7.62939453125e-06
+      }
+    },
+    {
+      "id": 90,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#7->img#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": null,
+        "shape": [
+          100,
+          100,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.0286102294921875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 83,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 8,
+          "from_name": "randint"
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#7->img#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 83,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 10,
+          "from_name": "resize"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 10,
+          "to_name": "resize"
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#7->img#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 83,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 12,
+          "from_name": "cvtColor"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 12,
+          "to_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#7->img#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 83,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 14,
+          "from_name": "GaussianBlur"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 14,
+          "to_name": "GaussianBlur"
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#7->img#6",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 6,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.046875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 83,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 95,
+          "from_name": "operator.div"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "flows_to",
+          "to_id": 98,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "name": "operator.div",
+      "type": "operator",
+      "module": "builtin",
+      "context": "run_opencv_generator#1->opencv_data_generator#7->operator.div#L1",
+      "performance": {
+        "execution_time_ms": 0.01,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 94,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "name": "opencv_data_generator",
+      "type": "function",
+      "module": "__main__",
+      "context": "run_opencv_generator#1->opencv_data_generator#8",
+      "performance": {
+        "execution_time_ms": 7.087469100952148,
+        "memory_before_mb": 0.503596305847168,
+        "memory_after_mb": 0.5759782791137695,
+        "memory_allocated_mb": 0.07238197326660156,
+        "peak_memory_mb": 0.5759782791137695,
+        "memory_usage": 603957
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 0,
+          "from_name": "run_opencv_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 97,
+          "to_name": "i"
+        },
+        {
+          "type": "creates",
+          "to_id": 98,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 99,
+          "to_name": "i"
+        },
+        {
+          "type": "calls",
+          "to_id": 100,
+          "to_name": "prod"
+        },
+        {
+          "type": "modifies",
+          "to_id": 103,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 104,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 105,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 106,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 107,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "name": "i",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#8->i#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 6,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 96,
+          "from_name": "opencv_data_generator"
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#8->img#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.046875
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 96,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "flows_to",
+          "from_id": 94,
+          "from_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "name": "i",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#8->i#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": 7,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 96,
+          "from_name": "opencv_data_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 3,
+          "to_name": "seed"
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "name": "prod",
+      "type": "function",
+      "module": "unknown",
+      "context": "run_opencv_generator#1->opencv_data_generator#8->prod#1",
+      "performance": {
+        "execution_time_ms": 0.9882450103759766,
+        "memory_before_mb": 0.5114889144897461,
+        "memory_after_mb": 0.5166263580322266,
+        "memory_allocated_mb": 0.005137443542480469,
+        "peak_memory_mb": 0.5166263580322266,
+        "memory_usage": 541722
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 96,
+          "from_name": "opencv_data_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 101,
+          "to_name": "relevant_args"
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "name": "relevant_args",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#8->prod#1->relevant_args#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": [
+          [
+            100,
+            100,
+            3
+          ],
+          null
+        ],
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.002
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 100,
+          "from_name": "prod"
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "name": "<return_expression>",
+      "type": "variable",
+      "module": "anonymous",
+      "context": "run_opencv_generator#1->opencv_data_generator#8->prod#1-><return_expression>",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 0,
+        "actual_value": null,
+        "shape": [],
+        "dtype": "int64",
+        "device": null,
+        "size_mb": 7.62939453125e-06
+      }
+    },
+    {
+      "id": 103,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#8->img#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": null,
+        "shape": [
+          100,
+          100,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.0286102294921875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 96,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 8,
+          "from_name": "randint"
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#8->img#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 96,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 10,
+          "from_name": "resize"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 10,
+          "to_name": "resize"
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#8->img#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 96,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 12,
+          "from_name": "cvtColor"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 12,
+          "to_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#8->img#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 96,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 14,
+          "from_name": "GaussianBlur"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 14,
+          "to_name": "GaussianBlur"
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#8->img#6",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 6,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.046875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 96,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 108,
+          "from_name": "operator.div"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "flows_to",
+          "to_id": 111,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 108,
+      "name": "operator.div",
+      "type": "operator",
+      "module": "builtin",
+      "context": "run_opencv_generator#1->opencv_data_generator#8->operator.div#L1",
+      "performance": {
+        "execution_time_ms": 0.01,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 107,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "name": "opencv_data_generator",
+      "type": "function",
+      "module": "__main__",
+      "context": "run_opencv_generator#1->opencv_data_generator#9",
+      "performance": {
+        "execution_time_ms": 6.64830207824707,
+        "memory_before_mb": 0.5804910659790039,
+        "memory_after_mb": 0.6526956558227539,
+        "memory_allocated_mb": 0.07220458984375,
+        "peak_memory_mb": 0.6526956558227539,
+        "memory_usage": 684401
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 0,
+          "from_name": "run_opencv_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 110,
+          "to_name": "i"
+        },
+        {
+          "type": "creates",
+          "to_id": 111,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 112,
+          "to_name": "i"
+        },
+        {
+          "type": "calls",
+          "to_id": 113,
+          "to_name": "prod"
+        },
+        {
+          "type": "modifies",
+          "to_id": 116,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 117,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 118,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 119,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 120,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "name": "i",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#9->i#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 7,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 109,
+          "from_name": "opencv_data_generator"
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#9->img#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.046875
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 109,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "flows_to",
+          "from_id": 107,
+          "from_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "name": "i",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#9->i#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": 8,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 109,
+          "from_name": "opencv_data_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 3,
+          "to_name": "seed"
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "name": "prod",
+      "type": "function",
+      "module": "unknown",
+      "context": "run_opencv_generator#1->opencv_data_generator#9->prod#1",
+      "performance": {
+        "execution_time_ms": 0.7932186126708984,
+        "memory_before_mb": 0.5878763198852539,
+        "memory_after_mb": 0.5933113098144531,
+        "memory_allocated_mb": 0.005434989929199219,
+        "peak_memory_mb": 0.5933113098144531,
+        "memory_usage": 622132
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 109,
+          "from_name": "opencv_data_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 114,
+          "to_name": "relevant_args"
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "name": "relevant_args",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#9->prod#1->relevant_args#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": [
+          [
+            100,
+            100,
+            3
+          ],
+          null
+        ],
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.002
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 113,
+          "from_name": "prod"
+        }
+      ]
+    },
+    {
+      "id": 115,
+      "name": "<return_expression>",
+      "type": "variable",
+      "module": "anonymous",
+      "context": "run_opencv_generator#1->opencv_data_generator#9->prod#1-><return_expression>",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 0,
+        "actual_value": null,
+        "shape": [],
+        "dtype": "int64",
+        "device": null,
+        "size_mb": 7.62939453125e-06
+      }
+    },
+    {
+      "id": 116,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#9->img#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": null,
+        "shape": [
+          100,
+          100,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.0286102294921875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 109,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 8,
+          "from_name": "randint"
+        }
+      ]
+    },
+    {
+      "id": 117,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#9->img#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 109,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 10,
+          "from_name": "resize"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 10,
+          "to_name": "resize"
+        }
+      ]
+    },
+    {
+      "id": 118,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#9->img#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 109,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 12,
+          "from_name": "cvtColor"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 12,
+          "to_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 119,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#9->img#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 109,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 14,
+          "from_name": "GaussianBlur"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 14,
+          "to_name": "GaussianBlur"
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#9->img#6",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 6,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.046875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 109,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 121,
+          "from_name": "operator.div"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "flows_to",
+          "to_id": 124,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 121,
+      "name": "operator.div",
+      "type": "operator",
+      "module": "builtin",
+      "context": "run_opencv_generator#1->opencv_data_generator#9->operator.div#L1",
+      "performance": {
+        "execution_time_ms": 0.01,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 120,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 122,
+      "name": "opencv_data_generator",
+      "type": "function",
+      "module": "__main__",
+      "context": "run_opencv_generator#1->opencv_data_generator#10",
+      "performance": {
+        "execution_time_ms": 6.588220596313477,
+        "memory_before_mb": 0.6565322875976562,
+        "memory_after_mb": 0.7296667098999023,
+        "memory_allocated_mb": 0.0731344223022461,
+        "peak_memory_mb": 0.7296667098999023,
+        "memory_usage": 765111
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 0,
+          "from_name": "run_opencv_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 123,
+          "to_name": "i"
+        },
+        {
+          "type": "creates",
+          "to_id": 124,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 125,
+          "to_name": "i"
+        },
+        {
+          "type": "calls",
+          "to_id": 126,
+          "to_name": "prod"
+        },
+        {
+          "type": "modifies",
+          "to_id": 129,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 130,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 131,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 132,
+          "to_name": "img"
+        },
+        {
+          "type": "modifies",
+          "to_id": 133,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 123,
+      "name": "i",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#10->i#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 8,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 122,
+          "from_name": "opencv_data_generator"
+        }
+      ]
+    },
+    {
+      "id": 124,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#10->img#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.046875
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 122,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "flows_to",
+          "from_id": 120,
+          "from_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 125,
+      "name": "i",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#10->i#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": 9,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 122,
+          "from_name": "opencv_data_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 3,
+          "to_name": "seed"
+        }
+      ]
+    },
+    {
+      "id": 126,
+      "name": "prod",
+      "type": "function",
+      "module": "unknown",
+      "context": "run_opencv_generator#1->opencv_data_generator#10->prod#1",
+      "performance": {
+        "execution_time_ms": 0.7798671722412109,
+        "memory_before_mb": 0.6642780303955078,
+        "memory_after_mb": 0.6697483062744141,
+        "memory_allocated_mb": 0.00547027587890625,
+        "peak_memory_mb": 0.6697483062744141,
+        "memory_usage": 702282
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 122,
+          "from_name": "opencv_data_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 127,
+          "to_name": "relevant_args"
+        }
+      ]
+    },
+    {
+      "id": 127,
+      "name": "relevant_args",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#10->prod#1->relevant_args#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": [
+          [
+            100,
+            100,
+            3
+          ],
+          null
+        ],
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.002
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 126,
+          "from_name": "prod"
+        }
+      ]
+    },
+    {
+      "id": 128,
+      "name": "<return_expression>",
+      "type": "variable",
+      "module": "anonymous",
+      "context": "run_opencv_generator#1->opencv_data_generator#10->prod#1-><return_expression>",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 0,
+        "actual_value": null,
+        "shape": [],
+        "dtype": "int64",
+        "device": null,
+        "size_mb": 7.62939453125e-06
+      }
+    },
+    {
+      "id": 129,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#10->img#2",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 2,
+        "actual_value": null,
+        "shape": [
+          100,
+          100,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.0286102294921875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 122,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 8,
+          "from_name": "randint"
+        }
+      ]
+    },
+    {
+      "id": 130,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#10->img#3",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 3,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 122,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 10,
+          "from_name": "resize"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 10,
+          "to_name": "resize"
+        }
+      ]
+    },
+    {
+      "id": 131,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#10->img#4",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 4,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 122,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 12,
+          "from_name": "cvtColor"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 12,
+          "to_name": "cvtColor"
+        }
+      ]
+    },
+    {
+      "id": 132,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#10->img#5",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 5,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "device": null,
+        "size_mb": 0.01171875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 122,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 14,
+          "from_name": "GaussianBlur"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "uses",
+          "to_id": 14,
+          "to_name": "GaussianBlur"
+        }
+      ]
+    },
+    {
+      "id": 133,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#10->img#6",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 6,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.046875
+      },
+      "input_edges": [
+        {
+          "type": "modifies",
+          "from_id": 122,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 134,
+          "from_name": "operator.div"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "flows_to",
+          "to_id": 137,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 134,
+      "name": "operator.div",
+      "type": "operator",
+      "module": "builtin",
+      "context": "run_opencv_generator#1->opencv_data_generator#10->operator.div#L1",
+      "performance": {
+        "execution_time_ms": 0.01,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 133,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 135,
+      "name": "opencv_data_generator",
+      "type": "function",
+      "module": "__main__",
+      "context": "run_opencv_generator#1->opencv_data_generator#11",
+      "performance": {
+        "execution_time_ms": 0.5125999450683594,
+        "memory_before_mb": 0.7341127395629883,
+        "memory_after_mb": 0.7400445938110352,
+        "memory_allocated_mb": 0.005931854248046875,
+        "peak_memory_mb": 0.7400445938110352,
+        "memory_usage": 775993
+      },
+      "input_edges": [
+        {
+          "type": "calls",
+          "from_id": 0,
+          "from_name": "run_opencv_generator"
+        }
+      ],
+      "output_edges": [
+        {
+          "type": "creates",
+          "to_id": 136,
+          "to_name": "i"
+        },
+        {
+          "type": "creates",
+          "to_id": 137,
+          "to_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 136,
+      "name": "i",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#11->i#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": 9,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": null
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 135,
+          "from_name": "opencv_data_generator"
+        }
+      ]
+    },
+    {
+      "id": 137,
+      "name": "img",
+      "type": "variable",
+      "module": "run_opencv_generator#1",
+      "context": "run_opencv_generator#1->opencv_data_generator#11->img#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "float32",
+        "device": null,
+        "size_mb": 0.046875
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 135,
+          "from_name": "opencv_data_generator"
+        },
+        {
+          "type": "flows_to",
+          "from_id": 133,
+          "from_name": "img"
+        }
+      ]
+    },
+    {
+      "id": 138,
+      "name": "results",
+      "type": "variable",
+      "module": "global",
+      "context": "run_opencv_generator#1->results#1",
+      "performance": {
+        "execution_time_ms": 0,
+        "memory_before_mb": 0,
+        "memory_after_mb": 0,
+        "memory_allocated_mb": 0,
+        "peak_memory_mb": 0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 1,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.01
+      },
+      "input_edges": [
+        {
+          "type": "creates",
+          "from_id": 0,
+          "from_name": "run_opencv_generator"
+        },
+        {
+          "type": "produces",
+          "from_id": 139,
+          "from_name": "list"
+        }
+      ]
+    },
+    {
+      "id": 139,
+      "name": "list",
+      "type": "function_call",
+      "module": "library",
+      "context": "run_opencv_generator#1->list#L1",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "output_edges": [
+        {
+          "type": "produces",
+          "to_id": 138,
+          "to_name": "results"
+        }
+      ]
+    },
+    {
+      "id": 140,
+      "name": "<return_expression>",
+      "type": "variable",
+      "module": "anonymous",
+      "context": "run_opencv_generator#1-><return_expression>",
+      "performance": {
+        "execution_time_ms": 0.0,
+        "memory_before_mb": 0.0,
+        "memory_after_mb": 0.0,
+        "memory_allocated_mb": 0.0,
+        "peak_memory_mb": 0.0,
+        "memory_usage": 0
+      },
+      "variable_info": {
+        "version": 0,
+        "actual_value": null,
+        "shape": null,
+        "dtype": null,
+        "device": null,
+        "size_mb": 0.002
+      }
+    }
+  ],
+  "edges": [
+    [
+      0,
+      1,
+      "calls"
+    ],
+    [
+      1,
+      2,
+      "creates"
+    ],
+    [
+      2,
+      3,
+      "uses"
+    ],
+    [
+      1,
+      4,
+      "calls"
+    ],
+    [
+      4,
+      5,
+      "creates"
+    ],
+    [
+      1,
+      7,
+      "creates"
+    ],
+    [
+      8,
+      7,
+      "produces"
+    ],
+    [
+      1,
+      9,
+      "modifies"
+    ],
+    [
+      9,
+      10,
+      "uses"
+    ],
+    [
+      10,
+      9,
+      "produces"
+    ],
+    [
+      1,
+      11,
+      "modifies"
+    ],
+    [
+      11,
+      12,
+      "uses"
+    ],
+    [
+      12,
+      11,
+      "produces"
+    ],
+    [
+      1,
+      13,
+      "modifies"
+    ],
+    [
+      13,
+      14,
+      "uses"
+    ],
+    [
+      14,
+      13,
+      "produces"
+    ],
+    [
+      1,
+      15,
+      "modifies"
+    ],
+    [
+      17,
+      15,
+      "produces"
+    ],
+    [
+      0,
+      18,
+      "calls"
+    ],
+    [
+      18,
+      19,
+      "creates"
+    ],
+    [
+      18,
+      20,
+      "creates"
+    ],
+    [
+      15,
+      20,
+      "flows_to"
+    ],
+    [
+      18,
+      21,
+      "modifies"
+    ],
+    [
+      21,
+      3,
+      "uses"
+    ],
+    [
+      18,
+      22,
+      "calls"
+    ],
+    [
+      22,
+      23,
+      "creates"
+    ],
+    [
+      18,
+      25,
+      "modifies"
+    ],
+    [
+      8,
+      25,
+      "produces"
+    ],
+    [
+      18,
+      26,
+      "modifies"
+    ],
+    [
+      26,
+      10,
+      "uses"
+    ],
+    [
+      10,
+      26,
+      "produces"
+    ],
+    [
+      18,
+      27,
+      "modifies"
+    ],
+    [
+      27,
+      12,
+      "uses"
+    ],
+    [
+      12,
+      27,
+      "produces"
+    ],
+    [
+      18,
+      28,
+      "modifies"
+    ],
+    [
+      28,
+      14,
+      "uses"
+    ],
+    [
+      14,
+      28,
+      "produces"
+    ],
+    [
+      18,
+      29,
+      "modifies"
+    ],
+    [
+      30,
+      29,
+      "produces"
+    ],
+    [
+      0,
+      31,
+      "calls"
+    ],
+    [
+      31,
+      32,
+      "creates"
+    ],
+    [
+      31,
+      33,
+      "creates"
+    ],
+    [
+      29,
+      33,
+      "flows_to"
+    ],
+    [
+      31,
+      34,
+      "modifies"
+    ],
+    [
+      34,
+      3,
+      "uses"
+    ],
+    [
+      31,
+      35,
+      "calls"
+    ],
+    [
+      35,
+      36,
+      "creates"
+    ],
+    [
+      31,
+      38,
+      "modifies"
+    ],
+    [
+      8,
+      38,
+      "produces"
+    ],
+    [
+      31,
+      39,
+      "modifies"
+    ],
+    [
+      39,
+      10,
+      "uses"
+    ],
+    [
+      10,
+      39,
+      "produces"
+    ],
+    [
+      31,
+      40,
+      "modifies"
+    ],
+    [
+      40,
+      12,
+      "uses"
+    ],
+    [
+      12,
+      40,
+      "produces"
+    ],
+    [
+      31,
+      41,
+      "modifies"
+    ],
+    [
+      41,
+      14,
+      "uses"
+    ],
+    [
+      14,
+      41,
+      "produces"
+    ],
+    [
+      31,
+      42,
+      "modifies"
+    ],
+    [
+      43,
+      42,
+      "produces"
+    ],
+    [
+      0,
+      44,
+      "calls"
+    ],
+    [
+      44,
+      45,
+      "creates"
+    ],
+    [
+      44,
+      46,
+      "creates"
+    ],
+    [
+      42,
+      46,
+      "flows_to"
+    ],
+    [
+      44,
+      47,
+      "modifies"
+    ],
+    [
+      47,
+      3,
+      "uses"
+    ],
+    [
+      44,
+      48,
+      "calls"
+    ],
+    [
+      48,
+      49,
+      "creates"
+    ],
+    [
+      44,
+      51,
+      "modifies"
+    ],
+    [
+      8,
+      51,
+      "produces"
+    ],
+    [
+      44,
+      52,
+      "modifies"
+    ],
+    [
+      52,
+      10,
+      "uses"
+    ],
+    [
+      10,
+      52,
+      "produces"
+    ],
+    [
+      44,
+      53,
+      "modifies"
+    ],
+    [
+      53,
+      12,
+      "uses"
+    ],
+    [
+      12,
+      53,
+      "produces"
+    ],
+    [
+      44,
+      54,
+      "modifies"
+    ],
+    [
+      54,
+      14,
+      "uses"
+    ],
+    [
+      14,
+      54,
+      "produces"
+    ],
+    [
+      44,
+      55,
+      "modifies"
+    ],
+    [
+      56,
+      55,
+      "produces"
+    ],
+    [
+      0,
+      57,
+      "calls"
+    ],
+    [
+      57,
+      58,
+      "creates"
+    ],
+    [
+      57,
+      59,
+      "creates"
+    ],
+    [
+      55,
+      59,
+      "flows_to"
+    ],
+    [
+      57,
+      60,
+      "modifies"
+    ],
+    [
+      60,
+      3,
+      "uses"
+    ],
+    [
+      57,
+      61,
+      "calls"
+    ],
+    [
+      61,
+      62,
+      "creates"
+    ],
+    [
+      57,
+      64,
+      "modifies"
+    ],
+    [
+      8,
+      64,
+      "produces"
+    ],
+    [
+      57,
+      65,
+      "modifies"
+    ],
+    [
+      65,
+      10,
+      "uses"
+    ],
+    [
+      10,
+      65,
+      "produces"
+    ],
+    [
+      57,
+      66,
+      "modifies"
+    ],
+    [
+      66,
+      12,
+      "uses"
+    ],
+    [
+      12,
+      66,
+      "produces"
+    ],
+    [
+      57,
+      67,
+      "modifies"
+    ],
+    [
+      67,
+      14,
+      "uses"
+    ],
+    [
+      14,
+      67,
+      "produces"
+    ],
+    [
+      57,
+      68,
+      "modifies"
+    ],
+    [
+      69,
+      68,
+      "produces"
+    ],
+    [
+      0,
+      70,
+      "calls"
+    ],
+    [
+      70,
+      71,
+      "creates"
+    ],
+    [
+      70,
+      72,
+      "creates"
+    ],
+    [
+      68,
+      72,
+      "flows_to"
+    ],
+    [
+      70,
+      73,
+      "modifies"
+    ],
+    [
+      73,
+      3,
+      "uses"
+    ],
+    [
+      70,
+      74,
+      "calls"
+    ],
+    [
+      74,
+      75,
+      "creates"
+    ],
+    [
+      70,
+      77,
+      "modifies"
+    ],
+    [
+      8,
+      77,
+      "produces"
+    ],
+    [
+      70,
+      78,
+      "modifies"
+    ],
+    [
+      78,
+      10,
+      "uses"
+    ],
+    [
+      10,
+      78,
+      "produces"
+    ],
+    [
+      70,
+      79,
+      "modifies"
+    ],
+    [
+      79,
+      12,
+      "uses"
+    ],
+    [
+      12,
+      79,
+      "produces"
+    ],
+    [
+      70,
+      80,
+      "modifies"
+    ],
+    [
+      80,
+      14,
+      "uses"
+    ],
+    [
+      14,
+      80,
+      "produces"
+    ],
+    [
+      70,
+      81,
+      "modifies"
+    ],
+    [
+      82,
+      81,
+      "produces"
+    ],
+    [
+      0,
+      83,
+      "calls"
+    ],
+    [
+      83,
+      84,
+      "creates"
+    ],
+    [
+      83,
+      85,
+      "creates"
+    ],
+    [
+      81,
+      85,
+      "flows_to"
+    ],
+    [
+      83,
+      86,
+      "modifies"
+    ],
+    [
+      86,
+      3,
+      "uses"
+    ],
+    [
+      83,
+      87,
+      "calls"
+    ],
+    [
+      87,
+      88,
+      "creates"
+    ],
+    [
+      83,
+      90,
+      "modifies"
+    ],
+    [
+      8,
+      90,
+      "produces"
+    ],
+    [
+      83,
+      91,
+      "modifies"
+    ],
+    [
+      91,
+      10,
+      "uses"
+    ],
+    [
+      10,
+      91,
+      "produces"
+    ],
+    [
+      83,
+      92,
+      "modifies"
+    ],
+    [
+      92,
+      12,
+      "uses"
+    ],
+    [
+      12,
+      92,
+      "produces"
+    ],
+    [
+      83,
+      93,
+      "modifies"
+    ],
+    [
+      93,
+      14,
+      "uses"
+    ],
+    [
+      14,
+      93,
+      "produces"
+    ],
+    [
+      83,
+      94,
+      "modifies"
+    ],
+    [
+      95,
+      94,
+      "produces"
+    ],
+    [
+      0,
+      96,
+      "calls"
+    ],
+    [
+      96,
+      97,
+      "creates"
+    ],
+    [
+      96,
+      98,
+      "creates"
+    ],
+    [
+      94,
+      98,
+      "flows_to"
+    ],
+    [
+      96,
+      99,
+      "modifies"
+    ],
+    [
+      99,
+      3,
+      "uses"
+    ],
+    [
+      96,
+      100,
+      "calls"
+    ],
+    [
+      100,
+      101,
+      "creates"
+    ],
+    [
+      96,
+      103,
+      "modifies"
+    ],
+    [
+      8,
+      103,
+      "produces"
+    ],
+    [
+      96,
+      104,
+      "modifies"
+    ],
+    [
+      104,
+      10,
+      "uses"
+    ],
+    [
+      10,
+      104,
+      "produces"
+    ],
+    [
+      96,
+      105,
+      "modifies"
+    ],
+    [
+      105,
+      12,
+      "uses"
+    ],
+    [
+      12,
+      105,
+      "produces"
+    ],
+    [
+      96,
+      106,
+      "modifies"
+    ],
+    [
+      106,
+      14,
+      "uses"
+    ],
+    [
+      14,
+      106,
+      "produces"
+    ],
+    [
+      96,
+      107,
+      "modifies"
+    ],
+    [
+      108,
+      107,
+      "produces"
+    ],
+    [
+      0,
+      109,
+      "calls"
+    ],
+    [
+      109,
+      110,
+      "creates"
+    ],
+    [
+      109,
+      111,
+      "creates"
+    ],
+    [
+      107,
+      111,
+      "flows_to"
+    ],
+    [
+      109,
+      112,
+      "modifies"
+    ],
+    [
+      112,
+      3,
+      "uses"
+    ],
+    [
+      109,
+      113,
+      "calls"
+    ],
+    [
+      113,
+      114,
+      "creates"
+    ],
+    [
+      109,
+      116,
+      "modifies"
+    ],
+    [
+      8,
+      116,
+      "produces"
+    ],
+    [
+      109,
+      117,
+      "modifies"
+    ],
+    [
+      117,
+      10,
+      "uses"
+    ],
+    [
+      10,
+      117,
+      "produces"
+    ],
+    [
+      109,
+      118,
+      "modifies"
+    ],
+    [
+      118,
+      12,
+      "uses"
+    ],
+    [
+      12,
+      118,
+      "produces"
+    ],
+    [
+      109,
+      119,
+      "modifies"
+    ],
+    [
+      119,
+      14,
+      "uses"
+    ],
+    [
+      14,
+      119,
+      "produces"
+    ],
+    [
+      109,
+      120,
+      "modifies"
+    ],
+    [
+      121,
+      120,
+      "produces"
+    ],
+    [
+      0,
+      122,
+      "calls"
+    ],
+    [
+      122,
+      123,
+      "creates"
+    ],
+    [
+      122,
+      124,
+      "creates"
+    ],
+    [
+      120,
+      124,
+      "flows_to"
+    ],
+    [
+      122,
+      125,
+      "modifies"
+    ],
+    [
+      125,
+      3,
+      "uses"
+    ],
+    [
+      122,
+      126,
+      "calls"
+    ],
+    [
+      126,
+      127,
+      "creates"
+    ],
+    [
+      122,
+      129,
+      "modifies"
+    ],
+    [
+      8,
+      129,
+      "produces"
+    ],
+    [
+      122,
+      130,
+      "modifies"
+    ],
+    [
+      130,
+      10,
+      "uses"
+    ],
+    [
+      10,
+      130,
+      "produces"
+    ],
+    [
+      122,
+      131,
+      "modifies"
+    ],
+    [
+      131,
+      12,
+      "uses"
+    ],
+    [
+      12,
+      131,
+      "produces"
+    ],
+    [
+      122,
+      132,
+      "modifies"
+    ],
+    [
+      132,
+      14,
+      "uses"
+    ],
+    [
+      14,
+      132,
+      "produces"
+    ],
+    [
+      122,
+      133,
+      "modifies"
+    ],
+    [
+      134,
+      133,
+      "produces"
+    ],
+    [
+      0,
+      135,
+      "calls"
+    ],
+    [
+      135,
+      136,
+      "creates"
+    ],
+    [
+      135,
+      137,
+      "creates"
+    ],
+    [
+      133,
+      137,
+      "flows_to"
+    ],
+    [
+      0,
+      138,
+      "creates"
+    ],
+    [
+      139,
+      138,
+      "produces"
+    ]
+  ],
+  "memory_report": {
+    "peak_memory_mb": 0.748438835144043,
+    "peak_gpu_memory_mb": 0,
+    "total_variables_tracked": 0,
+    "function_profiles": {
+      "run_opencv_generator#1": {
+        "function": "run_opencv_generator",
+        "call_count": 1,
+        "peak_memory_mb": 0.748438835144043,
+        "allocated_mb": 0.748112678527832,
+        "freed_mb": 0,
+        "duration_ms": 76.79128646850586
+      },
+      "run_opencv_generator#1->opencv_data_generator#1": {
+        "function": "opencv_data_generator",
+        "call_count": 1,
+        "peak_memory_mb": 0.0774068832397461,
+        "allocated_mb": 0.07472896575927734,
+        "freed_mb": 0,
+        "duration_ms": 9.334564208984375
+      },
+      "run_opencv_generator#1->opencv_data_generator#1->prod#1": {
+        "function": "prod",
+        "call_count": 1,
+        "peak_memory_mb": 0.014334678649902344,
+        "allocated_mb": 0.007082939147949219,
+        "freed_mb": 0,
+        "duration_ms": 0.9543895721435547
+      },
+      "run_opencv_generator#1->opencv_data_generator#2": {
+        "function": "opencv_data_generator",
+        "call_count": 2,
+        "peak_memory_mb": 0.1502542495727539,
+        "allocated_mb": 0.06970024108886719,
+        "freed_mb": 0,
+        "duration_ms": 6.013154983520508
+      },
+      "run_opencv_generator#1->opencv_data_generator#2->prod#1": {
+        "function": "prod",
+        "call_count": 1,
+        "peak_memory_mb": 0.09141731262207031,
+        "allocated_mb": 0.00476837158203125,
+        "freed_mb": 0,
+        "duration_ms": 0.7252693176269531
+      },
+      "run_opencv_generator#1->opencv_data_generator#3": {
+        "function": "opencv_data_generator",
+        "call_count": 3,
+        "peak_memory_mb": 0.22737884521484375,
+        "allocated_mb": 0.07388591766357422,
+        "freed_mb": 0,
+        "duration_ms": 6.305932998657227
+      },
+      "run_opencv_generator#1->opencv_data_generator#3->prod#1": {
+        "function": "prod",
+        "call_count": 1,
+        "peak_memory_mb": 0.1667032241821289,
+        "allocated_mb": 0.00530242919921875,
+        "freed_mb": 0,
+        "duration_ms": 0.8127689361572266
+      },
+      "run_opencv_generator#1->opencv_data_generator#4": {
+        "function": "opencv_data_generator",
+        "call_count": 4,
+        "peak_memory_mb": 0.3031492233276367,
+        "allocated_mb": 0.0724630355834961,
+        "freed_mb": 0,
+        "duration_ms": 6.366491317749023
+      },
+      "run_opencv_generator#1->opencv_data_generator#4->prod#1": {
+        "function": "prod",
+        "call_count": 1,
+        "peak_memory_mb": 0.24389266967773438,
+        "allocated_mb": 0.00530242919921875,
+        "freed_mb": 0,
+        "duration_ms": 0.8220672607421875
+      },
+      "run_opencv_generator#1->opencv_data_generator#5": {
+        "function": "opencv_data_generator",
+        "call_count": 5,
+        "peak_memory_mb": 0.3807191848754883,
+        "allocated_mb": 0.07426261901855469,
+        "freed_mb": 0,
+        "duration_ms": 6.1893463134765625
+      },
+      "run_opencv_generator#1->opencv_data_generator#5->prod#1": {
+        "function": "prod",
+        "call_count": 1,
+        "peak_memory_mb": 0.3208293914794922,
+        "allocated_mb": 0.007311820983886719,
+        "freed_mb": 0,
+        "duration_ms": 0.8149147033691406
+      },
+      "run_opencv_generator#1->opencv_data_generator#6": {
+        "function": "opencv_data_generator",
+        "call_count": 6,
+        "peak_memory_mb": 0.4577369689941406,
+        "allocated_mb": 0.07322978973388672,
+        "freed_mb": 0,
+        "duration_ms": 6.420612335205078
+      },
+      "run_opencv_generator#1->opencv_data_generator#6->prod#1": {
+        "function": "prod",
+        "call_count": 1,
+        "peak_memory_mb": 0.39799976348876953,
+        "allocated_mb": 0.0057830810546875,
+        "freed_mb": 0,
+        "duration_ms": 0.8394718170166016
+      },
+      "run_opencv_generator#1->opencv_data_generator#7": {
+        "function": "opencv_data_generator",
+        "call_count": 7,
+        "peak_memory_mb": 0.5001668930053711,
+        "allocated_mb": 0.038641929626464844,
+        "freed_mb": 0,
+        "duration_ms": 6.845235824584961
+      },
+      "run_opencv_generator#1->opencv_data_generator#7->prod#1": {
+        "function": "prod",
+        "call_count": 1,
+        "peak_memory_mb": 0.44286346435546875,
+        "allocated_mb": 0.004425048828125,
+        "freed_mb": 0,
+        "duration_ms": 0.8270740509033203
+      },
+      "run_opencv_generator#1->opencv_data_generator#8": {
+        "function": "opencv_data_generator",
+        "call_count": 8,
+        "peak_memory_mb": 0.5760011672973633,
+        "allocated_mb": 0.07252693176269531,
+        "freed_mb": 0,
+        "duration_ms": 7.154703140258789
+      },
+      "run_opencv_generator#1->opencv_data_generator#8->prod#1": {
+        "function": "prod",
+        "call_count": 1,
+        "peak_memory_mb": 0.5166492462158203,
+        "allocated_mb": 0.005305290222167969,
+        "freed_mb": 0,
+        "duration_ms": 1.0440349578857422
+      },
+      "run_opencv_generator#1->opencv_data_generator#9": {
+        "function": "opencv_data_generator",
+        "call_count": 9,
+        "peak_memory_mb": 0.6527185440063477,
+        "allocated_mb": 0.07234954833984375,
+        "freed_mb": 0,
+        "duration_ms": 6.712675094604492
+      },
+      "run_opencv_generator#1->opencv_data_generator#9->prod#1": {
+        "function": "prod",
+        "call_count": 1,
+        "peak_memory_mb": 0.5933341979980469,
+        "allocated_mb": 0.005602836608886719,
+        "freed_mb": 0,
+        "duration_ms": 0.8516311645507812
+      },
+      "run_opencv_generator#1->opencv_data_generator#10": {
+        "function": "opencv_data_generator",
+        "call_count": 10,
+        "peak_memory_mb": 0.7296895980834961,
+        "allocated_mb": 0.07327938079833984,
+        "freed_mb": 0,
+        "duration_ms": 6.651639938354492
+      },
+      "run_opencv_generator#1->opencv_data_generator#10->prod#1": {
+        "function": "prod",
+        "call_count": 1,
+        "peak_memory_mb": 0.6697711944580078,
+        "allocated_mb": 0.00563812255859375,
+        "freed_mb": 0,
+        "duration_ms": 0.8368492126464844
+      },
+      "run_opencv_generator#1->opencv_data_generator#11": {
+        "function": "opencv_data_generator",
+        "call_count": 11,
+        "peak_memory_mb": 0.7400674819946289,
+        "allocated_mb": 0.006587982177734375,
+        "freed_mb": 0,
+        "duration_ms": 0.5679130554199219
+      }
+    },
+    "variable_summary": {}
+  },
+  "flame_graph": {
+    "name": "root",
+    "value": 0.748438835144043,
+    "children": [
+      {
+        "name": "run_opencv_generator#1",
+        "value": 0.748438835144043,
+        "children": [
+          {
+            "name": "opencv_data_generator#1",
+            "value": 0.0774068832397461,
+            "children": [
+              {
+                "name": "prod#1",
+                "value": 0.014334678649902344,
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "opencv_data_generator#2",
+            "value": 0.1502542495727539,
+            "children": [
+              {
+                "name": "prod#1",
+                "value": 0.09141731262207031,
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "opencv_data_generator#3",
+            "value": 0.22737884521484375,
+            "children": [
+              {
+                "name": "prod#1",
+                "value": 0.1667032241821289,
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "opencv_data_generator#4",
+            "value": 0.3031492233276367,
+            "children": [
+              {
+                "name": "prod#1",
+                "value": 0.24389266967773438,
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "opencv_data_generator#5",
+            "value": 0.3807191848754883,
+            "children": [
+              {
+                "name": "prod#1",
+                "value": 0.3208293914794922,
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "opencv_data_generator#6",
+            "value": 0.4577369689941406,
+            "children": [
+              {
+                "name": "prod#1",
+                "value": 0.39799976348876953,
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "opencv_data_generator#7",
+            "value": 0.5001668930053711,
+            "children": [
+              {
+                "name": "prod#1",
+                "value": 0.44286346435546875,
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "opencv_data_generator#8",
+            "value": 0.5760011672973633,
+            "children": [
+              {
+                "name": "prod#1",
+                "value": 0.5166492462158203,
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "opencv_data_generator#9",
+            "value": 0.6527185440063477,
+            "children": [
+              {
+                "name": "prod#1",
+                "value": 0.5933341979980469,
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "opencv_data_generator#10",
+            "value": 0.7296895980834961,
+            "children": [
+              {
+                "name": "prod#1",
+                "value": 0.6697711944580078,
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "opencv_data_generator#11",
+            "value": 0.7400674819946289,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "statistics": {
+    "total_nodes": 141,
+    "function_nodes": 22,
+    "variable_nodes": 102,
+    "total_variables_tracked": 5,
+    "peak_memory_mb": 0.748438835144043
+  }
+}

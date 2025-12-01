@@ -1,0 +1,29 @@
+{
+  "version": "1.0",
+  "gpu_count": 1,
+  "partition_count": 2,
+  "partition_device_map": {
+    "0": "cuda:0",
+    "1": "cuda:0"
+  },
+  "context_device_map": {
+    "random_pipeline": "cuda:0",
+    "random_pipeline->a": "cuda:0",
+    "random_pipeline->rand#L1": "cuda:0",
+    "random_pipeline->b": "cuda:0",
+    "random_pipeline->randn#L1": "cuda:0",
+    "random_pipeline->c": "cuda:0",
+    "random_pipeline->normal#L1": "cuda:0",
+    "random_pipeline->d": "cuda:0",
+    "random_pipeline->uniform#L1": "cuda:0",
+    "random_pipeline->result": "cuda:0",
+    "random_pipeline->operator.add#L1": "cuda:0",
+    "random_pipeline->mean": "cuda:0",
+    "random_pipeline->mean->relevant_args": "cuda:0",
+    "random_pipeline->mean->asanyarray": "cuda:0",
+    "random_pipeline->mean->asanyarray->a": "cuda:0",
+    "random_pipeline->mean->asanyarray->dtype": "cuda:0",
+    "random_pipeline->mean->asanyarray->order": "cuda:0",
+    "random_pipeline->mean-><return_expression>": "cuda:0"
+  }
+}

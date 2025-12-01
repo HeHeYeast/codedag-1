@@ -1,0 +1,68 @@
+{
+  "case_name": "03c_TorchDataLoader",
+  "success": true,
+  "trace_time": 1.9112517833709717,
+  "node_count": 1679,
+  "edge_count": 2120,
+  "function_nodes": 21,
+  "variable_nodes": 1288,
+  "optimize_time": 6.74275016784668,
+  "coarsening_stats": {
+    "pattern_count": 0,
+    "total_instances": 0,
+    "nodes_saved": 0,
+    "pattern_details": []
+  },
+  "partition_stats": {
+    "partition_count": 2,
+    "partition_sizes": [
+      622,
+      1057
+    ],
+    "partition_loads": [
+      0.023000000000000013,
+      0.022000000000000013
+    ],
+    "avg_load": 0.022500000000000013,
+    "max_load": 0.023000000000000013,
+    "min_load": 0.022000000000000013,
+    "load_balance": 0.9555555555555555,
+    "total_nodes": 1679
+  },
+  "optimization_stats": {
+    "iterations": 0,
+    "moves_executed": 0,
+    "initial_objective": 0.6222222222222222,
+    "final_objective": 0.6222222222222222,
+    "improvement": 0.0,
+    "improvement_ratio": 0.0
+  },
+  "partition_count": 2,
+  "migration_time": 0.04796290397644043,
+  "migration_stats": {
+    "is_applied": false,
+    "context_mappings": 300,
+    "registry_stats": {
+      "total": 153,
+      "exact_match": 145,
+      "prefix_match": 8,
+      "by_strategy": {
+        "StandardOp": 118,
+        "MoveOnly": 8,
+        "NonMigratable": 13,
+        "FactoryOp": 6
+      },
+      "by_priority": {
+        "0": 35,
+        "1": 6,
+        "2": 86,
+        "3": 18
+      }
+    },
+    "gpu_count": 1,
+    "default_device": "cuda:0"
+  },
+  "patched_count": 122,
+  "errors": [],
+  "warnings": []
+}

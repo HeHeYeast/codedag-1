@@ -1,0 +1,28 @@
+{
+  "version": "1.0",
+  "gpu_count": 1,
+  "partition_count": 2,
+  "partition_device_map": {
+    "0": "cuda:0",
+    "1": "cuda:0"
+  },
+  "context_device_map": {
+    "run_opencv_generator": "cuda:0",
+    "run_opencv_generator->opencv_data_generator": "cuda:0",
+    "run_opencv_generator->opencv_data_generator->i": "cuda:0",
+    "run_opencv_generator->opencv_data_generator->seed#L1": "cuda:0",
+    "run_opencv_generator->opencv_data_generator->prod": "cuda:0",
+    "run_opencv_generator->opencv_data_generator->prod->relevant_args": "cuda:0",
+    "run_opencv_generator->opencv_data_generator->prod-><return_expression>": "cuda:0",
+    "run_opencv_generator->opencv_data_generator->img": "cuda:0",
+    "run_opencv_generator->opencv_data_generator->randint#L1": "cuda:0",
+    "run_opencv_generator->opencv_data_generator->resize#L1": "cuda:0",
+    "run_opencv_generator->opencv_data_generator->cvtColor#L1": "cuda:0",
+    "run_opencv_generator->opencv_data_generator->GaussianBlur#L1": "cuda:0",
+    "run_opencv_generator->opencv_data_generator->astype#L1": "cuda:0",
+    "run_opencv_generator->opencv_data_generator->operator.div#L1": "cuda:0",
+    "run_opencv_generator->results": "cuda:0",
+    "run_opencv_generator->list#L1": "cuda:0",
+    "run_opencv_generator-><return_expression>": "cuda:0"
+  }
+}
