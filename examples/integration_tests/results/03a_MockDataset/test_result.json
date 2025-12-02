@@ -1,12 +1,12 @@
 {
   "case_name": "03a_MockDataset",
   "success": true,
-  "trace_time": 0.32477784156799316,
-  "node_count": 484,
-  "edge_count": 763,
+  "trace_time": 0.3674640655517578,
+  "node_count": 500,
+  "edge_count": 775,
   "function_nodes": 7,
-  "variable_nodes": 381,
-  "optimize_time": 0.9731106758117676,
+  "variable_nodes": 393,
+  "optimize_time": 1.4199192523956299,
   "coarsening_stats": {
     "pattern_count": 0,
     "total_instances": 0,
@@ -16,8 +16,8 @@
   "partition_stats": {
     "partition_count": 2,
     "partition_sizes": [
-      220,
-      264
+      165,
+      335
     ],
     "partition_loads": [
       0.02000000000000001,
@@ -27,18 +27,18 @@
     "max_load": 0.02000000000000001,
     "min_load": 0.01900000000000001,
     "load_balance": 0.9487179487179487,
-    "total_nodes": 484
+    "total_nodes": 500
   },
   "optimization_stats": {
     "iterations": 0,
     "moves_executed": 0,
-    "initial_objective": 0.6256410256410255,
-    "final_objective": 0.6256410256410255,
+    "initial_objective": 0.6102564102564102,
+    "final_objective": 0.6102564102564102,
     "improvement": 0.0,
     "improvement_ratio": 0.0
   },
   "partition_count": 2,
-  "migration_time": 1.2588253021240234,
+  "migration_time": 1.1999187469482422,
   "migration_stats": {
     "is_applied": false,
     "context_mappings": 72,

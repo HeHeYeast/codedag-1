@@ -224,9 +224,17 @@ class SimpleASTAnalyzer(ast.NodeVisitor):
         self.frame = frame  # 保存当前栈帧用于名字解析
         # 预编译正则，用于匹配去除版本号后缀的节点名
         self.version_pattern = re.compile(r'#\d+$')
+        # 当前正在分析的代码行号 (用于区分自引用赋值中的变量版本)
+        self.current_lineno = 0
 
     def visit_Assign(self, node):
         """处理赋值语句: targets = value"""
+        # 0. 记录当前行号 (用于区分自引用赋值中的变量版本)
+        # 注意：如果外部已经设置了 current_lineno（如在 _process_previous_line 中），
+        # 则不要覆盖。因为 ast.parse() 单行代码时，AST 节点的 lineno=1，不是原始行号。
+        if self.current_lineno == 0:
+            self.current_lineno = getattr(node, 'lineno', 0)
+
         # 1. 分析右值 (RHS)，获取产生数据的源节点 (Operator 或 Function)
         # 这一步非常关键：self.visit 会分发到 visit_BinOp 或 visit_Call
         # 它们必须返回一个 DAGNode，否则链条就断了
@@ -250,7 +258,7 @@ class SimpleASTAnalyzer(ast.NodeVisitor):
             edge_type = 'produces'
 
             for var_name in target_names:
-                # 强制获取或创建变量节点 (解决 c, d, e 缺失的核心)
+                # 获取或创建变量节点 (使用 lineno 机制避免循环)
                 var_node = self._ensure_variable_node(var_name)
 
                 # 建立连边
@@ -291,57 +299,54 @@ class SimpleASTAnalyzer(ast.NodeVisitor):
 
     def visit_Call(self, node):
         """处理函数调用: func(args) (返回 Function Node)"""
-        # 1. 尝试解析函数在运行时的真实名称
-        #    例如: 代码写的是 np.max，解析对象后发现是 np.amax，名字是 'amax'
+        # 1. 解析函数名
         runtime_name = self._resolve_runtime_name(node.func)
-
-        # 备选：如果解析失败，使用字面量名字
         ast_name = self._get_func_name(node.func)
 
         target_func_node = None
-
-        # 2. 优先使用运行时真实名称查找
         if runtime_name:
             target_func_node = self._find_latest_function_node(runtime_name)
-
-        # 3. 如果找不到，尝试使用 AST 字面量名称查找
         if not target_func_node and ast_name and ast_name != runtime_name:
             target_func_node = self._find_latest_function_node(ast_name)
 
+        # [关键修复 A] 防止递归时的自引用
+        # 获取当前正在分析的函数节点的 ID
+        current_func_node_id = self.tracer.context_map.get(self.func_context)
+
+        if target_func_node and current_func_node_id and target_func_node.node_id == current_func_node_id:
+            # 如果找到的是自己，说明 Runtime 还没创建子调用节点（或被过滤），或者匹配错了
+            # 这种情况下，必须强制放弃这个节点，转而创建幽灵节点
+            logger.debug(f"[防环] 忽略自引用函数节点: {target_func_node.name}")
+            target_func_node = None
+
+        # 2. 兜底创建 (Phantom Node)
         if not target_func_node:
-            # [兜底逻辑] Runtime 没抓到，手动创建
-            # 优先使用 AST 名字（代码里写的名字），因为它对用户更直观
             final_name = ast_name or runtime_name or "unknown_call"
             lineno = getattr(node, 'lineno', 0)
-            phantom_context = f"{self.func_context}->{final_name}#L{lineno}"
-
             target_func_node = self.tracer.dag_builder.dag.add_node(
                 name=final_name,
                 node_type="function_call",
                 module="library",
-                context=phantom_context,
+                context=f"{self.func_context}->{final_name}#L{lineno}",
                 version=0
             )
             target_func_node.performance['execution_time'] = 0.001
 
-        # 4. 建立输入边: Arg -> Uses -> Function
-        # 处理位置参数
-        for arg in node.args:
-            self.visit(arg)  # 递归，处理嵌套调用 func(g(x))
+        # 3. 建立输入边
+        # 合并 args 和 keywords
+        all_args = list(node.args) + [kw.value for kw in node.keywords]
+
+        for arg in all_args:
+            self.visit(arg)  # 递归处理嵌套调用
             var_name = self._get_variable_name(arg)
             if var_name:
                 var_node = self._find_or_create_input_variable(var_name)
                 if var_node:
-                    self.tracer._add_edge(var_node.node_id, target_func_node.node_id, 'uses')
-
-        # 处理关键字参数
-        for keyword in node.keywords:
-            self.visit(keyword.value)
-            var_name = self._get_variable_name(keyword.value)
-            if var_name:
-                var_node = self._find_or_create_input_variable(var_name)
-                if var_node:
-                    self.tracer._add_edge(var_node.node_id, target_func_node.node_id, 'uses')
+                    # [关键修复 B] 最后的防线：检查显式循环
+                    if not self._would_create_cycle(var_node, target_func_node):
+                        self.tracer._add_edge(var_node.node_id, target_func_node.node_id, 'uses')
+                    else:
+                        logger.debug(f"[防环] 拦截循环边: {var_node.name} -> {target_func_node.name}")
 
         # [关键] 必须返回节点，供 visit_Assign 使用
         return target_func_node
@@ -349,29 +354,37 @@ class SimpleASTAnalyzer(ast.NodeVisitor):
     # --- 辅助方法 ---
 
     def _ensure_variable_node(self, var_name: str):
-        """确保(输出)变量节点存在，如果不存在则立即创建"""
-        # 1. 尝试查找
-        var_node = self._find_variable_node(var_name)
-        if var_node:
-            return var_node
+        """确保(输出)变量节点存在，如果不存在则立即创建
 
-        # 2. 二次查找尝试：在 variable_nodes 中查找同名且 Context 匹配的最新节点
-        # 有时 _find_variable_node 的 context 匹配太严格，这里做最后的防重检查
+        输出变量的严格匹配规则：
+        1. 必须严格属于当前函数作用域（不能是父级或子函数的变量）
+        2. 如果 Runtime 已经为当前行创建了变量，直接复用
+        3. 否则强制创建新版本
+        """
+        current_context = "->".join(self.tracer.context_key_manager.call_stack)
+
+        # 1. 查找 Runtime 已创建的、严格属于当前作用域的变量节点
         if var_name in self.tracer.variable_nodes:
-            potential_nodes = self.tracer.variable_nodes[var_name]
-            if potential_nodes:
-                latest = potential_nodes[-1]
-                # 如果这个变量是属于当前函数的 (通过前缀判断)，直接复用
-                # 比如 Runtime 刚创建了 "func->c#1"，AST 正在找 "func->c"
-                current_base = self.func_context.split('#')[0]
-                latest_base = latest.context.split('#')[0]
-                if current_base in latest_base or latest_base in current_base:
+            # 对于输出变量，我们只关心当前函数内的变量，不关心父级
+            # 使用严格匹配：var_scope 必须完全等于 func_context
+            candidates = []
+            for node in self.tracer.variable_nodes[var_name]:
+                var_scope = node.context.rsplit('->', 1)[0]
+                if var_scope == self.func_context:
+                    candidates.append(node)
+
+            if candidates:
+                latest = candidates[-1]
+                # 如果 Runtime 已经为当前行创建了新版本，直接复用
+                created_lineno = latest.attributes.get('created_at_lineno', 0)
+                if created_lineno == self.current_lineno and self.current_lineno > 0:
                     return latest
 
-        # 3. 不存在，强制创建
-        current_context = "->".join(self.tracer.context_key_manager.call_stack)
+        # 2. 强制创建新版本 (传入 lineno)
         var_node = self.tracer._create_variable_node(
-            var_name, None, current_context, increment_version=False
+            var_name, None, current_context,
+            increment_version=True,
+            lineno=self.current_lineno
         )
         return var_node
 
@@ -412,16 +425,80 @@ class SimpleASTAnalyzer(ast.NodeVisitor):
                     return node
         return None
 
+    def _is_relevant_context(self, node) -> bool:
+        """判断变量节点是否属于当前可见的作用域
+
+        逻辑：
+        1. 必须是当前函数的局部变量 (Context 完全匹配前缀)
+        2. 或者是父级作用域的变量（闭包/外层函数）
+        3. 或者是全局变量
+        4. [关键] 不能是子函数的变量！(子函数的 context 会比当前更长)
+
+        例如:
+        - self.func_context = "run#1->__getitem__#1"
+        - node.context = "run#1->__getitem__#1->img#1" -> 当前作用域，可见
+        - node.context = "run#1->__getitem__#1->_normalize#1->img#1" -> 子函数，不可见！
+        - node.context = "run#1->img#1" -> 父级作用域，可见
+        """
+        if not node.context:
+            return False
+
+        # 提取变量所在的函数上下文 (去除 ->var_name#version 后缀)
+        # node.context 格式: "root#1->func#1->var#1"
+        # 我们需要提取: "root#1->func#1"
+        var_scope = node.context.rsplit('->', 1)[0]
+
+        # 1. 精确匹配当前作用域 (最常见情况)
+        #    var_scope == self.func_context
+        if var_scope == self.func_context:
+            return True
+
+        # 2. 匹配父级作用域 (闭包/外层函数的变量)
+        #    self.func_context 以 var_scope 开头，说明 var_scope 是父级
+        #    例如: self.func_context = "run#1->inner#1", var_scope = "run#1"
+        if self.func_context.startswith(var_scope + "->"):
+            return True
+
+        # 3. 全局变量
+        if "global" in node.module:
+            return True
+
+        # 4. 其他情况（包括子函数的变量）不可见
+        return False
+
     def _find_variable_node(self, var_name: str):
-        """查找变量节点 (支持当前作用域和全局)"""
-        if var_name in self.tracer.variable_nodes:
-            for node in reversed(self.tracer.variable_nodes[var_name]):
-                # 宽松匹配：只要属于当前执行路径即可
-                if node.context.startswith(self.func_context) or \
-                   self.func_context.startswith(node.context.split('->')[0]) or \
-                   "global" in node.module:
-                    return node
-        return None
+        """查找输入变量节点
+
+        使用严格的作用域匹配 + 行号防环机制：
+        1. 只查找当前作用域或父级作用域的变量（不包括子函数）
+        2. 如果找到的变量是当前行创建的，回溯到上一个版本（防止自引用循环）
+        """
+        if var_name not in self.tracer.variable_nodes:
+            return None
+
+        nodes = self.tracer.variable_nodes[var_name]
+
+        # 1. 严格筛选可见作用域的节点
+        candidates = [n for n in nodes if self._is_relevant_context(n)]
+        if not candidates:
+            return None
+
+        # 2. 选取最新的
+        latest = candidates[-1]
+
+        # 3. [防环] 如果最新版本是当前行产生的，回溯取上一个版本
+        #    对于 img = self._normalize(img)：
+        #    - 右边的 img 是输入，应该是之前某行创建的
+        #    - 左边的 img 是输出，是当前行创建的新版本
+        created_lineno = latest.attributes.get('created_at_lineno', 0)
+        if created_lineno == self.current_lineno and self.current_lineno > 0:
+            if len(candidates) >= 2:
+                logger.debug(f"[防环] 变量 {var_name} 回溯版本 v{latest.version} -> v{candidates[-2].version}")
+                return candidates[-2]
+            # 只有当前行产生的版本，无法作为输入
+            return None
+
+        return latest
 
     def _get_variable_name(self, node):
         """从AST节点获取变量名"""
@@ -429,13 +506,65 @@ class SimpleASTAnalyzer(ast.NodeVisitor):
             return node.id
         return None
 
+    def _would_create_cycle(self, var_node, func_node):
+        """检查添加 var_node -> func_node 的 uses 边是否会形成循环
+
+        循环条件：如果 func_node 已经是 var_node 的生产者 (creates/modifies/produces)，
+        那么 var_node 不能反过来作为 func_node 的输入 (uses)。
+        """
+        # 快速检查：节点 ID 相同（虽然不太可能，因为类型不同）
+        if var_node.node_id == func_node.node_id:
+            return True
+
+        # 方法 1: 检查 Context 包含关系 (快)
+        # 如果 var 是 func 的局部变量，且 func_node 就是当前 func，那么大概率是循环
+        # var_node.context: "root->func#1->var#1"
+        # func_node.context: "root->func#1"
+        if var_node.context and func_node.context:
+            if var_node.context.startswith(func_node.context + "->"):
+                return True
+
+        # 方法 2: 严格检查 Edge (慢但准确)
+        # 遍历 DAG 的边，检查是否存在 func_node -> var_node 的 creates/modifies 边
+        for edge in self.tracer.dag_builder.dag.edges:
+            src, dst, edge_type = edge
+            if src == func_node.node_id and dst == var_node.node_id:
+                if edge_type in ('creates', 'modifies', 'produces'):
+                    return True
+
+        return False
+
     def _get_func_name(self, node):
-        """从AST节点获取函数名"""
+        """从AST节点获取函数名（返回完整路径，如 cv2.resize）"""
         if isinstance(node, ast.Name):
             return node.id
         elif isinstance(node, ast.Attribute):
-            return node.attr
+            # 递归构建完整路径: cv2.resize, np.random.rand 等
+            return self._get_full_func_path(node)
         return None
+
+    def _get_full_func_path(self, node):
+        """递归获取完整的函数调用路径
+
+        例如:
+            cv2.resize -> "cv2.resize"
+            np.random.rand -> "np.random.rand"
+            obj.method -> "obj.method"
+        """
+        parts = []
+        curr = node
+        while isinstance(curr, ast.Attribute):
+            parts.append(curr.attr)
+            curr = curr.value
+
+        if isinstance(curr, ast.Name):
+            parts.append(curr.id)
+        else:
+            # 复杂表达式如 func().method，只返回最后的属性名
+            return node.attr if isinstance(node, ast.Attribute) else None
+
+        parts.reverse()
+        return ".".join(parts)
 
     def _resolve_runtime_name(self, func_node):
         """利用当前 Frame 动态解析 AST 对应的运行时对象名称
@@ -735,8 +864,16 @@ class EnhancedTracer(BaseTracer):
         self.dag_builder.dag.add_edge(from_id, to_id, edge_type)
         logger.debug(f"创建边: {from_id} --{edge_type}--> {to_id}")
     
-    def _track_local_variables(self, frame, event_type: str):
-        """追踪局部变量变化"""
+    def _track_local_variables(self, frame, event_type: str, lineno: int = 0):
+        """追踪局部变量变化
+
+        Args:
+            frame: 当前栈帧
+            event_type: 事件类型
+            lineno: 导致变量变化的源代码行号（来自 previous_line_info）
+                   注意：不能使用 frame.f_lineno，因为 'line' 事件触发时
+                   frame.f_lineno 指向的是即将执行的下一行，而不是刚执行完的那行
+        """
         try:
             if not self.context_key_manager.call_stack:
                 return
@@ -775,10 +912,12 @@ class EnhancedTracer(BaseTracer):
                     old_snapshot = self.variable_snapshots[var_context_key]
                     if current_snapshot.has_changed(old_snapshot):
                         # 变量值发生变化，创建新版本节点
-                        self._create_variable_node(var_name, var_value, current_context, increment_version=True)
+                        self._create_variable_node(var_name, var_value, current_context,
+                                                   increment_version=True, lineno=lineno)
                 else:
                     # 新变量，创建首个版本节点
-                    self._create_variable_node(var_name, var_value, current_context, increment_version=False)
+                    self._create_variable_node(var_name, var_value, current_context,
+                                               increment_version=False, lineno=lineno)
 
                 # 更新快照
                 self.variable_snapshots[var_context_key] = current_snapshot
@@ -786,8 +925,17 @@ class EnhancedTracer(BaseTracer):
         except Exception as e:
             logger.debug(f"变量追踪失败: {e}")
     
-    def _create_variable_node(self, var_name: str, var_value: Any, context: str, increment_version: bool = True) -> EnhancedNode:
-        """创建变量节点并建立函数创建边"""
+    def _create_variable_node(self, var_name: str, var_value: Any, context: str,
+                               increment_version: bool = True, lineno: int = 0) -> EnhancedNode:
+        """创建变量节点并建立函数创建边
+
+        Args:
+            var_name: 变量名
+            var_value: 变量值
+            context: 上下文路径
+            increment_version: 是否自增版本号
+            lineno: 创建此变量的源代码行号 (用于区分自引用赋值)
+        """
         try:
             # 获取版本号
             version = 1
@@ -795,7 +943,7 @@ class EnhancedTracer(BaseTracer):
                 version = self.context_key_manager.get_next_variable_version(var_name, context)
             else:
                 self.context_key_manager.variable_versions[f"{context}->{var_name}"] = 1
-            
+
             # 创建变量快照
             snapshot = VariableSnapshot.create_snapshot(var_value)
 
@@ -817,6 +965,8 @@ class EnhancedTracer(BaseTracer):
             var_node.performance['memory_allocated_mb'] = 0
             var_node.performance['peak_memory_mb'] = 0
             var_node.attributes['variable_snapshot'] = snapshot
+            # 记录创建行号 (用于 AST 分析器区分自引用赋值中的变量版本)
+            var_node.attributes['created_at_lineno'] = lineno
 
             # 添加到变量节点映射（直接存储node对象）
             if var_name not in self.variable_nodes:
@@ -1019,8 +1169,10 @@ class EnhancedTracer(BaseTracer):
 
                     # 创建AST分析器并分析 (传入 frame 用于运行时名字解析)
                     analyzer = SimpleASTAnalyzer(self, current_context, frame)
+                    # [关键] 设置当前行号，用于防环机制
+                    analyzer.current_lineno = lineno
                     analyzer.visit(parsed)
-                    
+
                     logger.debug(f"AST分析第{lineno}行: {source_line}")
                     
                 except SyntaxError:
@@ -1049,10 +1201,12 @@ class EnhancedTracer(BaseTracer):
             prev_info = self.previous_line_info[func_key]
             source_line = prev_info.get('source_line', '')
 
-            logger.debug(f"处理上一行 第{prev_info['lineno']}行: {source_line}")
+            prev_lineno = prev_info.get('lineno', 0)
+            logger.debug(f"处理上一行 第{prev_lineno}行: {source_line}")
 
             # 1. 先进行变量变化检测（此时上一行已执行完成）
-            self._track_local_variables(frame, "line")
+            # 传入上一行的行号，而不是 frame.f_lineno（那是下一行的行号）
+            self._track_local_variables(frame, "line", lineno=prev_lineno)
 
             # 2. [核心修复] 在上一行执行完成后再进行 AST 分析
             # 此时 Runtime 函数节点已经创建，AST 可以正确匹配到它们
@@ -1061,6 +1215,8 @@ class EnhancedTracer(BaseTracer):
                     current_context = "->".join(self.context_key_manager.call_stack)
                     parsed = ast.parse(source_line)
                     analyzer = SimpleASTAnalyzer(self, current_context, frame)
+                    # 设置 AST 分析器的当前行号
+                    analyzer.current_lineno = prev_lineno
                     analyzer.visit(parsed)
                 except SyntaxError:
                     # 某些行可能无法单独解析，忽略
@@ -1108,8 +1264,10 @@ class EnhancedTracer(BaseTracer):
             try:
                 parsed = ast.parse(source_line)
                 analyzer = SimpleASTAnalyzer(self, current_context, frame)
+                # [关键] 设置当前行号，用于防环机制
+                analyzer.current_lineno = lineno
                 analyzer.visit(parsed)
-                
+
                 # 收集待处理的运算符信息
                 pending_operators = []
                 for op_node in analyzer.operator_nodes:
@@ -1290,6 +1448,9 @@ class EnhancedTracer(BaseTracer):
             # 分析AST
             current_context = "->".join(self.context_key_manager.call_stack)
             analyzer = SimpleASTAnalyzer(self, current_context, frame)
+            # [关键] 设置当前行号，用于防环机制
+            # 对于整函数分析，使用 frame 的当前行号
+            analyzer.current_lineno = frame.f_lineno if frame else 0
             analyzer.visit(func_ast)
 
             return analyzer.operator_nodes

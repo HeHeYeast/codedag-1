@@ -1,12 +1,12 @@
 {
   "case_name": "03b_OpenCVDataset",
   "success": true,
-  "trace_time": 0.14888668060302734,
-  "node_count": 278,
-  "edge_count": 419,
+  "trace_time": 0.17281842231750488,
+  "node_count": 294,
+  "edge_count": 431,
   "function_nodes": 9,
-  "variable_nodes": 221,
-  "optimize_time": 0.2748708724975586,
+  "variable_nodes": 233,
+  "optimize_time": 0.3980844020843506,
   "coarsening_stats": {
     "pattern_count": 0,
     "total_instances": 0,
@@ -16,8 +16,8 @@
   "partition_stats": {
     "partition_count": 2,
     "partition_sizes": [
-      152,
-      126
+      139,
+      155
     ],
     "partition_loads": [
       0.009000000000000001,
@@ -27,18 +27,18 @@
     "max_load": 0.009000000000000001,
     "min_load": 0.008,
     "load_balance": 0.8823529411764705,
-    "total_nodes": 278
+    "total_nodes": 294
   },
   "optimization_stats": {
     "iterations": 0,
     "moves_executed": 0,
-    "initial_objective": 0.6588235294117647,
-    "final_objective": 0.6588235294117647,
+    "initial_objective": 0.6235294117647059,
+    "final_objective": 0.6235294117647059,
     "improvement": 0.0,
     "improvement_ratio": 0.0
   },
   "partition_count": 2,
-  "migration_time": 0.0509488582611084,
+  "migration_time": 0.05050086975097656,
   "migration_stats": {
     "is_applied": false,
     "context_mappings": 51,

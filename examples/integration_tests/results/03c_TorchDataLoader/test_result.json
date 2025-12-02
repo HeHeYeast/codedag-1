@@ -1,47 +1,54 @@
 {
   "case_name": "03c_TorchDataLoader",
   "success": true,
-  "trace_time": 1.9112517833709717,
-  "node_count": 1679,
-  "edge_count": 2120,
-  "function_nodes": 21,
-  "variable_nodes": 1288,
-  "optimize_time": 6.74275016784668,
+  "trace_time": 1.9255092144012451,
+  "node_count": 1524,
+  "edge_count": 1947,
+  "function_nodes": 31,
+  "variable_nodes": 1171,
+  "optimize_time": 9.164637565612793,
   "coarsening_stats": {
-    "pattern_count": 0,
-    "total_instances": 0,
-    "nodes_saved": 0,
-    "pattern_details": []
+    "pattern_count": 1,
+    "total_instances": 3,
+    "nodes_saved": 4,
+    "pattern_details": [
+      {
+        "hash": "86a598db",
+        "instance_count": 3,
+        "nodes_per_instance": 2,
+        "nodes_saved": 4
+      }
+    ]
   },
   "partition_stats": {
     "partition_count": 2,
     "partition_sizes": [
-      622,
-      1057
+      1288,
+      232
     ],
     "partition_loads": [
-      0.023000000000000013,
-      0.022000000000000013
+      0.025000000000000015,
+      0.024000000000000014
     ],
-    "avg_load": 0.022500000000000013,
-    "max_load": 0.023000000000000013,
-    "min_load": 0.022000000000000013,
-    "load_balance": 0.9555555555555555,
-    "total_nodes": 1679
+    "avg_load": 0.024500000000000015,
+    "max_load": 0.025000000000000015,
+    "min_load": 0.024000000000000014,
+    "load_balance": 0.9591836734693877,
+    "total_nodes": 1520
   },
   "optimization_stats": {
-    "iterations": 0,
-    "moves_executed": 0,
-    "initial_objective": 0.6222222222222222,
-    "final_objective": 0.6222222222222222,
-    "improvement": 0.0,
-    "improvement_ratio": 0.0
+    "iterations": 3,
+    "moves_executed": 1,
+    "initial_objective": 0.9899814471243042,
+    "final_objective": 0.6081932638061975,
+    "improvement": 0.3817881833181067,
+    "improvement_ratio": 38.56518568374429
   },
   "partition_count": 2,
-  "migration_time": 0.04796290397644043,
+  "migration_time": 0.0459294319152832,
   "migration_stats": {
     "is_applied": false,
-    "context_mappings": 300,
+    "context_mappings": 311,
     "registry_stats": {
       "total": 153,
       "exact_match": 145,

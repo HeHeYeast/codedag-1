@@ -1,12 +1,12 @@
 {
   "case_name": "03d_AugmentationDataset",
   "success": true,
-  "trace_time": 0.38075876235961914,
-  "node_count": 667,
-  "edge_count": 830,
-  "function_nodes": 8,
-  "variable_nodes": 520,
-  "optimize_time": 1.4236876964569092,
+  "trace_time": 0.06048941612243652,
+  "node_count": 149,
+  "edge_count": 173,
+  "function_nodes": 6,
+  "variable_nodes": 112,
+  "optimize_time": 0.1197969913482666,
   "coarsening_stats": {
     "pattern_count": 0,
     "total_instances": 0,
@@ -16,32 +16,32 @@
   "partition_stats": {
     "partition_count": 2,
     "partition_sizes": [
-      397,
-      270
+      69,
+      80
     ],
     "partition_loads": [
-      0.014000000000000005,
-      0.014000000000000005
+      0.005,
+      0.005
     ],
-    "avg_load": 0.014000000000000005,
-    "max_load": 0.014000000000000005,
-    "min_load": 0.014000000000000005,
+    "avg_load": 0.005,
+    "max_load": 0.005,
+    "min_load": 0.005,
     "load_balance": 1.0,
-    "total_nodes": 667
+    "total_nodes": 149
   },
   "optimization_stats": {
-    "iterations": 10,
-    "moves_executed": 1,
-    "initial_objective": 1.0499934375410154,
+    "iterations": 0,
+    "moves_executed": 0,
+    "initial_objective": 0.6,
     "final_objective": 0.6,
-    "improvement": 0.4499934375410154,
-    "improvement_ratio": 42.856785714285714
+    "improvement": 0.0,
+    "improvement_ratio": 0.0
   },
   "partition_count": 2,
-  "migration_time": 0.0515139102935791,
+  "migration_time": 0.04645109176635742,
   "migration_stats": {
     "is_applied": false,
-    "context_mappings": 53,
+    "context_mappings": 36,
     "registry_stats": {
       "total": 153,
       "exact_match": 145,
